@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petravox — Télécharger le Launcher</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #080612;
+      color: #ede9fe;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* NAV */
+    nav {
+      width: 100%;
+      background: #110d22;
+      border-bottom: 1px solid #2d1f52;
+      padding: 0 32px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    nav .logo { font-weight: 900; font-size: 17px; letter-spacing: 1px; color: #ede9fe; text-decoration: none; }
+    nav a { color: #8b7ab8; text-decoration: none; font-size: 14px; transition: color .2s; }
+    nav a:hover { color: #ede9fe; }
+    nav .spacer { flex: 1; }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 72px 24px 48px;
+      max-width: 700px;
+      width: 100%;
+    }
+    .hero img { width: 80px; height: 80px; margin-bottom: 24px; border-radius: 16px; }
+    .hero h1 { font-size: 40px; font-weight: 900; margin-bottom: 10px; }
+    .hero h1 span { color: #9f5cf7; }
+    .hero p { color: #8b7ab8; font-size: 16px; line-height: 1.6; max-width: 520px; margin-bottom: 36px; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #18112e; border: 1px solid #2d1f52;
+      border-radius: 20px; padding: 5px 14px;
+      font-size: 12px; color: #8b7ab8; margin-bottom: 36px;
+    }
+    .badge span { color: #a78bfa; font-weight: 700; }
+
+    /* DOWNLOAD BUTTON */
+    .btn-dl {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: #7c3aed; color: #fff;
+      text-decoration: none; border-radius: 14px;
+      padding: 16px 36px; font-size: 18px; font-weight: 800;
+      transition: background .2s, transform .15s;
+      margin-bottom: 14px;
+    }
+    .btn-dl:hover { background: #9f5cf7; transform: translateY(-2px); }
+    .btn-dl svg { width: 22px; height: 22px; }
+    .dl-note { color: #4b3f6b; font-size: 12px; margin-bottom: 48px; }
+
+    /* STEPS */
+    .steps {
+      width: 100%; max-width: 620px;
+      background: #110d22; border: 1px solid #2d1f52;
+      border-radius: 20px; padding: 32px 36px;
+      margin-bottom: 48px;
+    }
+    .steps h2 { font-size: 18px; font-weight: 700; margin-bottom: 24px; color: #ede9fe; }
+    .step {
+      display: flex; gap: 16px; align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .step:last-child { margin-bottom: 0; }
+    .step-num {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: #2d1f52; color: #a78bfa;
+      font-weight: 900; font-size: 14px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-body { padding-top: 4px; }
+    .step-body strong { display: block; color: #ede9fe; margin-bottom: 3px; }
+    .step-body span { color: #8b7ab8; font-size: 14px; }
+    .step-body code {
+      background: #18112e; border: 1px solid #2d1f52;
+      border-radius: 6px; padding: 2px 8px;
+      color: #a78bfa; font-size: 13px; font-family: monospace;
+    }
+
+    /* SPECS */
+    .specs {
+      width: 100%; max-width: 620px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 12px; margin-bottom: 48px;
+    }
+    .spec-card {
+      background: #18112e; border: 1px solid #2d1f52;
+      border-radius: 14px; padding: 18px 20px;
+    }
+    .spec-card .label { font-size: 11px; color: #4b3f6b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+    .spec-card .val { font-size: 16px; font-weight: 700; color: #a78bfa; }
+
+    /* FOOTER */
+    footer {
+      width: 100%; text-align: center;
+      padding: 24px; color: #4b3f6b; font-size: 12px;
+      border-top: 1px solid #2d1f52; margin-top: auto;
+    }
+    footer a { color: #6b5fa8; text-decoration: none; }
+    footer a:hover { color: #a78bfa; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">PETRAVOX</a>
+  <a href="index.html">Accueil</a>
+  <a href="https://github.com/Leimmingz/Petravox-modpack">GitHub</a>
+  <div class="spacer"></div>
+  <a href="https://github.com/Leimmingz/Petravox-modpack/releases/latest"
+     style="background:#7c3aed;color:#fff;padding:7px 16px;border-radius:8px;font-size:13px;font-weight:700">
+    Télécharger
+  </a>
+</nav>
+
+<div class="hero">
+  <img src="logo.png" alt="Petravox" onerror="this.style.display='none'" />
+  <h1>Launcher <span>Petravox</span></h1>
+  <p>Installe Forge, synchronise les mods et lance Minecraft en un clic. Aucune configuration manuelle.</p>
+  <div class="badge">
+    Forge 1.20.1 &nbsp;·&nbsp; <span>205+ mods</span> &nbsp;·&nbsp; Windows &nbsp;·&nbsp; Whitelist
+  </div>
+
+  <a class="btn-dl"
+     href="https://github.com/Leimmingz/Petravox-modpack/releases/latest/download/Petravox.Launcher.exe">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    Télécharger le Launcher
+  </a>
+  <div class="dl-note">Petravox Launcher.exe · Windows 10/11 · Aucune installation requise</div>
+</div>
+
+<div class="steps">
+  <h2>Comment rejoindre</h2>
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <strong>Télécharge et lance le launcher</strong>
+      <span>Double-clique sur <code>Petravox Launcher.exe</code> — Windows peut afficher un avertissement, clique sur "Exécuter quand même".</span>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <strong>Connecte ton compte Microsoft</strong>
+      <span>Clique sur "Se connecter" — un code s'affiche, entre-le sur <code>microsoft.com/devicelogin</code>. Ton compte doit posséder Minecraft Java Edition.</span>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <strong>Clique sur Jouer</strong>
+      <span>Le launcher installe Forge et tous les mods automatiquement (~2–5 min la première fois). Minecraft se lance tout seul.</span>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <strong>Rejoins le serveur</strong>
+      <span>Ajoute le serveur dans Minecraft : <code>srv01.uniheberg.fr:25540</code>. Le serveur est en whitelist — contacte un admin pour être ajouté.</span>
+    </div>
+  </div>
+</div>
+
+<div class="specs">
+  <div class="spec-card"><div class="label">Version</div><div class="val">Minecraft 1.20.1</div></div>
+  <div class="spec-card"><div class="label">Loader</div><div class="val">Forge 47.4.10</div></div>
+  <div class="spec-card"><div class="label">Mods</div><div class="val">205+</div></div>
+  <div class="spec-card"><div class="label">RAM recommandée</div><div class="val">6–8 Go</div></div>
+  <div class="spec-card"><div class="label">Serveur</div><div class="val">UniHeberg (France)</div></div>
+  <div class="spec-card"><div class="label">Accès</div><div class="val">Whitelist</div></div>
+</div>
+
+<footer>
+  Powered by <strong>Zervox</strong> &nbsp;·&nbsp;
+  <a href="https://github.com/Leimmingz/Petravox-modpack">GitHub</a> &nbsp;·&nbsp;
+  Non affilié à Mojang
+</footer>
+
+</body>
+</html>
