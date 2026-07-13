@@ -60,9 +60,6 @@ Petravox-modpack/
 │   └── launcher/
 │       ├── version.json            # Version actuelle du launcher
 │       └── Petravox Launcher.exe   # Exe distribué via GitHub Pages
-├── launcher/
-│   ├── petravox_launcher.py        # Code source du launcher
-│   └── compiler_en_exe.bat         # Script de compilation PyInstaller
 └── README.md
 ```
 
