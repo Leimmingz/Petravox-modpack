@@ -30,7 +30,7 @@
     },
     {
       "icon": "⛏️",
-      "name": "Ore Vein Miner",
+      "name": "Ore Excavation",
       "desc": "Mine un filon de minerai entier en un clic"
     },
     {
@@ -45,7 +45,7 @@
       "icon": "🗺️",
       "title": "Carte BlueMap",
       "desc": "Carte 3D du serveur en direct dans le launcher",
-      "status": "En cours"
+      "status": "Bloque"
     },
     {
       "icon": "🚀",
