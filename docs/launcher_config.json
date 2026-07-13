@@ -1,0 +1,29 @@
+{
+  "_comment": "Edite ce fichier et pousse sur GitHub pour mettre a jour le launcher sans recompiler.",
+
+  "whats_new": [
+    "Onglet Ressources : gere tes resource packs et shader packs",
+    "Onglet Web : site Petravox integre dans le launcher",
+    "Skin Minecraft reel affiche dans la sidebar",
+    "Clic sur l'avatar pour acceder a ton compte Microsoft",
+    "Carrousel : glisser gauche/droite pour naviguer"
+  ],
+
+  "mods_recents": [
+    {
+      "icon": "🌲",
+      "name": "Falling Tree",
+      "desc": "Les arbres tombent entiers d'un seul coup de hache"
+    },
+    {
+      "icon": "⛏️",
+      "name": "Ore Vein Miner",
+      "desc": "Mine un filon de minerai entier en un clic"
+    },
+    {
+      "icon": "🚪",
+      "name": "Double Door",
+      "desc": "Les deux portes d'une double porte s'ouvrent ensemble"
+    }
+  ]
+}
