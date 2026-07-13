@@ -8,13 +8,13 @@
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62b47a?style=flat-square&logo=minecraft&logoColor=white)](https://minecraft.net)
 [![Forge](https://img.shields.io/badge/Forge-47.4.10-e04a00?style=flat-square)](https://files.minecraftforge.net)
-[![Launcher](https://img.shields.io/badge/Launcher-v2.4.4-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
+[![Launcher](https://img.shields.io/badge/Launcher-v2.5.0-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
 [![Site](https://img.shields.io/badge/Site-leimmingz.github.io-9f5cf7?style=flat-square)](https://leimmingz.github.io/Petravox-modpack/)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
 *Serveur privé sur invitation · Hébergé sur UniHeberg (France)*
 
-🌐 **[Site web](https://leimmingz.github.io/Petravox-modpack/)** &nbsp;·&nbsp; 📥 **[Télécharger le launcher](https://leimmingz.github.io/Petravox-modpack/Petravox_Launcher.html)**
+🌐 **[Site web](https://leimmingz.github.io/Petravox-modpack/)** &nbsp;·&nbsp; 📥 **[Télécharger le launcher](https://github.com/Leimmingz/Petravox-modpack/releases/latest/download/Petravox.Launcher.exe)**
 
 </div>
 
@@ -90,6 +90,17 @@ Le serveur est en **whitelist** (sur invitation uniquement).
 ---
 
 ## Changelog
+
+### v2.5.0 — 13 juillet 2026
+- Onglet Serveur : statut en direct, joueurs connectés, copie IP en 1 clic
+- Notifications toast (plus de popups bloquantes)
+- Avatar coloré avec initiales dans la sidebar
+- Compteur joueurs en direct dans la sidebar
+- Historique des lancements dans À propos
+- Bouton "Ouvrir le dossier .petravox" dans Paramètres
+- Bouton "Réparer les mods" dans Paramètres
+- Détection automatique du mode hors-ligne
+- Sélecteur Java dans Paramètres
 
 ### v2.4.4 — 13 juillet 2026
 - Fenêtre toujours visible même si erreur au démarrage (try/finally)
