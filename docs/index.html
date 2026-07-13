@@ -148,7 +148,7 @@
 
   <div class="status-row">
     <div class="badge"><div class="dot" id="srv-dot"></div> Serveur&nbsp;: <strong id="srv-status">Vérification...</strong></div>
-    <div class="badge"><div class="dot green"></div> Launcher : <strong>v2.8.6</strong></div>
+    <div class="badge"><div class="dot green"></div> Launcher : <strong>v2.8.7</strong></div>
     <div class="badge">⬇ <strong id="dl-count">...</strong> téléchargements</div>
   </div>
 
@@ -394,10 +394,20 @@
 
   <div class="cl-version">
     <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.6 <span style="color:#22c55e;font-size:11px;margin-left:8px">← actuelle</span></h3>
+      <h3>v2.8.7 <span style="color:#22c55e;font-size:11px;margin-left:8px">← actuelle</span></h3>
       <span class="cl-date">13 juillet 2026</span>
     </div>
     <div class="cl-body">
+      <div class="cl-entry"><span class="cl-tag tag-audit">AUDIT</span><span>Auto-updater définitif : <code>taskkill /F</code>, timeout 5s, 5 tentatives de <code>move</code> avec 2s d'attente chacune, <code>start /D</code> — toutes les erreurs DLL couvertes</span></div>
+    </div>
+  </div>
+
+  <div class="cl-version">
+    <div class="cl-header" onclick="toggleCl(this)">
+      <h3>v2.8.6</h3>
+      <span class="cl-date">13 juillet 2026</span>
+    </div>
+    <div class="cl-body" style="display:none">
       <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auto-updater : <code>taskkill</code> de l'ancien exe avant remplacement + timeout 3s (fix <code>python312.dll</code> verrouillé)</span></div>
     </div>
   </div>

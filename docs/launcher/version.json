@@ -1,8 +1,8 @@
 {
-  "version": "2.8.6",
+  "version": "2.8.7",
   "exe_url": "https://github.com/Leimmingz/Petravox-modpack/releases/latest/download/Petravox.Launcher.exe",
   "url": "https://github.com/Leimmingz/Petravox-modpack/releases",
   "changelog": [
-    "Fix auto-updater : taskkill + timeout 3s avant remplacement (fix python312.dll verrouille)"
+    "Auto-updater definitif : taskkill + 5s + 5 retries move + start /D — plus d'erreur DLL possible"
   ]
 }
