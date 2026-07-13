@@ -8,7 +8,7 @@
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62b47a?style=flat-square&logo=minecraft&logoColor=white)](https://minecraft.net)
 [![Forge](https://img.shields.io/badge/Forge-47.4.10-e04a00?style=flat-square)](https://files.minecraftforge.net)
-[![Launcher](https://img.shields.io/badge/Launcher-v2.3.0-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
+[![Launcher](https://img.shields.io/badge/Launcher-v2.4.0-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
 *Serveur privé sur invitation · Hébergé sur UniHeberg (France)*
@@ -130,6 +130,11 @@ Les utilisateurs recevront la notification automatiquement au prochain lancement
 ---
 
 ## Changelog
+
+### v2.4.0 — 13 juillet 2026
+- Launcher en plein ecran au demarrage (F11)
+- Carrousel Nouveautes sur la page Jouer
+- Boutons Site web et GitHub dans la sidebar
 
 ### v2.3.0 — 13 juillet 2026
 - Plein écran configurable dans les paramètres
