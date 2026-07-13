@@ -8,7 +8,7 @@
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62b47a?style=flat-square&logo=minecraft&logoColor=white)](https://minecraft.net)
 [![Forge](https://img.shields.io/badge/Forge-47.4.10-e04a00?style=flat-square)](https://files.minecraftforge.net)
-[![Launcher](https://img.shields.io/badge/Launcher-v2.8.5-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
+[![Launcher](https://img.shields.io/badge/Launcher-v2.8.6-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
 [![Site](https://img.shields.io/badge/Site-leimmingz.github.io-9f5cf7?style=flat-square)](https://leimmingz.github.io/Petravox-modpack/)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
@@ -89,7 +89,10 @@ Le launcher le télécharge et l'installe automatiquement. En cas de mise à jou
 
 ## Changelog
 
-### v2.8.5 — 13 juillet 2026 ← actuelle
+### v2.8.6 — 13 juillet 2026 ← actuelle
+- Fix auto-updater : `taskkill` de l'ancien exe avant remplacement + timeout 3s (fix `python312.dll` verrouillé)
+
+### v2.8.5 — 13 juillet 2026
 - Audit poll serveur : `_poll_running` flag dédié, thread redémarré après changement de thème
 - Fix crash `_update_server_ui` pendant le rebuild UI
 - Fix carrousel : couleurs de fondu adaptées au thème clair
