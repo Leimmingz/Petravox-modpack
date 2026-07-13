@@ -1,10 +1,11 @@
 {
-  "version": "2.7.2",
+  "version": "2.8.0",
   "exe_url": "https://github.com/Leimmingz/Petravox-modpack/releases/latest/download/Petravox.Launcher.exe",
   "url": "https://github.com/Leimmingz/Petravox-modpack/releases",
   "changelog": [
-    "Fix auto-update : relancement depuis le bon repertoire (fix DLL python312)",
-    "Tableau de bord : stats de jeu, statut serveur, infos modpack",
-    "Theme clair optionnel (Parametres > Apparence)"
+    "Timer de session live dans la sidebar (temps écoulé pendant le jeu)",
+    "Galerie de screenshots : miniatures cliquables depuis le dossier Minecraft",
+    "Achievements dans le tableau de bord (sessions, heures jouées)",
+    "Notifications ami en ligne : toast quand un joueur rejoint le serveur"
   ]
 }

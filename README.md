@@ -8,7 +8,7 @@
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62b47a?style=flat-square&logo=minecraft&logoColor=white)](https://minecraft.net)
 [![Forge](https://img.shields.io/badge/Forge-47.4.10-e04a00?style=flat-square)](https://files.minecraftforge.net)
-[![Launcher](https://img.shields.io/badge/Launcher-v2.7.2-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
+[![Launcher](https://img.shields.io/badge/Launcher-v2.8.0-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
 [![Site](https://img.shields.io/badge/Site-leimmingz.github.io-9f5cf7?style=flat-square)](https://leimmingz.github.io/Petravox-modpack/)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
@@ -88,6 +88,12 @@ Le launcher le télécharge et l'installe automatiquement. En cas de mise à jou
 ---
 
 ## Changelog
+
+### v2.8.0 — 13 juillet 2026
+- Timer de session live dans la sidebar (s'affiche pendant le jeu, disparaît à la fermeture)
+- Galerie de screenshots : onglet dédié avec miniatures cliquables (dossier `.petravox/minecraft/screenshots/`)
+- Achievements dans le tableau de bord : 7 médailles basées sur sessions et heures jouées
+- Notifications ami en ligne : toast quand le nombre de joueurs sur le serveur augmente
 
 ### v2.7.2 — 13 juillet 2026
 - Fix auto-update : relancement depuis le bon répertoire (fix DLL python312)

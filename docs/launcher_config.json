@@ -15,11 +15,11 @@
   },
 
   "whats_new": [
-    "Tableau de bord : stats de jeu et statut serveur en direct",
-    "Theme clair optionnel dans Parametres > Apparence",
-    "Onglet Ressources : gere tes resource packs et shader packs",
-    "Skin Minecraft reel affiche dans la sidebar",
-    "Carrousel : glisser gauche/droite pour naviguer"
+    "Timer de session live dans la sidebar (temps écoulé pendant le jeu)",
+    "Galerie de screenshots : miniatures cliquables, onglet dédié",
+    "Achievements dans le tableau de bord (sessions, heures jouées)",
+    "Notifications ami en ligne : toast quand un joueur rejoint",
+    "Theme clair optionnel dans Parametres > Apparence"
   ],
 
   "mods_recents": [
