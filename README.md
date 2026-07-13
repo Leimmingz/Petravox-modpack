@@ -59,7 +59,12 @@ Petravox-modpack/
 │   ├── Petravox_Launcher.html      # Page téléchargement launcher
 │   ├── logo.png                    # Logo Petravox
 │   └── launcher/
+<<<<<<< HEAD
 │       └── version.json            # Version actuelle du launcher
+=======
+│       ├── version.json            # Version actuelle du launcher
+│       └── Petravox Launcher.exe   # Exe distribué via GitHub Pages
+>>>>>>> f22d54befd68744aae927c65850f1f71191ee0ee
 └── README.md
 ```
 
@@ -86,6 +91,7 @@ Le serveur est en **whitelist** (sur invitation uniquement).
 
 ---
 
+<<<<<<< HEAD
 ## Publier une mise à jour du launcher
 
 1. Modifier `LAUNCHER_VERSION` dans `petravox_launcher.py`
@@ -99,6 +105,8 @@ Le serveur est en **whitelist** (sur invitation uniquement).
 
 ---
 
+=======
+>>>>>>> f22d54befd68744aae927c65850f1f71191ee0ee
 ## Changelog
 
 ### v2.4.4 — 13 juillet 2026
