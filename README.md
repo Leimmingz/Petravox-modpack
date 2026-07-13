@@ -8,10 +8,10 @@
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62b47a?style=flat-square&logo=minecraft&logoColor=white)](https://minecraft.net)
 [![Forge](https://img.shields.io/badge/Forge-47.4.10-e04a00?style=flat-square)](https://files.minecraftforge.net)
-[![Launcher](https://img.shields.io/badge/Launcher-v2.4.0-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
+[![Launcher](https://img.shields.io/badge/Launcher-v2.4.2-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
-Hébergé sur UniHeberg (France)*
+*Serveur privé sur invitation · Hébergé sur UniHeberg (France)*
 
 </div>
 
@@ -56,10 +56,14 @@ Lance `Petravox Launcher.exe` — aucune installation requise.
 Petravox-modpack/
 ├── docs/
 │   ├── index.html                  # Site Zervox (GitHub Pages)
+│   ├── Petravox_Launcher.html      # Page téléchargement launcher
 │   ├── logo.png                    # Logo Petravox
 │   └── launcher/
 │       ├── version.json            # Version actuelle du launcher
 │       └── Petravox Launcher.exe   # Exe distribué via GitHub Pages
+├── launcher/
+│   ├── petravox_launcher.py        # Code source du launcher
+│   └── compiler_en_exe.bat         # Script de compilation PyInstaller
 └── README.md
 ```
 
@@ -84,15 +88,60 @@ Le serveur est en **whitelist** (sur invitation uniquement).
 3. Clique sur **Jouer** — le launcher installe tout automatiquement
 4. Adresse du serveur : `srv01.uniheberg.fr:25540`
 
+---
+
+## Compiler le launcher
+
+Nécessite Python 3.10+ et les dépendances :
+
+```bash
+pip install customtkinter minecraft-launcher-lib pillow requests pyinstaller
+```
+
+Puis dans le dossier `launcher/` :
+
+```bat
+compiler_en_exe.bat
+```
+
+L'exe généré se trouve dans `launcher/dist/`.
+
+---
+
+## Publier une mise à jour du launcher
+
+1. Modifier `LAUNCHER_VERSION` dans `petravox_launcher.py`
+2. Ajouter les entrées dans `CHANGELOG` (dans le même fichier)
+3. Compiler avec `compiler_en_exe.bat`
+4. Copier l'exe dans `docs/launcher/`
+5. Mettre à jour `docs/launcher/version.json`
+6. `git add . && git commit -m "launcher vX.Y.Z" && git push`
+
+Les utilisateurs recevront la notification automatiquement au prochain lancement.
+
+> **Versionnage :** fonctionnalité majeure → X.Y.0 · petite amélioration → X.Y.Z
+
+---
+
 ## Changelog
 
+### v2.4.2 — 13 juillet 2026
+- Animations boutons : flash lumineux au clic
+- Transition fondu entre les slides du carrousel
+- Sons de boutons (clic, navigation, succès lancement)
+
+### v2.4.1 — 13 juillet 2026
+- VFX : particules flottantes animées en arrière-plan
+- Pulsation couleur du bouton JOUER
+- Bouton JOUER redimensionné (plus compact)
+
 ### v2.4.0 — 13 juillet 2026
-- Launcher en plein ecran au demarrage (F11)
-- Carrousel Nouveautes sur la page Jouer
-- Boutons Site web et GitHub dans la sidebar
+- Launcher en plein écran au démarrage (F11 pour basculer)
+- Carrousel Nouveautés sur la page Jouer
+- Boutons Site web et GitHub dans la sidebar et À propos
 
 ### v2.3.0 — 13 juillet 2026
-- Plein écran configurable dans les paramètres
+- Plein écran Minecraft configurable dans les paramètres
 - Auto-updater : le launcher se met à jour tout seul
 - RAM dynamique : sliders adaptés à la RAM du PC
 - Avertissement si RAM < 4 Go
