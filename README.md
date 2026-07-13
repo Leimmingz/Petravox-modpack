@@ -8,7 +8,7 @@
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62b47a?style=flat-square&logo=minecraft&logoColor=white)](https://minecraft.net)
 [![Forge](https://img.shields.io/badge/Forge-47.4.10-e04a00?style=flat-square)](https://files.minecraftforge.net)
-[![Launcher](https://img.shields.io/badge/Launcher-v2.4.2-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
+[![Launcher](https://img.shields.io/badge/Launcher-v2.4.3-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
 *Serveur privé sur invitation · Hébergé sur UniHeberg (France)*
@@ -124,6 +124,11 @@ Les utilisateurs recevront la notification automatiquement au prochain lancement
 ---
 
 ## Changelog
+
+### v2.4.3 — 13 juillet 2026
+- Démarrage propre sans saut de taille (fenêtre cachée pendant la construction)
+- F11 corrigé : plus de rectangles blancs (state zoomed/normal)
+- URL de mise à jour corrigée vers GitHub Releases
 
 ### v2.4.2 — 13 juillet 2026
 - Animations boutons : flash lumineux au clic
