@@ -8,7 +8,7 @@
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62b47a?style=flat-square&logo=minecraft&logoColor=white)](https://minecraft.net)
 [![Forge](https://img.shields.io/badge/Forge-47.4.10-e04a00?style=flat-square)](https://files.minecraftforge.net)
-[![Launcher](https://img.shields.io/badge/Launcher-v2.8.3-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
+[![Launcher](https://img.shields.io/badge/Launcher-v2.8.5-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
 [![Site](https://img.shields.io/badge/Site-leimmingz.github.io-9f5cf7?style=flat-square)](https://leimmingz.github.io/Petravox-modpack/)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
@@ -89,8 +89,19 @@ Le launcher le télécharge et l'installe automatiquement. En cas de mise à jou
 
 ## Changelog
 
-### v2.8.3 — 13 juillet 2026 ← actuelle
-- Fix auto-updater : `start /D` dans le bat pour garantir le bon répertoire au relancement (fix erreur DLL _tkinter après mise à jour)
+### v2.8.5 — 13 juillet 2026 ← actuelle
+- Audit poll serveur : `_poll_running` flag dédié, thread redémarré après changement de thème
+- Fix crash `_update_server_ui` pendant le rebuild UI
+- Fix carrousel : couleurs de fondu adaptées au thème clair
+- Fix réinitialiser paramètres : remet le thème sombre
+
+### v2.8.4 — 13 juillet 2026
+- Fix changement de thème : fenêtre cachée pendant le rebuild (plus de flash clair/sombre)
+- Fix mods récents conservés après changement de thème (config en cache, pas de re-fetch)
+- Fix stats de jeu : valeurs alignées sous leurs labels
+
+### v2.8.3 — 13 juillet 2026
+- Fix auto-updater : `start /D` dans le bat pour garantir le bon répertoire au relancement (fix erreur DLL _tkinter)
 
 ### v2.8.2 — 13 juillet 2026
 - Fix : carrousel Nouveautés toujours affiché, même si la version courante n'a que des entrées "fix/audit"
