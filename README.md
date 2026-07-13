@@ -11,7 +11,7 @@
 [![Launcher](https://img.shields.io/badge/Launcher-v2.3.0-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
-*Serveur privé sur invitation · Hébergé sur UniHeberg (France)*
+Hébergé sur UniHeberg (France)*
 
 </div>
 
