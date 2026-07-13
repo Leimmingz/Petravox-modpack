@@ -8,7 +8,7 @@
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62b47a?style=flat-square&logo=minecraft&logoColor=white)](https://minecraft.net)
 [![Forge](https://img.shields.io/badge/Forge-47.4.10-e04a00?style=flat-square)](https://files.minecraftforge.net)
-[![Launcher](https://img.shields.io/badge/Launcher-v2.4.3-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
+[![Launcher](https://img.shields.io/badge/Launcher-v2.4.4-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
 *Serveur privé sur invitation · Hébergé sur UniHeberg (France)*
@@ -37,7 +37,7 @@ Le launcher Petravox est un exécutable Windows (.exe) qui s'occupe de tout :
 
 👉 **[Télécharger le launcher (dernière version)](https://github.com/Leimmingz/Petravox-modpack/releases/latest)**
 
-Lance `Petravox Launcher.exe` — aucune installation requise.
+Lance `Petravox.Launcher.exe` — aucune installation requise.
 
 ### Paramètres disponibles
 
@@ -55,15 +55,11 @@ Lance `Petravox Launcher.exe` — aucune installation requise.
 ```
 Petravox-modpack/
 ├── docs/
-│   ├── index.html                  # Site Zervox (GitHub Pages)
+│   ├── index.html                  # Site principal (GitHub Pages)
 │   ├── Petravox_Launcher.html      # Page téléchargement launcher
 │   ├── logo.png                    # Logo Petravox
 │   └── launcher/
-│       ├── version.json            # Version actuelle du launcher
-│       └── Petravox Launcher.exe   # Exe distribué via GitHub Pages
-├── launcher/
-│   ├── petravox_launcher.py        # Code source du launcher
-│   └── compiler_en_exe.bat         # Script de compilation PyInstaller
+│       └── version.json            # Version actuelle du launcher
 └── README.md
 ```
 
@@ -75,7 +71,7 @@ Le modpack est distribué au format `.mrpack` (compatible Modrinth) via les [Rel
 
 Le launcher le télécharge et l'installe automatiquement. En cas de mise à jour du modpack, il détecte le changement au prochain lancement et resynchronise les mods.
 
-**Mods notables :** Easy NPC 7.0.0, [+ 200 autres mods Fantasy vs. Science]
+**Mods notables :** Easy NPC 7.0.0, Create, Waystones, Artifacts, Immersive Engineering [+ 200 autres]
 
 ---
 
@@ -90,34 +86,14 @@ Le serveur est en **whitelist** (sur invitation uniquement).
 
 ---
 
-## Compiler le launcher
-
-Nécessite Python 3.10+ et les dépendances :
-
-```bash
-pip install customtkinter minecraft-launcher-lib pillow requests pyinstaller
-```
-
-Puis dans le dossier `launcher/` :
-
-```bat
-compiler_en_exe.bat
-```
-
-L'exe généré se trouve dans `launcher/dist/`.
-
----
-
 ## Publier une mise à jour du launcher
 
 1. Modifier `LAUNCHER_VERSION` dans `petravox_launcher.py`
 2. Ajouter les entrées dans `CHANGELOG` (dans le même fichier)
 3. Compiler avec `compiler_en_exe.bat`
-4. Copier l'exe dans `docs/launcher/`
+4. Uploader l'exe dans une nouvelle Release GitHub (nom : `Petravox.Launcher.exe`)
 5. Mettre à jour `docs/launcher/version.json`
 6. `git add . && git commit -m "launcher vX.Y.Z" && git push`
-
-Les utilisateurs recevront la notification automatiquement au prochain lancement.
 
 > **Versionnage :** fonctionnalité majeure → X.Y.0 · petite amélioration → X.Y.Z
 
@@ -125,15 +101,17 @@ Les utilisateurs recevront la notification automatiquement au prochain lancement
 
 ## Changelog
 
-### v2.4.3 — 13 juillet 2026
-- Démarrage propre sans saut de taille (fenêtre cachée pendant la construction)
+### v2.4.4 — 13 juillet 2026
+- Fenêtre toujours visible même si erreur au démarrage (try/finally)
 - F11 corrigé : plus de rectangles blancs (state zoomed/normal)
 - URL de mise à jour corrigée vers GitHub Releases
+- Log d'erreurs dans `%appdata%\.petravox\launcher_error.log`
 
-### v2.4.2 — 13 juillet 2026
+### v2.4.2 / v2.4.3 — 13 juillet 2026
 - Animations boutons : flash lumineux au clic
 - Transition fondu entre les slides du carrousel
 - Sons de boutons (clic, navigation, succès lancement)
+- Démarrage propre sans saut de taille
 
 ### v2.4.1 — 13 juillet 2026
 - VFX : particules flottantes animées en arrière-plan
@@ -150,7 +128,7 @@ Les utilisateurs recevront la notification automatiquement au prochain lancement
 - Auto-updater : le launcher se met à jour tout seul
 - RAM dynamique : sliders adaptés à la RAM du PC
 - Avertissement si RAM < 4 Go
-- Barre de progression réaliste (mode indéterminé au démarrage)
+- Barre de progression réaliste
 - Changelog intégré dans le launcher
 
 ### v2.2.0 — 13 juillet 2026
@@ -158,7 +136,6 @@ Les utilisateurs recevront la notification automatiquement au prochain lancement
 - Logo Petravox, "Powered by Zervox"
 - Paramètres persistants, résolution, toggle fermeture
 - Terminal caché au lancement de Minecraft
-- Meilleure gestion des erreurs d'authentification Xbox
 
 ### v1.x — Avant juillet 2026
 - Launcher initial avec auth Microsoft Device Flow
