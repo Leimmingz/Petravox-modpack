@@ -9,9 +9,12 @@
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62b47a?style=flat-square&logo=minecraft&logoColor=white)](https://minecraft.net)
 [![Forge](https://img.shields.io/badge/Forge-47.4.10-e04a00?style=flat-square)](https://files.minecraftforge.net)
 [![Launcher](https://img.shields.io/badge/Launcher-v2.4.4-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
+[![Site](https://img.shields.io/badge/Site-leimmingz.github.io-9f5cf7?style=flat-square)](https://leimmingz.github.io/Petravox-modpack/)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
 *Serveur privé sur invitation · Hébergé sur UniHeberg (France)*
+
+🌐 **[Site web](https://leimmingz.github.io/Petravox-modpack/)** &nbsp;·&nbsp; 📥 **[Télécharger le launcher](https://leimmingz.github.io/Petravox-modpack/Petravox_Launcher.html)**
 
 </div>
 
@@ -59,12 +62,7 @@ Petravox-modpack/
 │   ├── Petravox_Launcher.html      # Page téléchargement launcher
 │   ├── logo.png                    # Logo Petravox
 │   └── launcher/
-<<<<<<< HEAD
 │       └── version.json            # Version actuelle du launcher
-=======
-│       ├── version.json            # Version actuelle du launcher
-│       └── Petravox Launcher.exe   # Exe distribué via GitHub Pages
->>>>>>> f22d54befd68744aae927c65850f1f71191ee0ee
 └── README.md
 ```
 
@@ -91,22 +89,6 @@ Le serveur est en **whitelist** (sur invitation uniquement).
 
 ---
 
-<<<<<<< HEAD
-## Publier une mise à jour du launcher
-
-1. Modifier `LAUNCHER_VERSION` dans `petravox_launcher.py`
-2. Ajouter les entrées dans `CHANGELOG` (dans le même fichier)
-3. Compiler avec `compiler_en_exe.bat`
-4. Uploader l'exe dans une nouvelle Release GitHub (nom : `Petravox.Launcher.exe`)
-5. Mettre à jour `docs/launcher/version.json`
-6. `git add . && git commit -m "launcher vX.Y.Z" && git push`
-
-> **Versionnage :** fonctionnalité majeure → X.Y.0 · petite amélioration → X.Y.Z
-
----
-
-=======
->>>>>>> f22d54befd68744aae927c65850f1f71191ee0ee
 ## Changelog
 
 ### v2.4.4 — 13 juillet 2026
