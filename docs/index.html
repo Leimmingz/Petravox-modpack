@@ -148,7 +148,7 @@
 
   <div class="status-row">
     <div class="badge"><div class="dot" id="srv-dot"></div> Serveur&nbsp;: <strong id="srv-status">Vérification...</strong></div>
-    <div class="badge"><div class="dot green"></div> Launcher : <strong>v2.6.0</strong></div>
+    <div class="badge"><div class="dot green"></div> Launcher : <strong>v2.7.2</strong></div>
     <div class="badge">⬇ <strong id="dl-count">...</strong> téléchargements</div>
   </div>
 
@@ -269,7 +269,7 @@
     <div class="mod-card">
       <div class="mod-icon" style="background:#1a1a2e">⛏️</div>
       <div>
-        <h4>Ore Vein Miner</h4>
+        <h4>Ore Excavation</h4>
         <p>Mine un filon de minerai entier en un seul clic. Idéal pour les grottes profondes.</p>
         <span class="mod-tag" style="background:#052e16;color:#22c55e">NOUVEAU</span>
       </div>
@@ -394,10 +394,101 @@
 
   <div class="cl-version">
     <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.6.0 <span style="color:#22c55e;font-size:11px;margin-left:8px">← actuelle</span></h3>
+      <h3>v2.7.2 <span style="color:#22c55e;font-size:11px;margin-left:8px">← actuelle</span></h3>
       <span class="cl-date">13 juillet 2026</span>
     </div>
     <div class="cl-body">
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auto-update : relancement depuis le bon répertoire (fix DLL python312)</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Carrousel compact — plus d'espace vide sous le texte</span></div>
+    </div>
+  </div>
+
+  <div class="cl-version">
+    <div class="cl-header" onclick="toggleCl(this)">
+      <h3>v2.7.1</h3>
+      <span class="cl-date">13 juillet 2026</span>
+    </div>
+    <div class="cl-body" style="display:none">
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auto-updater : ajout du répertoire de travail dans le bat pour éviter l'erreur DLL</span></div>
+    </div>
+  </div>
+
+  <div class="cl-version">
+    <div class="cl-header" onclick="toggleCl(this)">
+      <h3>v2.7.0</h3>
+      <span class="cl-date">13 juillet 2026</span>
+    </div>
+    <div class="cl-body" style="display:none">
+      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Tableau de bord : stats de jeu (sessions, temps total, dernière session), statut serveur en direct, infos modpack</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Thème clair optionnel (toggle dans Paramètres &gt; Apparence)</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Dialogs de confirmation non-bloquants (déconnexion, réparation mods, suppression packs)</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Config serveur lue depuis launcher_config.json (host et port dynamiques)</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-audit">AUDIT</span><span>Durée 0 min affichée correctement dans l'historique</span></div>
+    </div>
+  </div>
+
+  <div class="cl-version">
+    <div class="cl-header" onclick="toggleCl(this)">
+      <h3>v2.6.5</h3>
+      <span class="cl-date">13 juillet 2026</span>
+    </div>
+    <div class="cl-body" style="display:none">
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Carrousel Nouveautés compact, hauteur fixe (plus d'espace vide sur grand écran)</span></div>
+    </div>
+  </div>
+
+  <div class="cl-version">
+    <div class="cl-header" onclick="toggleCl(this)">
+      <h3>v2.6.4</h3>
+      <span class="cl-date">13 juillet 2026</span>
+    </div>
+    <div class="cl-body" style="display:none">
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Roadmap affichée par défaut (valeurs codées en dur, plus de roadmap.json séparé)</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Ore Excavation dans les mods récents par défaut (au lieu de Ore Vein Miner)</span></div>
+    </div>
+  </div>
+
+  <div class="cl-version">
+    <div class="cl-header" onclick="toggleCl(this)">
+      <h3>v2.6.3</h3>
+      <span class="cl-date">13 juillet 2026</span>
+    </div>
+    <div class="cl-body" style="display:none">
+      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Toast de bienvenue au démarrage (disparaît après 4s)</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Bandeau orange non-bloquant si le launcher n'est pas à jour</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Carte changelog dans la page Jouer quand une MAJ est disponible</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Suppression de la messagebox bloquante pour les mises à jour</span></div>
+    </div>
+  </div>
+
+  <div class="cl-version">
+    <div class="cl-header" onclick="toggleCl(this)">
+      <h3>v2.6.2</h3>
+      <span class="cl-date">13 juillet 2026</span>
+    </div>
+    <div class="cl-body" style="display:none">
+      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Onglet Web : carte BlueMap + guide intégré, URLs dynamiques via config</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>launcher_config.json étendu : annonce, liens, roadmap, carte live</span></div>
+    </div>
+  </div>
+
+  <div class="cl-version">
+    <div class="cl-header" onclick="toggleCl(this)">
+      <h3>v2.6.1</h3>
+      <span class="cl-date">13 juillet 2026</span>
+    </div>
+    <div class="cl-body" style="display:none">
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Tous les fichiers créés dans .petravox au lieu du dossier de l'exe</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>launcher_config.json sur GitHub Pages : modifier carousel et mods récents sans recompiler</span></div>
+    </div>
+  </div>
+
+  <div class="cl-version">
+    <div class="cl-header" onclick="toggleCl(this)">
+      <h3>v2.6.0</h3>
+      <span class="cl-date">13 juillet 2026</span>
+    </div>
+    <div class="cl-body" style="display:none">
       <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Skin Minecraft réel affiché dans la sidebar (face + chapeau)</span></div>
       <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Clic sur l'avatar : menu compte (profil Xbox, déconnexion)</span></div>
       <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Carrousel : glisser gauche/droite pour changer de slide</span></div>
