@@ -8,7 +8,7 @@
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62b47a?style=flat-square&logo=minecraft&logoColor=white)](https://minecraft.net)
 [![Forge](https://img.shields.io/badge/Forge-47.4.10-e04a00?style=flat-square)](https://files.minecraftforge.net)
-[![Launcher](https://img.shields.io/badge/Launcher-v2.6.4-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
+[![Launcher](https://img.shields.io/badge/Launcher-v2.7.0-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
 [![Site](https://img.shields.io/badge/Site-leimmingz.github.io-9f5cf7?style=flat-square)](https://leimmingz.github.io/Petravox-modpack/)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
@@ -88,6 +88,16 @@ Le launcher le télécharge et l'installe automatiquement. En cas de mise à jou
 ---
 
 ## Changelog
+
+### v2.7.0 — 13 juillet 2026
+- Tableau de bord : stats de jeu (sessions, temps total, dernière session), statut serveur live, infos modpack
+- Thème clair optionnel (toggle dans Paramètres > Apparence, persisté entre sessions)
+- Fix : dialogs de confirmation non-bloquants (déconnexion, réparation mods, suppression packs)
+- Fix : config serveur lue depuis `launcher_config.json` (host, port dynamiques)
+- Audit : durée 0 min affichée correctement dans l'historique
+
+### v2.6.5 — 13 juillet 2026
+- Fix : carrousel Nouveautés compact, hauteur fixe (plus d'espace vide sur grand écran)
 
 ### v2.6.4 — 13 juillet 2026
 - Fix : roadmap affichée par défaut (valeurs codées en dur, plus de `roadmap.json` séparé)

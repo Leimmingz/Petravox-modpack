@@ -15,10 +15,10 @@
   },
 
   "whats_new": [
+    "Tableau de bord : stats de jeu et statut serveur en direct",
+    "Theme clair optionnel dans Parametres > Apparence",
     "Onglet Ressources : gere tes resource packs et shader packs",
-    "Onglet Web : site et carte interactive dans le launcher",
     "Skin Minecraft reel affiche dans la sidebar",
-    "Clic sur l'avatar pour acceder a ton compte Microsoft",
     "Carrousel : glisser gauche/droite pour naviguer"
   ],
 
@@ -51,7 +51,7 @@
       "icon": "🚀",
       "title": "Launcher v2.7",
       "desc": "Tableau de bord stats de jeu, thème clair optionnel",
-      "status": "Planifié"
+      "status": "Ajouté"
     }
   ],
 

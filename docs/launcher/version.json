@@ -1,10 +1,10 @@
 {
-  "version": "2.6.4",
+  "version": "2.7.0",
   "exe_url": "https://github.com/Leimmingz/Petravox-modpack/releases/latest/download/Petravox.Launcher.exe",
   "url": "https://github.com/Leimmingz/Petravox-modpack/releases",
   "changelog": [
-    "Roadmap affichee par defaut (sans roadmap.json separee)",
-    "Ore Excavation dans les mods recents par defaut",
-    "Fix valeurs par defaut coherentes avec launcher_config.json"
+    "Tableau de bord : stats de jeu, statut serveur, infos modpack",
+    "Theme clair optionnel (Parametres > Apparence)",
+    "Dialogs non-bloquants (deconnexion, reparation, suppression)"
   ]
 }
