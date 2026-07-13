@@ -1,9 +1,22 @@
 {
-  "_comment": "Edite ce fichier et pousse sur GitHub pour mettre a jour le launcher sans recompiler.",
+  "_comment": "Edite ce fichier et pousse avec push_github.bat — le launcher le recharge au prochain demarrage. Aucune recompilation requise.",
+
+  "announcement": {
+    "enabled": false,
+    "message": "🔧 Maintenance prévue dimanche à 20h",
+    "color": "warn"
+  },
+
+  "web": {
+    "url": "https://leimmingz.github.io/Petravox-modpack/",
+    "label": "Site Petravox",
+    "map_url": "",
+    "map_label": "Carte du serveur"
+  },
 
   "whats_new": [
     "Onglet Ressources : gere tes resource packs et shader packs",
-    "Onglet Web : site Petravox integre dans le launcher",
+    "Onglet Web : site et carte interactive dans le launcher",
     "Skin Minecraft reel affiche dans la sidebar",
     "Clic sur l'avatar pour acceder a ton compte Microsoft",
     "Carrousel : glisser gauche/droite pour naviguer"
@@ -25,5 +38,35 @@
       "name": "Double Door",
       "desc": "Les deux portes d'une double porte s'ouvrent ensemble"
     }
-  ]
+  ],
+
+  "roadmap": [
+    {
+      "icon": "🗺️",
+      "title": "Carte BlueMap",
+      "desc": "Carte 3D du serveur en direct dans le launcher",
+      "status": "En cours"
+    },
+    {
+      "icon": "🚀",
+      "title": "Launcher v2.7",
+      "desc": "Tableau de bord stats de jeu, thème clair optionnel",
+      "status": "Planifié"
+    }
+  ],
+
+  "server": {
+    "host": "srv01.uniheberg.fr",
+    "port": 25540,
+    "display_name": "Petravox",
+    "motd": "Survie moddé — Fantasy vs. Science"
+  },
+
+  "links": {
+    "discord": "",
+    "site": "https://leimmingz.github.io/Petravox-modpack/",
+    "github": "https://github.com/Leimmingz/Petravox-modpack"
+  },
+
+  "changelog_extra": []
 }
