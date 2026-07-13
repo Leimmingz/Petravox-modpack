@@ -1,10 +1,10 @@
 {
-  "version": "2.7.0",
+  "version": "2.7.1",
   "exe_url": "https://github.com/Leimmingz/Petravox-modpack/releases/latest/download/Petravox.Launcher.exe",
   "url": "https://github.com/Leimmingz/Petravox-modpack/releases",
   "changelog": [
+    "Fix auto-update : relancement depuis le bon repertoire (fix DLL python312)",
     "Tableau de bord : stats de jeu, statut serveur, infos modpack",
-    "Theme clair optionnel (Parametres > Apparence)",
-    "Dialogs non-bloquants (deconnexion, reparation, suppression)"
+    "Theme clair optionnel (Parametres > Apparence)"
   ]
 }
