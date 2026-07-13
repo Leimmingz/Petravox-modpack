@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "🌲",
+    "title": "Falling Tree",
+    "desc": "Les arbres tombent entiers d'un seul coup de hache",
+    "status": "Ajouté"
+  },
+  {
+    "icon": "⛏️",
+    "title": "Ore Vein Miner",
+    "desc": "Mine un filon de minerai entier en un clic",
+    "status": "Ajouté"
+  },
+  {
+    "icon": "🚪",
+    "title": "Double Door",
+    "desc": "Les deux portes d'une double porte s'ouvrent ensemble",
+    "status": "Ajouté"
+  },
+  {
+    "icon": "🚀",
+    "title": "Launcher v2.6",
+    "desc": "Thème clair optionnel, stats de jeu dans A propos",
+    "status": "Planifié"
+  },
+  {
+    "icon": "🧩",
+    "title": "Optimisation mods",
+    "desc": "Tests de performance sur les mods lourds (Create, IE)",
+    "status": "En cours"
+  }
+]
