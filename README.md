@@ -11,7 +11,7 @@
 [![Launcher](https://img.shields.io/badge/Launcher-v2.4.0-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
-*Serveur privé sur invitation · Hébergé sur UniHeberg (France)*
+Hébergé sur UniHeberg (France)*
 
 </div>
 
@@ -60,9 +60,6 @@ Petravox-modpack/
 │   └── launcher/
 │       ├── version.json            # Version actuelle du launcher
 │       └── Petravox Launcher.exe   # Exe distribué via GitHub Pages
-├── launcher/
-│   ├── petravox_launcher.py        # Code source du launcher
-│   └── compiler_en_exe.bat         # Script de compilation PyInstaller
 └── README.md
 ```
 
@@ -86,48 +83,6 @@ Le serveur est en **whitelist** (sur invitation uniquement).
 2. Connecte ton compte Microsoft
 3. Clique sur **Jouer** — le launcher installe tout automatiquement
 4. Adresse du serveur : `srv01.uniheberg.fr:25540`
-
----
-
-## Compiler le launcher
-
-Nécessite Python 3.10+ et les dépendances :
-
-```bash
-pip install customtkinter minecraft-launcher-lib pillow requests pyinstaller
-```
-
-Puis dans le dossier `launcher/` :
-
-```bat
-compiler_en_exe.bat
-```
-
-L'exe généré se trouve dans `launcher/dist/`.
-
----
-
-## Publier une mise à jour du launcher
-
-1. Modifier `LAUNCHER_VERSION` dans `petravox_launcher.py`
-2. Ajouter les entrées dans `CHANGELOG` (dans le même fichier)
-3. Compiler avec `compiler_en_exe.bat`
-4. Copier l'exe dans `docs/launcher/`
-5. Mettre à jour `docs/launcher/version.json` :
-
-```json
-{
-  "version": "2.4.0",
-  "exe_url": "https://leimmingz.github.io/Petravox-modpack/launcher/Petravox%20Launcher.exe",
-  "url": "https://github.com/Leimmingz/Petravox-modpack/releases"
-}
-```
-
-6. `git add . && git commit -m "launcher v2.4.0" && git push`
-
-Les utilisateurs recevront la notification automatiquement au prochain lancement.
-
----
 
 ## Changelog
 
