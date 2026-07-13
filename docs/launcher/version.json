@@ -1,11 +1,10 @@
 {
-  "version": "2.6.3",
+  "version": "2.6.4",
   "exe_url": "https://github.com/Leimmingz/Petravox-modpack/releases/latest/download/Petravox.Launcher.exe",
   "url": "https://github.com/Leimmingz/Petravox-modpack/releases",
   "changelog": [
-    "Toast de bienvenue au demarrage",
-    "Bandeau orange si le launcher n'est pas a jour",
-    "Carte changelog dans la page Jouer quand une MAJ est dispo",
-    "Suppression de la messagebox bloquante"
+    "Roadmap affichee par defaut (sans roadmap.json separee)",
+    "Ore Excavation dans les mods recents par defaut",
+    "Fix valeurs par defaut coherentes avec launcher_config.json"
   ]
 }
