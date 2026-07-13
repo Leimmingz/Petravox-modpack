@@ -8,7 +8,7 @@
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62b47a?style=flat-square&logo=minecraft&logoColor=white)](https://minecraft.net)
 [![Forge](https://img.shields.io/badge/Forge-47.4.10-e04a00?style=flat-square)](https://files.minecraftforge.net)
-[![Launcher](https://img.shields.io/badge/Launcher-v2.8.7-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
+[![Launcher](https://img.shields.io/badge/Launcher-v2.8.8-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
 [![Site](https://img.shields.io/badge/Site-leimmingz.github.io-9f5cf7?style=flat-square)](https://leimmingz.github.io/Petravox-modpack/)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
@@ -89,7 +89,12 @@ Le launcher le télécharge et l'installe automatiquement. En cas de mise à jou
 
 ## Changelog
 
-### v2.8.7 — 13 juillet 2026 ← actuelle
+### v2.8.8 — 13 juillet 2026 ← actuelle
+- Fix historique des lancements : sessions orphelines (launcher tué par auto-update) affichent la durée estimée au lieu de "En cours..."
+- Fix : `< 1 min` affiché pour les sessions très courtes
+- Fix durée avec "Fermer au lancement" : thread de suivi survit à la destruction de la fenêtre
+
+### v2.8.7 — 13 juillet 2026
 - Auto-updater définitif : `taskkill /F`, timeout 5s, 5 retries sur `move`, `start /D` — plus d'erreur DLL possible
 
 ### v2.8.6 — 13 juillet 2026

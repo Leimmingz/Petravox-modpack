@@ -1,8 +1,9 @@
 {
-  "version": "2.8.7",
+  "version": "2.8.8",
   "exe_url": "https://github.com/Leimmingz/Petravox-modpack/releases/latest/download/Petravox.Launcher.exe",
   "url": "https://github.com/Leimmingz/Petravox-modpack/releases",
   "changelog": [
-    "Auto-updater definitif : taskkill + 5s + 5 retries move + start /D — plus d'erreur DLL possible"
+    "Fix historique des lancements : sessions orphelines converties en duree estimee (plus de 'En cours...' bloque)",
+    "Fix : '< 1 min' affiche pour les sessions tres courtes"
   ]
 }
