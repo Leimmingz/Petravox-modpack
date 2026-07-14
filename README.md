@@ -8,7 +8,7 @@
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62b47a?style=flat-square&logo=minecraft&logoColor=white)](https://minecraft.net)
 [![Forge](https://img.shields.io/badge/Forge-47.4.10-e04a00?style=flat-square)](https://files.minecraftforge.net)
-[![Launcher](https://img.shields.io/badge/Launcher-v2.8.8-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
+[![Launcher](https://img.shields.io/badge/Launcher-v2.8.9-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
 [![Site](https://img.shields.io/badge/Site-leimmingz.github.io-9f5cf7?style=flat-square)](https://leimmingz.github.io/Petravox-modpack/)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
@@ -89,7 +89,15 @@ Le launcher le télécharge et l'installe automatiquement. En cas de mise à jou
 
 ## Changelog
 
-### v2.8.8 — 13 juillet 2026 ← actuelle
+### v2.8.9 — 14 juillet 2026 ← actuelle
+- Perf : lazy loading des onglets — seul l'onglet Jouer est construit au démarrage (ouverture ~3× plus rapide)
+- Perf : threads réseau (vérif MAJ, poll serveur) démarrés après 1–2 s pour ne pas bloquer l'affichage initial
+- Perf : particules VFX réduites de 38 à 20, intervalle d'animation 33 ms → 50 ms
+- Perf : `import random` sorti de la boucle d'animation (économie ~3 ms/frame)
+- Fix auth Microsoft : nouveau CLIENT_ID Azure (app `7e72ec82`) — l'ancien avait été restreint
+- Nouveau : pulse du bouton JOUER ralenti (40 ms → 80 ms) pour moins de charge CPU
+
+### v2.8.8 — 13 juillet 2026
 - Fix historique des lancements : sessions orphelines (launcher tué par auto-update) affichent la durée estimée au lieu de "En cours..."
 - Fix : `< 1 min` affiché pour les sessions très courtes
 - Fix durée avec "Fermer au lancement" : thread de suivi survit à la destruction de la fenêtre

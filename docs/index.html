@@ -103,6 +103,7 @@
     .tag-new { color: var(--new); background: #052e16; }
     .tag-fix { color: var(--fix); background: #0c1a3a; }
     .tag-audit { color: var(--audit); background: #2d1f00; }
+    .tag-perf  { color: #a3e635;     background: #14291a; }
     .cl-entry span { font-size: 13px; color: var(--text); line-height: 1.4; }
 
     /* FAQ */
@@ -148,7 +149,7 @@
 
   <div class="status-row">
     <div class="badge"><div class="dot" id="srv-dot"></div> Serveur&nbsp;: <strong id="srv-status">Vérification...</strong></div>
-    <div class="badge"><div class="dot green"></div> Launcher : <strong>v2.8.8</strong></div>
+    <div class="badge"><div class="dot green"></div> Launcher : <strong>v2.8.9</strong></div>
     <div class="badge">⬇ <strong id="dl-count">...</strong> téléchargements</div>
   </div>
 
@@ -394,10 +395,24 @@
 
   <div class="cl-version">
     <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.8 <span style="color:#22c55e;font-size:11px;margin-left:8px">← actuelle</span></h3>
-      <span class="cl-date">13 juillet 2026</span>
+      <h3>v2.8.9 <span style="color:#22c55e;font-size:11px;margin-left:8px">← actuelle</span></h3>
+      <span class="cl-date">14 juillet 2026</span>
     </div>
     <div class="cl-body">
+      <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span>Lazy loading des onglets : seul l'onglet Jouer est construit au démarrage — ouverture ~3× plus rapide</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span>Threads réseau (vérif MAJ, poll serveur) démarrés après 1–2 s pour ne pas bloquer l'affichage initial</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span>Particules VFX réduites de 38 à 20, intervalle animation 33 ms → 50 ms, pulse bouton 40 ms → 80 ms</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span><code>import random</code> sorti de la boucle d'animation (~3 ms économisés par frame)</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auth Microsoft : nouveau CLIENT_ID Azure (<code>7e72ec82</code>) — l'ancien avait été restreint</span></div>
+    </div>
+  </div>
+
+  <div class="cl-version">
+    <div class="cl-header" onclick="toggleCl(this)">
+      <h3>v2.8.8</h3>
+      <span class="cl-date">13 juillet 2026</span>
+    </div>
+    <div class="cl-body" style="display:none">
       <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Historique des lancements : sessions orphelines (launcher tué par auto-update) affichent la durée estimée au lieu de "En cours..."</span></div>
       <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Durée avec "Fermer au lancement" : le suivi de session survit à la fermeture de la fenêtre</span></div>
       <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span><code>&lt; 1 min</code> affiché pour les sessions très courtes (au lieu de <code>0 min</code>)</span></div>
