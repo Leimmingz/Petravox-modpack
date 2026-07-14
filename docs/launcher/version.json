@@ -3,8 +3,11 @@
   "exe_url": "https://github.com/Leimmingz/Petravox-modpack/releases/latest/download/Petravox.Launcher.exe",
   "url": "https://github.com/Leimmingz/Petravox-modpack/releases",
   "changelog": [
-    "Perf : particules VFX deplacees avec coords() au lieu de delete+create — 10x plus rapide",
-    "Perf : pulse bouton JOUER ralenti a 150ms — quasi-zero charge CPU",
-    "Fix auth Microsoft : TENANT passe a 'common' pour compatibilite comptes personnels"
+    "Fix auth : URL verification_uri correcte (microsoft.com/link) — code invalide corrige",
+    "Fix auth : header Accept ajouté a login_with_xbox (fix erreur 403 Minecraft)",
+    "Fix : rectangles noirs au changement d'onglet corrigés",
+    "Fix auto-updater bat : relancement apres MAJ corrige",
+    "Perf : VFX avec coords() — 10x moins de charge tkinter",
+    "Perf : pulse bouton JOUER a 150ms — quasi-zero CPU"
   ]
 }

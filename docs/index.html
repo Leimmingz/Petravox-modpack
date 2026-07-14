@@ -399,9 +399,12 @@
       <span class="cl-date">14 juillet 2026</span>
     </div>
     <div class="cl-body">
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auth Microsoft : <code>verification_uri</code> correcte utilisée pour ouvrir le navigateur — le code était invalide car la mauvaise page Microsoft s'ouvrait</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auth Microsoft : header <code>Accept: application/json</code> ajouté à <code>login_with_xbox</code> — fix erreur 403 Minecraft</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Changement d'onglet : rectangles noirs/flash corrigés (<code>update_idletasks</code> après pack)</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auto-updater bat : <code>setlocal enabledelayedexpansion</code> + <code>!TRIES!</code> — relancement après MAJ cassé corrigé</span></div>
       <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span>Particules VFX déplacées avec <code>coords()</code> au lieu de <code>delete+create_oval</code> chaque frame — 10× moins de charge tkinter</span></div>
       <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span>Pulse du bouton JOUER à 150 ms — quasi-zéro charge CPU</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auth Microsoft : <code>TENANT = "common"</code> pour compatibilité comptes personnels</span></div>
     </div>
   </div>
 

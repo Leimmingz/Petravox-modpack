@@ -90,9 +90,12 @@ Le launcher le télécharge et l'installe automatiquement. En cas de mise à jou
 ## Changelog
 
 ### v2.8.10 — 14 juillet 2026 ← actuelle
+- Fix auth Microsoft : `verification_uri` correcte utilisée pour ouvrir le navigateur — le code était invalide car la mauvaise page Microsoft s'ouvrait
+- Fix auth Microsoft : header `Accept: application/json` ajouté à `login_with_xbox` (fix erreur 403)
+- Fix : rectangles noirs/flash au changement d'onglet corrigés (`update_idletasks`)
+- Fix auto-updater bat : `setlocal enabledelayedexpansion` + `!TRIES!` (relancement après MAJ cassé corrigé)
 - Perf : particules VFX déplacées avec `coords()` au lieu de `delete`+`create_oval` chaque frame — 10× moins de charge tkinter
 - Perf : pulse du bouton JOUER à 150 ms (quasi-zéro CPU)
-- Fix auth Microsoft : `TENANT = "common"` pour compatibilité comptes personnels Microsoft
 
 ### v2.8.9 — 14 juillet 2026
 - Perf : lazy loading des onglets — seul l'onglet Jouer est construit au démarrage (ouverture ~3× plus rapide)
