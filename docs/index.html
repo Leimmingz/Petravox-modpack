@@ -149,7 +149,7 @@
 
   <div class="status-row">
     <div class="badge"><div class="dot" id="srv-dot"></div> Serveur&nbsp;: <strong id="srv-status">Vérification...</strong></div>
-    <div class="badge"><div class="dot green"></div> Launcher : <strong>v2.8.9</strong></div>
+    <div class="badge"><div class="dot green"></div> Launcher : <strong>v2.8.10</strong></div>
     <div class="badge">⬇ <strong id="dl-count">...</strong> téléchargements</div>
   </div>
 
@@ -395,10 +395,22 @@
 
   <div class="cl-version">
     <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.9 <span style="color:#22c55e;font-size:11px;margin-left:8px">← actuelle</span></h3>
+      <h3>v2.8.10 <span style="color:#22c55e;font-size:11px;margin-left:8px">← actuelle</span></h3>
       <span class="cl-date">14 juillet 2026</span>
     </div>
     <div class="cl-body">
+      <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span>Particules VFX déplacées avec <code>coords()</code> au lieu de <code>delete+create_oval</code> chaque frame — 10× moins de charge tkinter</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span>Pulse du bouton JOUER à 150 ms — quasi-zéro charge CPU</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auth Microsoft : <code>TENANT = "common"</code> pour compatibilité comptes personnels</span></div>
+    </div>
+  </div>
+
+  <div class="cl-version">
+    <div class="cl-header" onclick="toggleCl(this)">
+      <h3>v2.8.9</h3>
+      <span class="cl-date">14 juillet 2026</span>
+    </div>
+    <div class="cl-body" style="display:none">
       <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span>Lazy loading des onglets : seul l'onglet Jouer est construit au démarrage — ouverture ~3× plus rapide</span></div>
       <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span>Threads réseau (vérif MAJ, poll serveur) démarrés après 1–2 s pour ne pas bloquer l'affichage initial</span></div>
       <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span>Particules VFX réduites de 38 à 20, intervalle animation 33 ms → 50 ms, pulse bouton 40 ms → 80 ms</span></div>

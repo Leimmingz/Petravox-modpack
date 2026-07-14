@@ -1,14 +1,10 @@
 {
-  "version": "2.8.9",
+  "version": "2.8.10",
   "exe_url": "https://github.com/Leimmingz/Petravox-modpack/releases/latest/download/Petravox.Launcher.exe",
   "url": "https://github.com/Leimmingz/Petravox-modpack/releases",
   "changelog": [
-    "Perf : chargement des onglets a la demande (lazy loading) — ouverture 3x plus rapide",
-    "Perf : threads reseau (MAJ, serveur) demarres avec delai — UI affichee immediatement",
-    "Perf : particules reduites (38 -> 20), intervalles animation allonges (33ms -> 50ms)",
-    "Perf : import random retire de la boucle d'animation (-3ms/frame)",
-    "Fix : nouvel Azure App pour l'auth Microsoft (CLIENT_ID 7e72ec82)",
-    "Fix : sessions orphelines converties en duree estimee (plus de 'En cours...' bloque)",
-    "Fix : duree sauvegardee meme avec 'Fermer au lancement' active"
+    "Perf : particules VFX deplacees avec coords() au lieu de delete+create — 10x plus rapide",
+    "Perf : pulse bouton JOUER ralenti a 150ms — quasi-zero charge CPU",
+    "Fix auth Microsoft : TENANT passe a 'common' pour compatibilite comptes personnels"
   ]
 }
