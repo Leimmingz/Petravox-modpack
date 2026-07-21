@@ -1,13 +1,11 @@
 {
-  "version": "2.8.10",
+  "version": "2.8.11",
   "exe_url": "https://github.com/Leimmingz/Petravox-modpack/releases/latest/download/Petravox.Launcher.exe",
   "url": "https://github.com/Leimmingz/Petravox-modpack/releases",
   "changelog": [
-    "Fix auth : URL verification_uri correcte (microsoft.com/link) — code invalide corrige",
-    "Fix auth : header Accept ajouté a login_with_xbox (fix erreur 403 Minecraft)",
-    "Fix : rectangles noirs au changement d'onglet corrigés",
-    "Fix auto-updater bat : relancement apres MAJ corrige",
-    "Perf : VFX avec coords() — 10x moins de charge tkinter",
-    "Perf : pulse bouton JOUER a 150ms — quasi-zero CPU"
+    "Nouveau : fade-in fluide au démarrage (300 ms)",
+    "Nouveau : crossfade au changement d'onglet (plus de flash/rectangles noirs)",
+    "Nouveau : toasts en slide-in depuis la droite",
+    "Fix auth Microsoft : CLIENT_ID Xbox App + endpoints login.live.com"
   ]
 }
