@@ -19,24 +19,24 @@
     "Galerie de screenshots : miniatures cliquables, onglet dédié",
     "Achievements dans le tableau de bord (sessions, heures jouées)",
     "Notifications ami en ligne : toast quand un joueur rejoint",
-    "Theme clair optionnel dans Parametres > Apparence"
+    "Thème clair optionnel dans Paramètres > Apparence"
   ],
 
   "mods_recents": [
     {
-      "icon": "🌲",
-      "name": "Falling Tree",
-      "desc": "Les arbres tombent entiers d'un seul coup de hache"
+      "icon": "🎙️",
+      "name": "Plasmo Voice",
+      "desc": "Vous pouvez entendre les gens à proximité"
     },
     {
-      "icon": "⛏️",
-      "name": "Ore Excavation",
-      "desc": "Mine un filon de minerai entier en un clic"
+      "icon": "🏠",
+      "name": "MineColonies",
+      "desc": "Vous permet de devenir un maire de ville exemplaire"
     },
     {
-      "icon": "🚪",
-      "name": "Double Door",
-      "desc": "Les deux portes d'une double porte s'ouvrent ensemble"
+      "icon": "🎙️",
+      "name": "Ars News",
+      "desc": "Permet de lancer des sorts et d'en créer"
     }
   ],
 
