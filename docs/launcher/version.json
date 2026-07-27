@@ -1,11 +1,9 @@
 {
-  "version": "2.8.11",
+  "version": "2.8.12",
   "exe_url": "https://github.com/Leimmingz/Petravox-modpack/releases/latest/download/Petravox.Launcher.exe",
   "url": "https://github.com/Leimmingz/Petravox-modpack/releases",
   "changelog": [
-    "Nouveau : fade-in fluide au démarrage (300 ms)",
-    "Nouveau : crossfade au changement d'onglet (plus de flash/rectangles noirs)",
-    "Nouveau : toasts en slide-in depuis la droite",
-    "Fix auth Microsoft : CLIENT_ID Xbox App + endpoints login.live.com"
+    "Fix auth : token Minecraft rafraîchi automatiquement au démarrage — corrige les déconnexions en jeu après redémarrage du launcher",
+    "Fix auth : session proprement invalidée si le refresh échoue"
   ]
 }

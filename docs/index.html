@@ -149,7 +149,7 @@
 
   <div class="status-row">
     <div class="badge"><div class="dot" id="srv-dot"></div> Serveur&nbsp;: <strong id="srv-status">Vérification...</strong></div>
-    <div class="badge"><div class="dot green"></div> Launcher : <strong>v2.8.11</strong></div>
+    <div class="badge"><div class="dot green"></div> Launcher : <strong>v2.8.12</strong></div>
     <div class="badge">⬇ <strong id="dl-count">...</strong> téléchargements</div>
   </div>
 
@@ -289,104 +289,7 @@
 <!-- MODS PHARES -->
 <section id="mods">
   <div class="section-title">Mods phares</div>
-  <div class="mods-grid">
-    <div class="mod-card">
-      <div class="mod-icon" style="background:#1a2e1a">⚙️</div>
-      <div>
-        <h4>Create</h4>
-        <p>Automatisation mécanique avec engrenages, convoyeurs et machines à vapeur.</p>
-        <span class="mod-tag">Technologie</span>
-      </div>
-    </div>
-    <div class="mod-card">
-      <div class="mod-icon" style="background:#1a1a2e">🔬</div>
-      <div>
-        <h4>Mekanism</h4>
-        <p>Suite industrielle complète : machines, générateurs, outils, armes et armures high-tech.</p>
-        <span class="mod-tag">Industrie</span>
-      </div>
-    </div>
-    <div class="mod-card">
-      <div class="mod-icon" style="background:#2e2a1a">⚒️</div>
-      <div>
-        <h4>Tinkers' Construct</h4>
-        <p>Fabrique des outils et armes entièrement personnalisés avec des matériaux combinables.</p>
-        <span class="mod-tag">Artisanat</span>
-      </div>
-    </div>
-    <div class="mod-card">
-      <div class="mod-icon" style="background:#2e1a2e">🧙</div>
-      <div>
-        <h4>Iron's Spells 'n Spellbooks</h4>
-        <p>Système de magie complet : sorts, livres de sorts, baguettes et classes magiques.</p>
-        <span class="mod-tag">Magie</span>
-      </div>
-    </div>
-    <div class="mod-card">
-      <div class="mod-icon" style="background:#1a2e2e">🦎</div>
-      <div>
-        <h4>Alex's Mobs & Caves</h4>
-        <p>Des dizaines de nouvelles créatures et biomes souterrains uniques à explorer.</p>
-        <span class="mod-tag">Exploration</span>
-      </div>
-    </div>
-    <div class="mod-card">
-      <div class="mod-icon" style="background:#0a0a1e">🚀</div>
-      <div>
-        <h4>Ad Astra</h4>
-        <p>Explore l'espace, construis des fusées et colonise d'autres planètes.</p>
-        <span class="mod-tag">Espace</span>
-      </div>
-    </div>
-    <div class="mod-card">
-      <div class="mod-icon" style="background:#2e1a1a">🥊</div>
-      <div>
-        <h4>Epic Fight</h4>
-        <p>Système de combat dynamique avec esquives, combos et animations fluides.</p>
-        <span class="mod-tag">Combat</span>
-      </div>
-    </div>
-    <div class="mod-card">
-      <div class="mod-icon" style="background:#1a2a1a">🍽️</div>
-      <div>
-        <h4>Farmer's Delight + 10 addons</h4>
-        <p>Cuisine enrichie : cultures, recettes, boissons, poissons, desserts et plus encore.</p>
-        <span class="mod-tag">Nourriture</span>
-      </div>
-    </div>
-    <div class="mod-card">
-      <div class="mod-icon" style="background:#2e2e1a">🏰</div>
-      <div>
-        <h4>When Dungeons Arise</h4>
-        <p>Donjons gigantesques générés dans le monde, remplis de monstres et de trésors.</p>
-        <span class="mod-tag">Donjons</span>
-      </div>
-    </div>
-    <div class="mod-card">
-      <div class="mod-icon" style="background:#1a1a2e">🌍</div>
-      <div>
-        <h4>Biomes O' Plenty</h4>
-        <p>Des dizaines de nouveaux biomes uniques, de la forêt mystique aux plaines volcaniques.</p>
-        <span class="mod-tag">Monde</span>
-      </div>
-    </div>
-    <div class="mod-card">
-      <div class="mod-icon" style="background:#2e1a2e">👜</div>
-      <div>
-        <h4>Sophisticated Backpacks</h4>
-        <p>Sacs à dos améliorables avec filtres automatiques, tri et upgrades multiples.</p>
-        <span class="mod-tag">Stockage</span>
-      </div>
-    </div>
-    <div class="mod-card">
-      <div class="mod-icon" style="background:#2a1a0a">💀</div>
-      <div>
-        <h4>L_Ender's Cataclysm</h4>
-        <p>Boss colossaux et dimensions secrètes pour les joueurs cherchant un défi extrême.</p>
-        <span class="mod-tag">Boss</span>
-      </div>
-    </div>
-  </div>
+  <div class="mods-grid" id="mods-grid"></div>
 </section>
 
 <!-- CHANGELOG -->
@@ -395,7 +298,18 @@
 
   <div class="cl-version">
     <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.11 <span style="color:#22c55e;font-size:11px;margin-left:8px">← actuelle</span></h3>
+      <h3>v2.8.12 <span style="color:#22c55e;font-size:11px;margin-left:8px">← actuelle</span></h3>
+      <span class="cl-date">21 juillet 2026</span>
+    </div>
+    <div class="cl-body">
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auth : le token Minecraft est rafraîchi automatiquement au démarrage via <code>refresh_token</code> — corrige la déconnexion en jeu après avoir fermé/rouvert le launcher</span></div>
+      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auth : session proprement invalidée si le renouvellement échoue, au lieu de garder un compte affiché "connecté" avec un token expiré</span></div>
+    </div>
+  </div>
+
+  <div class="cl-version">
+    <div class="cl-header" onclick="toggleCl(this)">
+      <h3>v2.8.11</h3>
       <span class="cl-date">21 juillet 2026</span>
     </div>
     <div class="cl-body">
@@ -752,6 +666,70 @@
 </footer>
 
 <script>
+  // ── MODS PHARES ────────────────────────────────────────────────────────────
+  // Pour ajouter/modifier/retirer un mod : édite juste ce tableau, rien d'autre
+  // à toucher. icon = emoji, bg = couleur de fond de la pastille (hex sombre).
+  const MODS_PHARES = [
+    { icon: "⚙️", bg: "#1a2e1a", name: "Create",
+      desc: "Automatisation mécanique avec engrenages, convoyeurs et machines à vapeur.",
+      tag: "Technologie" },
+    { icon: "🔬", bg: "#1a1a2e", name: "Mekanism",
+      desc: "Suite industrielle complète : machines, générateurs, outils, armes et armures high-tech.",
+      tag: "Industrie" },
+    { icon: "⚒️", bg: "#2e2a1a", name: "Tinkers' Construct",
+      desc: "Fabrique des outils et armes entièrement personnalisés avec des matériaux combinables.",
+      tag: "Artisanat" },
+    { icon: "🧙", bg: "#2e1a2e", name: "Iron's Spells 'n Spellbooks",
+      desc: "Système de magie complet : sorts, livres de sorts, baguettes et classes magiques.",
+      tag: "Magie" },
+    { icon: "🦎", bg: "#1a2e2e", name: "Alex's Mobs & Caves",
+      desc: "Des dizaines de nouvelles créatures et biomes souterrains uniques à explorer.",
+      tag: "Exploration" },
+    { icon: "🚀", bg: "#0a0a1e", name: "Ad Astra",
+      desc: "Explore l'espace, construis des fusées et colonise d'autres planètes.",
+      tag: "Espace" },
+    { icon: "🥊", bg: "#2e1a1a", name: "Epic Fight",
+      desc: "Système de combat dynamique avec esquives, combos et animations fluides.",
+      tag: "Combat" },
+    { icon: "🍽️", bg: "#1a2a1a", name: "Farmer's Delight + 10 addons",
+      desc: "Cuisine enrichie : cultures, recettes, boissons, poissons, desserts et plus encore.",
+      tag: "Nourriture" },
+    { icon: "🏰", bg: "#2e2e1a", name: "When Dungeons Arise",
+      desc: "Donjons gigantesques générés dans le monde, remplis de monstres et de trésors.",
+      tag: "Donjons" },
+    { icon: "🌍", bg: "#1a1a2e", name: "Biomes O' Plenty",
+      desc: "Des dizaines de nouveaux biomes uniques, de la forêt mystique aux plaines volcaniques.",
+      tag: "Monde" },
+    { icon: "👜", bg: "#2e1a2e", name: "Sophisticated Backpacks",
+      desc: "Sacs à dos améliorables avec filtres automatiques, tri et upgrades multiples.",
+      tag: "Stockage" },
+    { icon: "💀", bg: "#2a1a0a", name: "L_Ender's Cataclysm",
+      desc: "Boss colossaux et dimensions secrètes pour les joueurs cherchant un défi extrême.",
+      tag: "Boss" },
+    { icon: "🎙️", bg: "#1a1a2e", name: "Plasmo Voice",
+      desc: "Chat vocal spatial in-game — entends les joueurs proches de toi.",
+      tag: "Communication" },
+    { icon: "🏘️", bg: "#2e2a1a", name: "MineColonies",
+      desc: "Construis et gère une colonie entière avec des PNJ travailleurs.",
+      tag: "Construction" },
+  ];
+
+  function renderModsPhares() {
+    const grid = document.getElementById("mods-grid");
+    if (!grid) return;
+    grid.innerHTML = MODS_PHARES.map(m => `
+      <div class="mod-card">
+        <div class="mod-icon" style="background:${m.bg}">${m.icon}</div>
+        <div>
+          <h4>${m.name}</h4>
+          <p>${m.desc}</p>
+          <span class="mod-tag">${m.tag}</span>
+        </div>
+      </div>
+    `).join("");
+  }
+  renderModsPhares();
+
   function toggleCl(header) {
     const body = header.nextElementSibling;
     const isOpen = body.style.display !== 'none' && body.style.display !== '';

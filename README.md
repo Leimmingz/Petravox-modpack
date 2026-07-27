@@ -8,7 +8,7 @@
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62b47a?style=flat-square&logo=minecraft&logoColor=white)](https://minecraft.net)
 [![Forge](https://img.shields.io/badge/Forge-47.4.10-e04a00?style=flat-square)](https://files.minecraftforge.net)
-[![Launcher](https://img.shields.io/badge/Launcher-v2.8.11-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
+[![Launcher](https://img.shields.io/badge/Launcher-v2.8.12-7c3aed?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases)
 [![Site](https://img.shields.io/badge/Site-leimmingz.github.io-9f5cf7?style=flat-square)](https://leimmingz.github.io/Petravox-modpack/)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
@@ -89,7 +89,11 @@ Le launcher le télécharge et l'installe automatiquement. En cas de mise à jou
 
 ## Changelog
 
-### v2.8.11 — 21 juillet 2026 ← actuelle
+### v2.8.12 — 21 juillet 2026 ← actuelle
+- Fix auth : token Minecraft rafraîchi automatiquement au démarrage via `refresh_token` — corrige la déconnexion en jeu après avoir fermé/rouvert le launcher (le launcher affichait "connecté" avec un token expiré)
+- Fix auth : session proprement invalidée si le refresh échoue, au lieu de garder un compte "connecté" avec un token mort
+
+### v2.8.11 — 21 juillet 2026
 - Nouveau : fade-in fluide au démarrage (0→1 en 300 ms) au lieu d'apparition instantanée
 - Nouveau : crossfade subtil au changement d'onglet — plus de flash ni de rectangles noirs
 - Nouveau : toasts en slide-in depuis la droite
