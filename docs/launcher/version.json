@@ -1,8 +1,0 @@
-{
-  "version": "2.8.13",
-  "exe_url": "https://github.com/Leimmingz/Petravox-modpack/releases/latest/download/Petravox.Launcher.exe",
-  "url": "https://github.com/Leimmingz/Petravox-modpack/releases",
-  "changelog": [
-    "Fix auto-updater : le launcher redémarre enfin correctement après avoir téléchargé une mise à jour"
-  ]
-}
