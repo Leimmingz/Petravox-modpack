@@ -1,0 +1,12 @@
+# Dépendances des outils de génération : réinstallables avec `npm install`,
+# elles n'ont rien à faire dans le dépôt du site.
+node_modules/
+
+# Systèmes
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Sorties temporaires
+*.log
+*.tmp
