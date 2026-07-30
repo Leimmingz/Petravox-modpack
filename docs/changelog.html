@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Changelog — Petravox</title>
+    <meta
+      name="description"
+      content="Historique des versions du launcher Petravox : nouveautés, correctifs et améliorations de performances."
+    />
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="wrap nav-inner">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="" />
+          <span>PETRAVOX</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="mods.html">Mods</a></li>
+          <li><a href="changelog.html" aria-current="page">Changelog</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li>
+            <a href="https://github.com/Leimmingz/Petravox-modpack" target="_blank" rel="noopener">
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="wrap hero" style="padding-bottom: var(--sp-6)">
+      <p class="section-label">Launcher</p>
+      <h1 style="font-size: var(--fs-2xl)">Historique des versions</h1>
+      <p class="lead">
+        Cette page est générée depuis le changelog du launcher : elle affiche exactement ce que
+        voient les joueurs dans l’application.
+      </p>
+    </header>
+
+    <div class="wrap" style="padding-bottom: var(--sp-9)">
+      <div data-changelog>
+        <p class="muted">Chargement…</p>
+      </div>
+      <button class="btn" style="margin-top: var(--sp-5)" data-changelog-more hidden type="button">
+        Afficher les versions plus anciennes
+      </button>
+    </div>
+
+    <footer>
+      <div class="wrap row row-between" style="flex-wrap: wrap; gap: var(--sp-4)">
+        <span>© <span data-year>2026</span> Petravox · Propulsé par Zervox</span>
+        <span class="row" style="gap: var(--sp-4)">
+          <a href="index.html">Accueil</a>
+          <a href="mods.html">Mods</a>
+          <a href="https://github.com/Leimmingz/Petravox-modpack" target="_blank" rel="noopener">
+            GitHub
+          </a>
+        </span>
+      </div>
+    </footer>
+
+    <script type="module">
+      const LABELS = {
+        new: ['Nouveau', 'tag-new'],
+        fix: ['Correctif', 'tag-fix'],
+        perf: ['Perf', 'tag-perf'],
+        audit: ['Audit', 'tag-audit']
+      }
+
+      /** Nombre de versions affichées avant le bouton « plus anciennes ». */
+      const INITIAL = 6
+
+      const host = document.querySelector('[data-changelog]')
+      const more = document.querySelector('[data-changelog-more]')
+
+      function renderRelease(release, isLatest) {
+        const section = document.createElement('section')
+        section.className = 'release'
+
+        const head = document.createElement('div')
+        head.className = 'row row-between'
+        head.style.flexWrap = 'wrap'
+
+        const title = document.createElement('h3')
+        title.textContent = `v${release.version}`
+        head.append(title)
+
+        if (isLatest) {
+          const tag = document.createElement('span')
+          tag.className = 'tag tag-new'
+          tag.textContent = 'Version actuelle'
+          head.append(tag)
+        }
+
+        const spacer = document.createElement('span')
+        spacer.className = 'spacer'
+        head.append(spacer)
+
+        const date = document.createElement('span')
+        date.className = 'muted'
+        date.textContent = release.date
+        head.append(date)
+
+        const list = document.createElement('ul')
+        list.className = 'entries'
+        for (const entry of release.entries) {
+          const [label, cls] = LABELS[entry.kind] ?? ['Note', 'tag-audit']
+          const li = document.createElement('li')
+          const tag = document.createElement('span')
+          tag.className = `tag ${cls}`
+          tag.textContent = label
+          const text = document.createElement('span')
+          // textContent et pas innerHTML : le contenu vient d'un fichier généré,
+          // autant ne pas ouvrir la porte à une injection.
+          text.textContent = entry.text
+          li.append(tag, text)
+          list.append(li)
+        }
+
+        section.append(head, list)
+        return section
+      }
+
+      try {
+        const res = await fetch('data/changelog.json')
+        const { releases } = await res.json()
+
+        const draw = (count) => {
+          host.replaceChildren(
+            ...releases.slice(0, count).map((r, i) => renderRelease(r, i === 0))
+          )
+        }
+
+        draw(INITIAL)
+
+        if (releases.length > INITIAL) {
+          more.hidden = false
+          more.textContent = `Afficher les ${releases.length - INITIAL} versions plus anciennes`
+          more.addEventListener('click', () => {
+            draw(releases.length)
+            more.hidden = true
+          })
+        }
+      } catch {
+        host.innerHTML = '<p class="muted">Changelog indisponible pour le moment.</p>'
+      }
+
+      const year = document.querySelector('[data-year]')
+      if (year) year.textContent = String(new Date().getFullYear())
+    </script>
+  </body>
+</html>

@@ -1,0 +1,761 @@
+{
+  "generatedAt": "2026-07-30T20:53:51.515Z",
+  "releases": [
+    {
+      "version": "3.0.0",
+      "date": "30 juillet 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Launcher entièrement réécrit en Electron + React + TypeScript — plus aucune dépendance Python"
+        },
+        {
+          "kind": "new",
+          "text": "Vrai installeur Windows (NSIS) : raccourcis Bureau et menu Démarrer, entrée dans Programmes et fonctionnalités, choix du dossier d'installation"
+        },
+        {
+          "kind": "new",
+          "text": "Mises à jour automatiques différentielles (electron-updater) — fini le script .bat qui tuait le launcher pour se remplacer"
+        },
+        {
+          "kind": "new",
+          "text": "Java 17 installé automatiquement s'il est absent de la machine (runtime officiel Mojang)"
+        },
+        {
+          "kind": "new",
+          "text": "Reprise automatique de l'ancienne installation : compte, réglages et dossier .minecraft sont conservés"
+        },
+        {
+          "kind": "fix",
+          "text": "Mods : vérification d'empreinte sha512/sha1 (le launcher Python comparait un sha256 absent des packs Modrinth et retéléchargeait donc tous les mods à chaque lancement)"
+        },
+        {
+          "kind": "fix",
+          "text": "Mods : un mod qui échoue au téléchargement fait échouer le lancement avec un message clair, au lieu de démarrer un client incomplet"
+        },
+        {
+          "kind": "audit",
+          "text": "Tokens Microsoft chiffrés au repos (DPAPI) au lieu d'un auth.json en clair"
+        },
+        {
+          "kind": "audit",
+          "text": "contextIsolation activé, nodeIntegration désactivé, CSP stricte, liste blanche d'hôtes pour les téléchargements de mods et les liens externes"
+        },
+        {
+          "kind": "audit",
+          "text": "Journaux dans %APPDATA%\\Petravox\\logs, y compris la sortie complète de Minecraft"
+        },
+        {
+          "kind": "new",
+          "text": "Logo et identité visuelle Petravox : palette vert émeraude sur bleu nuit, jeu d'icônes SVG homogène"
+        },
+        {
+          "kind": "new",
+          "text": "Onglet Mods : liste des mods installés, recherche, activation et désactivation individuelle"
+        },
+        {
+          "kind": "new",
+          "text": "Fenêtre de diagnostic quand Minecraft plante, avec la fin du journal et un bouton « Copier pour Discord »"
+        },
+        {
+          "kind": "new",
+          "text": "Vérification d'intégrité des mods : ne retélécharge que les fichiers abîmés au lieu du modpack entier"
+        },
+        {
+          "kind": "new",
+          "text": "Sauvegarde des mondes en archive datée, hors de .minecraft, avec rotation sur 5 archives et sauvegarde automatique après chaque session"
+        },
+        {
+          "kind": "new",
+          "text": "Option « Rejoindre le serveur directement » : le jeu se connecte à Petravox sans passer par le menu multijoueur"
+        },
+        {
+          "kind": "new",
+          "text": "Préréglages mémoire « PC modeste », « Recommandé » et « PC costaud », adaptés à la RAM de la machine"
+        },
+        {
+          "kind": "new",
+          "text": "Notifications Windows quand un joueur se connecte, même launcher réduit"
+        },
+        {
+          "kind": "new",
+          "text": "Débit et temps restant affichés pendant le téléchargement du modpack"
+        },
+        {
+          "kind": "perf",
+          "text": "Mise à jour différentielle du modpack : seuls les mods réellement modifiés sont téléchargés, et ceux retirés du pack sont supprimés"
+        },
+        {
+          "kind": "new",
+          "text": "Interface entièrement redessinée : typographie plus contrastée, fond animé, moins de cadres et de bordures"
+        },
+        {
+          "kind": "new",
+          "text": "Transitions entre onglets, apparition en cascade des blocs, retour au clic sur le bouton JOUER"
+        },
+        {
+          "kind": "fix",
+          "text": "Carte web du serveur retirée du launcher"
+        },
+        {
+          "kind": "perf",
+          "text": "Chargement à la demande des onglets : le bundle de démarrage passe de 640 ko à 210 ko"
+        },
+        {
+          "kind": "perf",
+          "text": "Screenshots servis directement depuis le disque au lieu d'être encodés en base64 — l'onglet s'ouvre instantanément même avec 100+ captures"
+        },
+        {
+          "kind": "perf",
+          "text": "Progression du lancement isolée du reste de l'interface : plus de redessin complet à chaque mod téléchargé"
+        },
+        {
+          "kind": "perf",
+          "text": "Interrogation du serveur suspendue quand la fenêtre est en arrière-plan"
+        }
+      ]
+    },
+    {
+      "version": "2.8.13",
+      "date": "21 juillet 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Auto-updater : suppression du flag /T sur taskkill — il tuait le bat lui-même en plein milieu, empêchant tout redémarrage après téléchargement de la mise à jour"
+        }
+      ]
+    },
+    {
+      "version": "2.8.12",
+      "date": "21 juillet 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Auth : le token Minecraft est maintenant rafraîchi automatiquement au démarrage — corrige la déconnexion silencieuse en jeu après avoir fermé/rouvert le launcher"
+        },
+        {
+          "kind": "fix",
+          "text": "Auth : si le refresh échoue (session expirée), le compte est proprement déconnecté au lieu de garder un token mort"
+        }
+      ]
+    },
+    {
+      "version": "2.8.11",
+      "date": "21 juillet 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Ouverture : fade-in fluide (0→1 en 300 ms) au lieu d'apparition instantanée"
+        },
+        {
+          "kind": "new",
+          "text": "Changement d'onglet : crossfade subtil (dip alpha 3 frames) pour une transition propre"
+        },
+        {
+          "kind": "new",
+          "text": "Toast : slide-in depuis la droite au lieu d'apparition instantanée"
+        },
+        {
+          "kind": "fix",
+          "text": "Rectangles noirs au changement d'onglet définitivement corrigés"
+        },
+        {
+          "kind": "fix",
+          "text": "Auth Microsoft : CLIENT_ID Xbox App + endpoints login.live.com"
+        }
+      ]
+    },
+    {
+      "version": "2.8.10",
+      "date": "14 juillet 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Auth Microsoft : URL verification_uri correcte (microsoft.com/link) — code invalide sur la mauvaise page corrige"
+        },
+        {
+          "kind": "fix",
+          "text": "Auth Microsoft : header Accept ajouté à login_with_xbox (fix erreur 403 Minecraft)"
+        },
+        {
+          "kind": "fix",
+          "text": "Changement d'onglet : rectangles noirs/flash corrigés (update_idletasks apres pack)"
+        },
+        {
+          "kind": "fix",
+          "text": "Auto-updater bat : setlocal enabledelayedexpansion + !TRIES! (relancement cassé corrige)"
+        },
+        {
+          "kind": "perf",
+          "text": "VFX : particules déplacées avec coords() au lieu de delete+create — 10× moins de charge tkinter"
+        },
+        {
+          "kind": "perf",
+          "text": "Pulse bouton JOUER à 150 ms (quasi-zero charge CPU)"
+        }
+      ]
+    },
+    {
+      "version": "2.8.9",
+      "date": "14 juillet 2026",
+      "entries": [
+        {
+          "kind": "perf",
+          "text": "Lazy loading des onglets : seul l'onglet Jouer est construit au démarrage (ouverture ~3× plus rapide)"
+        },
+        {
+          "kind": "perf",
+          "text": "Threads réseau (vérif MAJ, poll serveur) démarrés après 1–2 s pour ne pas bloquer l'affichage initial"
+        },
+        {
+          "kind": "perf",
+          "text": "Particules VFX réduites à 15, intervalle animation 60 ms (équilibre fluidité/CPU)"
+        },
+        {
+          "kind": "perf",
+          "text": "import random sorti de la boucle d'animation VFX (économie ~3 ms/frame)"
+        },
+        {
+          "kind": "fix",
+          "text": "Auth Microsoft : nouveau CLIENT_ID Azure — l'ancien avait été restreint"
+        },
+        {
+          "kind": "perf",
+          "text": "Pulse bouton JOUER ralenti à 80 ms pour moins de charge CPU"
+        }
+      ]
+    },
+    {
+      "version": "2.8.8",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Historique : sessions orphelines (launcher tué par auto-update) converties en durée estimée au lieu de 'En cours...'"
+        },
+        {
+          "kind": "fix",
+          "text": "Historique : '< 1 min' affiché pour les sessions très courtes (au lieu de '0 min')"
+        },
+        {
+          "kind": "audit",
+          "text": "Timestamp de démarrage sauvegardé dans chaque entrée d'historique pour estimation de durée fiable"
+        }
+      ]
+    },
+    {
+      "version": "2.8.7",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "audit",
+          "text": "Auto-updater definitif : taskkill /F, timeout 5s, 5 retries sur move avec 2s d'attente chacun, start /D"
+        }
+      ]
+    },
+    {
+      "version": "2.8.6",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Auto-updater : taskkill de l'ancien exe avant remplacement + timeout 3s (fix python312.dll verrouille)"
+        }
+      ]
+    },
+    {
+      "version": "2.8.5",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "audit",
+          "text": "Poll serveur : flag `_poll_running` dedie (evite arret definitif apres changement de theme)"
+        },
+        {
+          "kind": "audit",
+          "text": "Poll serveur : thread redemarre apres changement de theme"
+        },
+        {
+          "kind": "fix",
+          "text": "_update_server_ui : try/except global (evite crash si appele pendant le rebuild UI)"
+        },
+        {
+          "kind": "fix",
+          "text": "Carrousel : couleurs de fondu adaptees au theme (plus de violet dur en theme clair)"
+        },
+        {
+          "kind": "fix",
+          "text": "Reinitialiser parametres : remet le theme sombre si theme clair actif"
+        }
+      ]
+    },
+    {
+      "version": "2.8.4",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Changement de theme : fenetre cachee pendant le rebuild (plus de flash clair/sombre)"
+        },
+        {
+          "kind": "fix",
+          "text": "Mods recents et roadmap conserves apres changement de theme (config en cache, pas de re-fetch)"
+        },
+        {
+          "kind": "fix",
+          "text": "Stats de jeu : valeurs correctement alignees sous leurs labels (Sessions / Temps de jeu)"
+        }
+      ]
+    },
+    {
+      "version": "2.8.3",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Auto-updater : `start /D` dans le bat de remplacement pour garantir le bon repertoire de travail (fix DLL _tkinter au relancement)"
+        }
+      ]
+    },
+    {
+      "version": "2.8.2",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Carousel : affiche les nouveautes de la derniere version avec des 'new' (evite carousel vide)"
+        },
+        {
+          "kind": "fix",
+          "text": "Roadmap : Launcher v2.7 retire du defaut hardcode"
+        }
+      ]
+    },
+    {
+      "version": "2.8.1",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "audit",
+          "text": "Auto-updater : comparaison de version par tuple (évite faux downgrades)"
+        },
+        {
+          "kind": "audit",
+          "text": "Auto-updater : guard contre double-clic, nettoyage du fichier partiel en cas d'erreur"
+        }
+      ]
+    },
+    {
+      "version": "2.8.0",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Timer de session live dans la sidebar (temps écoulé pendant le jeu)"
+        },
+        {
+          "kind": "new",
+          "text": "Galerie de screenshots : miniatures cliquables depuis le dossier Minecraft"
+        },
+        {
+          "kind": "new",
+          "text": "Achievements de jeu dans le tableau de bord (sessions, heures jouées)"
+        },
+        {
+          "kind": "new",
+          "text": "Notifications ami en ligne : toast quand un joueur rejoint le serveur"
+        }
+      ]
+    },
+    {
+      "version": "2.7.2",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Page Jouer : plus de grande zone vide sous le carrousel"
+        }
+      ]
+    },
+    {
+      "version": "2.7.1",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Auto-update : cd dans le dossier de l'exe avant relancement (fix DLL python312)"
+        }
+      ]
+    },
+    {
+      "version": "2.7.0",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Tableau de bord : stats de jeu, statut serveur, infos modpack"
+        },
+        {
+          "kind": "new",
+          "text": "Theme clair optionnel (toggle dans Parametres > Apparence)"
+        },
+        {
+          "kind": "fix",
+          "text": "Deconnexion / Reparer mods / Supprimer pack : dialogs non-bloquants"
+        },
+        {
+          "kind": "fix",
+          "text": "Config serveur lue depuis launcher_config.json (host, port)"
+        },
+        {
+          "kind": "audit",
+          "text": "Bug historique : duree de 0 min affichee correctement"
+        }
+      ]
+    },
+    {
+      "version": "2.6.6",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Roadmap : statut Bloque affiche en rouge (lu depuis launcher_config.json)"
+        }
+      ]
+    },
+    {
+      "version": "2.6.5",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Carrousel Nouveautes : hauteur compacte, plus d'espace vide"
+        }
+      ]
+    },
+    {
+      "version": "2.6.4",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Roadmap affichee par defaut (plus de roadmap.json separee)"
+        },
+        {
+          "kind": "fix",
+          "text": "Ore Excavation dans les mods recents par defaut"
+        }
+      ]
+    },
+    {
+      "version": "2.6.3",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Toast de bienvenue au demarrage (disparait apres 4s)"
+        },
+        {
+          "kind": "new",
+          "text": "Bandeau orange si le launcher n'est pas a jour"
+        },
+        {
+          "kind": "new",
+          "text": "Carte changelog dans la page Jouer quand une MAJ est dispo"
+        },
+        {
+          "kind": "fix",
+          "text": "Suppression de la messagebox bloquante pour les mises a jour"
+        }
+      ]
+    },
+    {
+      "version": "2.6.2",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "launcher_config.json : annonce, map BlueMap, liens, roadmap distante"
+        },
+        {
+          "kind": "new",
+          "text": "Onglet Web : bouton carte live BlueMap + bouton site"
+        },
+        {
+          "kind": "new",
+          "text": "Bandeau d'annonce configurable depuis GitHub (sans recompiler)"
+        }
+      ]
+    },
+    {
+      "version": "2.6.1",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Dossiers crees dans .petravox/minecraft au lieu du dossier de l'exe"
+        },
+        {
+          "kind": "new",
+          "text": "launcher_config.json : modifier carousel/mods/changelog sans recompiler"
+        }
+      ]
+    },
+    {
+      "version": "2.6.0",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Onglet Ressources : gestionnaire de resource packs et shader packs"
+        },
+        {
+          "kind": "new",
+          "text": "Onglet Web : carte BlueMap et site via boutons (navigateur natif)"
+        },
+        {
+          "kind": "new",
+          "text": "Ajout / suppression de packs depuis le launcher"
+        }
+      ]
+    },
+    {
+      "version": "2.5.1",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Skin Minecraft reel affiche dans la sidebar (face + chapeau)"
+        },
+        {
+          "kind": "new",
+          "text": "Clic sur l'avatar : menu compte (profil Xbox, deconnexion)"
+        },
+        {
+          "kind": "new",
+          "text": "Carrousel : glisser gauche/droite pour changer de slide"
+        }
+      ]
+    },
+    {
+      "version": "2.5.0",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Onglet Serveur : statut en direct, joueurs connectes, copie IP"
+        },
+        {
+          "kind": "new",
+          "text": "Notifications toast (plus de popups bloquantes)"
+        },
+        {
+          "kind": "new",
+          "text": "Avatar colore avec initiales dans la sidebar"
+        },
+        {
+          "kind": "new",
+          "text": "Compteur joueurs en direct dans la sidebar"
+        },
+        {
+          "kind": "new",
+          "text": "Historique des lancements dans A propos"
+        },
+        {
+          "kind": "new",
+          "text": "Bouton Ouvrir le dossier .petravox dans Parametres"
+        },
+        {
+          "kind": "new",
+          "text": "Bouton Reparer (reinstauration mods) dans Parametres"
+        },
+        {
+          "kind": "new",
+          "text": "Detection mode hors-ligne automatique"
+        },
+        {
+          "kind": "new",
+          "text": "Selecteur Java dans Parametres"
+        }
+      ]
+    },
+    {
+      "version": "2.4.4",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Fenetre toujours visible meme si erreur au demarrage (try/finally)"
+        },
+        {
+          "kind": "fix",
+          "text": "Erreurs de demarrage ecrites dans launcher_error.log"
+        },
+        {
+          "kind": "fix",
+          "text": "F11 utilise state zoomed/normal (plus de rectangles blancs)"
+        },
+        {
+          "kind": "fix",
+          "text": "URL de mise a jour corrigee vers GitHub Releases"
+        }
+      ]
+    },
+    {
+      "version": "2.4.2",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Animations boutons : flash au clic, hover lumineux"
+        },
+        {
+          "kind": "new",
+          "text": "Carrousel : transition fondu entre les slides"
+        },
+        {
+          "kind": "new",
+          "text": "Sons de boutons (clic, navigation carrousel)"
+        },
+        {
+          "kind": "fix",
+          "text": "Demarrage propre sans saut de taille"
+        }
+      ]
+    },
+    {
+      "version": "2.4.1",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "VFX : particules flottantes animees en arriere-plan de la page Jouer"
+        },
+        {
+          "kind": "new",
+          "text": "Pulsation du bouton JOUER (animation couleur en boucle)"
+        },
+        {
+          "kind": "fix",
+          "text": "Bouton JOUER redimensionne (plus compact)"
+        }
+      ]
+    },
+    {
+      "version": "2.4.0",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Launcher en plein ecran au demarrage (F11 pour basculer)"
+        },
+        {
+          "kind": "new",
+          "text": "Carrousel Nouveautes sur la page Jouer"
+        },
+        {
+          "kind": "new",
+          "text": "Boutons Site web et GitHub dans la sidebar et la page A propos"
+        },
+        {
+          "kind": "new",
+          "text": "Layout adaptatif avec la taille de la fenetre"
+        }
+      ]
+    },
+    {
+      "version": "2.3.0",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Plein ecran Minecraft configurable dans Parametres"
+        },
+        {
+          "kind": "new",
+          "text": "Auto-updater : detection et remplacement automatique de l'exe"
+        },
+        {
+          "kind": "new",
+          "text": "RAM dynamique : sliders adaptes a la RAM du PC"
+        },
+        {
+          "kind": "new",
+          "text": "Avertissement si RAM < 4 Go"
+        },
+        {
+          "kind": "new",
+          "text": "Barre de progression realiste"
+        },
+        {
+          "kind": "new",
+          "text": "Changelog integre dans le launcher"
+        },
+        {
+          "kind": "fix",
+          "text": "Resolution desactivee automatiquement quand plein ecran est active"
+        },
+        {
+          "kind": "audit",
+          "text": "Auto-update : verifie sys.frozen avant de lancer le .bat"
+        }
+      ]
+    },
+    {
+      "version": "2.2.0",
+      "date": "13 juillet 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Redesign complet : sidebar + 3 onglets"
+        },
+        {
+          "kind": "new",
+          "text": "Theme sombre premium violet"
+        },
+        {
+          "kind": "new",
+          "text": "Logo Petravox, Powered by Zervox"
+        },
+        {
+          "kind": "new",
+          "text": "Parametres persistes (RAM, resolution, comportement)"
+        },
+        {
+          "kind": "fix",
+          "text": "Forge version check exact (47.4.10)"
+        },
+        {
+          "kind": "fix",
+          "text": "Ecriture atomique auth.json"
+        },
+        {
+          "kind": "fix",
+          "text": "Erreurs XSTS explicites"
+        }
+      ]
+    },
+    {
+      "version": "1.x",
+      "date": "Avant juillet 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Launcher initial : auth Microsoft Device Flow"
+        },
+        {
+          "kind": "new",
+          "text": "Installation Forge automatique, sync mods mrpack"
+        },
+        {
+          "kind": "fix",
+          "text": "NullPointerException serveur : Easy NPC 5.9.2 -> 7.0.0"
+        },
+        {
+          "kind": "fix",
+          "text": "Forge serveur 47.4.9 -> 47.4.10"
+        }
+      ]
+    }
+  ]
+}

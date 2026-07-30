@@ -1,777 +1,339 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Petravox — Télécharger le Launcher</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #080612; --surface: #110d22; --card: #18112e;
-      --border: #2d1f52; --accent: #7c3aed; --accent2: #9f5cf7;
-      --accent3: #5b21b6; --text: #ede9fe; --sub: #8b7ab8;
-      --dim: #4b3f6b; --green: #22c55e; --red: #ef4444;
-      --warn: #f59e0b; --new: #22c55e; --fix: #3b82f6; --audit: #f59e0b;
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Petravox — Serveur Minecraft moddé Fantasy vs. Science</title>
+    <meta
+      name="description"
+      content="Petravox est un serveur Minecraft moddé privé en Forge 1.20.1 : 216 mods, magie et technologie. Le launcher officiel installe tout automatiquement."
+    />
+    <meta property="og:title" content="Petravox — Serveur Minecraft moddé" />
+    <meta
+      property="og:description"
+      content="Fantasy vs. Science. 216 mods en Forge 1.20.1, installés automatiquement par le launcher."
+    />
+    <meta property="og:image" content="assets/logo.png" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="wrap nav-inner">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="" />
+          <span>PETRAVOX</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Accueil</a></li>
+          <li><a href="mods.html">Mods</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li>
+            <a href="https://github.com/Leimmingz/Petravox-modpack" target="_blank" rel="noopener">
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-    /* NAV */
-    nav { position: sticky; top: 0; z-index: 100; width: 100%; background: rgba(8,6,18,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 32px; height: 56px; display: flex; align-items: center; gap: 20px; }
-    nav .logo { font-weight: 900; font-size: 17px; letter-spacing: 1px; color: var(--text); text-decoration: none; }
-    nav a.nav-link { color: var(--sub); text-decoration: none; font-size: 14px; transition: color .2s; }
-    nav a.nav-link:hover { color: var(--text); }
-    nav .spacer { flex: 1; }
-    .btn-nav { background: var(--accent); color: #fff; padding: 7px 18px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; transition: background .2s; }
-    .btn-nav:hover { background: var(--accent2); }
+    <!-- Le héros parle du serveur, pas du launcher : c'est le serveur qu'on
+         rejoint, l'outil de téléchargement n'est qu'un moyen d'y arriver. -->
+    <header class="wrap hero">
+      <p class="section-label">Forge 1.20.1 · Serveur privé</p>
+      <h1>Un monde où la magie et la science s’affrontent.</h1>
+      <p class="lead">
+        Petravox est un serveur Minecraft moddé entre amis. <span data-mod-total>216</span> mods, deux voies opposées à
+        explorer, et un launcher qui installe absolument tout à ta place.
+      </p>
+      <div class="hero-actions">
+        <a
+          class="btn btn-primary btn-lg"
+          data-release-link
+          href="https://github.com/Leimmingz/Petravox-modpack/releases/latest"
+        >
+          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 3.5v12m0 0 4.5-4.5M12 15.5 7.5 11M4 19.5h16"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Télécharger le launcher
+        </a>
+        <a class="btn btn-lg" href="#rejoindre">Comment rejoindre</a>
+      </div>
+      <p class="muted" style="margin-top: var(--sp-4)">
+        Windows 10/11 · <span data-release-size>~90 Mo</span> · version
+        <span data-release-version>la plus récente</span> · Java inclus
+      </p>
+    </header>
 
-    /* HERO */
-    .hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 72px 24px 48px; max-width: 760px; margin: 0 auto; }
-    .hero img { width: 88px; height: 88px; margin-bottom: 24px; border-radius: 20px; box-shadow: 0 0 40px rgba(124,58,237,0.4); }
-    .hero h1 { font-size: 44px; font-weight: 900; margin-bottom: 12px; }
-    .hero h1 span { color: var(--accent2); }
-    .hero p { color: var(--sub); font-size: 16px; line-height: 1.7; max-width: 540px; margin-bottom: 32px; }
-
-    /* STATUS BADGE */
-    .status-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-bottom: 36px; }
-    .badge { display: inline-flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 6px 16px; font-size: 13px; color: var(--sub); }
-    .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--dim); flex-shrink: 0; }
-    .badge .dot.green { background: var(--green); box-shadow: 0 0 6px var(--green); }
-    .badge .dot.red { background: var(--red); }
-    .badge strong { color: var(--text); }
-
-    /* DOWNLOAD BUTTON */
-    .btn-dl { display: inline-flex; align-items: center; gap: 12px; background: var(--accent); color: #fff; text-decoration: none; border-radius: 14px; padding: 18px 40px; font-size: 20px; font-weight: 900; transition: background .2s, transform .15s, box-shadow .2s; margin-bottom: 12px; box-shadow: 0 4px 24px rgba(124,58,237,0.4); }
-    .btn-dl:hover { background: var(--accent2); transform: translateY(-3px); box-shadow: 0 8px 32px rgba(124,58,237,0.6); }
-    .btn-dl svg { width: 24px; height: 24px; }
-    .dl-meta { display: flex; gap: 20px; color: var(--dim); font-size: 13px; margin-bottom: 48px; justify-content: center; flex-wrap: wrap; }
-    .dl-meta span { display: flex; align-items: center; gap: 5px; }
-
-    /* SECTIONS */
-    section { max-width: 720px; margin: 0 auto; padding: 0 24px 64px; }
-    .section-title { font-size: 22px; font-weight: 800; margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
-    .section-title::before { content: ''; display: block; width: 4px; height: 22px; background: var(--accent); border-radius: 2px; }
-
-    /* STEPS */
-    .steps { display: flex; flex-direction: column; gap: 4px; }
-    .step { display: flex; gap: 16px; align-items: flex-start; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; }
-    .step-num { width: 34px; height: 34px; border-radius: 50%; background: var(--accent3); color: var(--accent2); font-weight: 900; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .step-body strong { display: block; color: var(--text); font-size: 15px; margin-bottom: 4px; }
-    .step-body span { color: var(--sub); font-size: 14px; line-height: 1.5; }
-    code { background: var(--surface); border: 1px solid var(--border); border-radius: 5px; padding: 1px 7px; color: var(--accent2); font-size: 13px; font-family: monospace; }
-
-    /* SMARTSCREEN */
-    .smartscreen { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
-    .smartscreen-header { background: var(--surface); padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }
-    .smartscreen-header svg { color: var(--warn); }
-    .smartscreen-header strong { color: var(--text); font-size: 15px; }
-    .smartscreen-header span { color: var(--sub); font-size: 13px; }
-    .smartscreen-steps { padding: 20px; display: flex; flex-direction: column; gap: 12px; }
-    .ss-step { display: flex; gap: 14px; align-items: flex-start; }
-    .ss-num { background: var(--accent3); color: var(--accent2); border-radius: 50%; width: 26px; height: 26px; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
-    .ss-step p { color: var(--sub); font-size: 14px; line-height: 1.5; }
-    .ss-step p strong { color: var(--text); }
-    .ss-mockup { background: #1a1a2e; border: 1px solid #333; border-radius: 8px; padding: 14px 18px; margin-top: 6px; font-size: 13px; color: #ccc; display: flex; align-items: center; gap: 10px; }
-    .ss-mockup .shield { color: var(--warn); font-size: 18px; }
-
-    /* SPECS GRID */
-    .specs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    .spec-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; }
-    .spec-card .icon { font-size: 28px; margin-bottom: 8px; }
-    .spec-card .label { font-size: 11px; color: var(--dim); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
-    .spec-card .val { font-size: 15px; font-weight: 700; color: var(--accent2); }
-    .spec-card .sub { font-size: 12px; color: var(--sub); margin-top: 3px; }
-
-    /* MODS */
-    .mods-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    .mod-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; display: flex; gap: 14px; align-items: flex-start; transition: border-color .2s; }
-    .mod-card:hover { border-color: var(--accent3); }
-    .mod-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
-    .mod-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
-    .mod-card p { font-size: 12px; color: var(--sub); line-height: 1.4; }
-    .mod-tag { display: inline-block; background: var(--accent3); color: var(--accent2); font-size: 10px; font-weight: 700; border-radius: 4px; padding: 1px 6px; margin-top: 6px; }
-
-    /* CHANGELOG */
-    .cl-version { background: var(--card); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 8px; overflow: hidden; }
-    .cl-header { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; cursor: pointer; user-select: none; }
-    .cl-header:hover { background: rgba(124,58,237,0.08); }
-    .cl-header h3 { font-size: 15px; font-weight: 800; color: var(--accent2); }
-    .cl-header .cl-date { font-size: 12px; color: var(--dim); }
-    .cl-body { padding: 0 20px 16px; display: flex; flex-direction: column; gap: 8px; }
-    .cl-entry { display: flex; gap: 12px; align-items: flex-start; }
-    .cl-tag { font-size: 10px; font-weight: 800; border-radius: 4px; padding: 2px 8px; flex-shrink: 0; margin-top: 1px; }
-    .tag-new { color: var(--new); background: #052e16; }
-    .tag-fix { color: var(--fix); background: #0c1a3a; }
-    .tag-audit { color: var(--audit); background: #2d1f00; }
-    .tag-perf  { color: #a3e635;     background: #14291a; }
-    .cl-entry span { font-size: 13px; color: var(--text); line-height: 1.4; }
-
-    /* FAQ */
-    .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 8px; overflow: hidden; }
-    .faq-q { padding: 16px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; font-size: 14px; font-weight: 600; color: var(--text); }
-    .faq-q:hover { background: rgba(124,58,237,0.08); }
-    .faq-q .arrow { color: var(--accent2); font-size: 18px; transition: transform .2s; }
-    .faq-a { padding: 0 20px 16px; color: var(--sub); font-size: 14px; line-height: 1.6; display: none; }
-    .faq-item.open .faq-a { display: block; }
-    .faq-item.open .arrow { transform: rotate(180deg); }
-
-    /* FOOTER */
-    footer { text-align: center; padding: 32px 24px; color: var(--dim); font-size: 12px; border-top: 1px solid var(--border); margin-top: 32px; }
-    footer a { color: var(--sub); text-decoration: none; }
-    footer a:hover { color: var(--accent2); }
-
-    @media (max-width: 600px) {
-      .specs-grid { grid-template-columns: repeat(2, 1fr); }
-      .mods-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 32px; }
-    }
-  </style>
-</head>
-<body>
-
-<nav>
-  <a class="logo" href="#">PETRAVOX</a>
-  <a class="nav-link" href="server.html">Serveur</a>
-  <a class="nav-link" href="#telecharger">Télécharger</a>
-  <a class="nav-link" href="#rejoindre">Rejoindre</a>
-  <a class="nav-link" href="#mods">Mods</a>
-  <a class="nav-link" href="#changelog">Changelog</a>
-  <a class="nav-link" href="#faq">FAQ</a>
-  <div class="spacer"></div>
-  <a class="btn-nav" href="https://github.com/Leimmingz/Petravox-modpack/releases/latest/download/Petravox.Launcher.exe">Télécharger</a>
-</nav>
-
-<!-- HERO -->
-<div class="hero" id="telecharger">
-  <img src="logo.png" alt="Petravox" onerror="this.style.display='none'" />
-  <h1>Launcher <span>Petravox</span></h1>
-  <p>Installe Forge, synchronise les 205+ mods et lance Minecraft en un clic. Aucune configuration manuelle, mises à jour automatiques.</p>
-
-  <div class="status-row">
-    <div class="badge"><div class="dot" id="srv-dot"></div> Serveur&nbsp;: <strong id="srv-status">Vérification...</strong></div>
-    <div class="badge"><div class="dot green"></div> Launcher : <strong>v2.8.12</strong></div>
-    <div class="badge">⬇ <strong id="dl-count">...</strong> téléchargements</div>
-  </div>
-
-  <a class="btn-dl" href="https://github.com/Leimmingz/Petravox-modpack/releases/latest/download/Petravox.Launcher.exe">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-      <polyline points="7 10 12 15 17 10"/>
-      <line x1="12" y1="15" x2="12" y2="3"/>
-    </svg>
-    Télécharger le Launcher
-  </a>
-  <div class="dl-meta">
-    <span>📁 ~23 MB</span>
-    <span>🪟 Windows 10 / 11</span>
-    <span>☕ Java inclus automatiquement</span>
-    <span>✅ Aucune installation requise</span>
-  </div>
-</div>
-
-<!-- AVERTISSEMENT SMARTSCREEN -->
-<section>
-  <div class="section-title">Windows bloque le launcher ?</div>
-  <div class="smartscreen">
-    <div class="smartscreen-header">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-      <div>
-        <strong>SmartScreen Windows Defender</strong>
-        <span style="display:block;margin-top:2px">Le launcher n'est pas signé numériquement — c'est normal pour un projet privé. Il est 100% sûr.</span>
+    <!-- Statut serveur : l'information la plus consultée, donc juste sous le héros. -->
+    <div class="wrap">
+      <div class="server-panel">
+        <div class="row">
+          <span class="dot" data-server-dot></span>
+          <div>
+            <div style="font-weight: 600" data-server-label>Vérification…</div>
+            <div class="stat-label" data-server-players></div>
+          </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="ip-box">
+          <span>srv01.uniheberg.fr:25540</span>
+          <button class="copy-btn" data-copy="srv01.uniheberg.fr:25540" type="button">
+            Copier
+          </button>
+        </div>
       </div>
     </div>
-    <div class="smartscreen-steps">
-      <div class="ss-step">
-        <div class="ss-num">1</div>
-        <div>
-          <p>Quand Windows affiche <strong>"Windows a protégé votre PC"</strong> :</p>
-          <div class="ss-mockup">
-            <span class="shield">🛡</span>
-            <span>Windows a protégé votre PC<br><small style="color:#888">Microsoft Defender SmartScreen a empêché le démarrage...</small></span>
+
+    <section id="apropos">
+      <div class="wrap">
+        <p class="section-label">Le serveur</p>
+        <h2>Deux façons de jouer, un seul monde</h2>
+        <p class="lead" style="margin-bottom: var(--sp-6)">
+          Le modpack « Fantasy vs. Science » mêle magie, exploration et automatisation. À toi de
+          choisir ta voie — ou de faire les deux.
+        </p>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="icon-badge">
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 3.5 13.9 9l5.6 2-5.6 2-1.9 5.5L10.1 13 4.5 11l5.6-2L12 3.5Z"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3 style="margin: var(--sp-3) 0 var(--sp-2)">La voie de la magie</h3>
+            <p class="muted">
+              Ars Nouveau et ses sorts à composer, rituels, créatures et dimensions à explorer.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon-badge">
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.2 2.2M16.9 16.9l2.2 2.2M19.1 4.9l-2.2 2.2M7.1 16.9l-2.2 2.2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3 style="margin: var(--sp-3) 0 var(--sp-2)">La voie de la science</h3>
+            <p class="muted">
+              Machines, automatisation et conquête spatiale avec Ad Astra.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon-badge">
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 20v-2a4 4 0 0 0-8 0v2" stroke-linecap="round" />
+                <circle cx="12" cy="8" r="3.4" />
+                <path
+                  d="M3.5 20v-1.5a3.5 3.5 0 0 1 3-3.4M20.5 20v-1.5a3.5 3.5 0 0 0-3-3.4"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3 style="margin: var(--sp-3) 0 var(--sp-2)">Entre amis</h3>
+            <p class="muted">
+              Chat vocal de proximité, villages à bâtir avec MineColonies, et pas de whitelist.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="rejoindre">
+      <div class="wrap">
+        <p class="section-label">Démarrer</p>
+        <h2>Rejoindre en quatre étapes</h2>
+        <p class="lead" style="margin-bottom: var(--sp-6)">
+          Aucun fichier à déplacer, aucun Forge à installer soi-même.
+        </p>
+
+        <ol class="steps">
+          <li class="step">
+            <div>
+              <h3>Télécharge le launcher</h3>
+              <p>
+                Lance <code>Petravox-Setup.exe</code> et suis l’installation. Un raccourci est créé
+                sur le Bureau et dans le menu Démarrer.
+              </p>
+            </div>
+          </li>
+          <li class="step">
+            <div>
+              <h3>Connecte ton compte Microsoft</h3>
+              <p>
+                Clique sur « Se connecter » : un code s’affiche, tu le saisis sur la page Microsoft
+                qui s’ouvre. Ton compte doit posséder Minecraft&nbsp;: Java Edition.
+              </p>
+            </div>
+          </li>
+          <li class="step">
+            <div>
+              <h3>Clique sur Jouer</h3>
+              <p>
+                Java, Minecraft, Forge et les <span data-mod-total>216</span> mods s’installent tout seuls. Compte une dizaine
+                de minutes la première fois, puis quelques secondes ensuite.
+              </p>
+            </div>
+          </li>
+          <li class="step">
+            <div>
+              <h3>Rejoins le serveur</h3>
+              <p>
+                Active « Rejoindre le serveur directement » dans les Paramètres du launcher, ou
+                ajoute <code>srv01.uniheberg.fr:25540</code> en multijoueur.
+              </p>
+            </div>
+          </li>
+        </ol>
+
+        <!-- Cet avertissement évite le plus gros point d'abandon : sans lui, une
+             partie des joueurs croit à un virus et n'installe jamais. -->
+        <div class="callout callout-warn" style="margin-top: var(--sp-5)">
+          <svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 8.5v5m0 3.5h.01M10.3 3.9 2.6 17.2A2 2 0 0 0 4.3 20.2h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <div>
+            <h3>Windows affiche « Windows a protégé votre ordinateur » ?</h3>
+            <p>
+              C’est normal : le launcher n’est pas signé numériquement — un certificat coûte
+              plusieurs centaines d’euros par an, difficile à justifier pour un serveur entre amis.
+              Windows affiche cet avertissement pour tout programme encore peu téléchargé.
+            </p>
+            <ol>
+              <li>Clique sur <strong>Informations complémentaires</strong></li>
+              <li>Puis sur <strong>Exécuter quand même</strong></li>
+            </ol>
+            <p>L’avertissement n’apparaît qu’à la première installation.</p>
           </div>
         </div>
       </div>
-      <div class="ss-step">
-        <div class="ss-num">2</div>
-        <p>Clique sur <strong>"Informations complémentaires"</strong> (lien bleu en bas)</p>
-      </div>
-      <div class="ss-step">
-        <div class="ss-num">3</div>
-        <p>Clique sur <strong>"Exécuter quand même"</strong> — le launcher démarre normalement</p>
-      </div>
-      <div class="ss-step">
-        <div class="ss-num">✓</div>
-        <p style="color:#22c55e">Cette étape n'apparaît qu'une seule fois. Windows s'en souvient ensuite.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- REJOINDRE -->
-<section id="rejoindre">
-  <div class="section-title">Comment rejoindre</div>
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <div class="step-body">
-        <strong>Télécharge et lance le launcher</strong>
-        <span>Double-clique sur <code>Petravox.Launcher.exe</code>. Si SmartScreen apparaît, voir la section ci-dessus.</span>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <div class="step-body">
-        <strong>Connecte ton compte Microsoft</strong>
-        <span>Clique sur "Se connecter" → un code s'affiche → entre-le sur <code>microsoft.com/devicelogin</code>. Ton compte doit posséder Minecraft Java Edition.</span>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <div class="step-body">
-        <strong>Clique sur Jouer</strong>
-        <span>Le launcher installe Forge et tous les mods automatiquement (~2–5 min la première fois). Tu n'as rien d'autre à faire.</span>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">4</div>
-      <div class="step-body">
-        <strong>Rejoins le serveur</strong>
-        <span>Ajoute <code>srv01.uniheberg.fr:25540</code> dans Minecraft et connecte-toi !</span>
-      </div>
-    </div>
-  </div>
-</section>
+    <section id="config">
+      <div class="wrap">
+        <p class="section-label">Prérequis</p>
+        <h2>Ce qu’il te faut</h2>
 
-<!-- CONFIG REQUISE -->
-<section>
-  <div class="section-title">Configuration requise</div>
-  <div class="specs-grid">
-    <div class="spec-card"><div class="icon">🪟</div><div class="label">Système</div><div class="val">Windows 10/11</div><div class="sub">64 bits requis</div></div>
-    <div class="spec-card"><div class="icon">🧠</div><div class="label">RAM recommandée</div><div class="val">8 Go</div><div class="sub">6 Go minimum</div></div>
-    <div class="spec-card"><div class="icon">💾</div><div class="label">Espace disque</div><div class="val">~4 Go</div><div class="sub">Mods + Forge</div></div>
-    <div class="spec-card"><div class="icon">☕</div><div class="label">Java</div><div class="val">Automatique</div><div class="sub">Géré par le launcher</div></div>
-    <div class="spec-card"><div class="icon">🎮</div><div class="label">Licence</div><div class="val">Java Edition</div><div class="sub">Compte Microsoft requis</div></div>
-    <div class="spec-card"><div class="icon">🌐</div><div class="label">Connexion</div><div class="val">Requise</div><div class="sub">Pour auth + mods</div></div>
-  </div>
-</section>
-
-<!-- MODS RECENTS -->
-<section>
-  <div class="section-title">Mods récemment ajoutés</div>
-  <div class="mods-grid" style="grid-template-columns: repeat(3, 1fr);">
-    <div class="mod-card">
-      <div class="mod-icon" style="background:#1a2e1a">🌲</div>
-      <div>
-        <h4>Falling Tree</h4>
-        <p>Les arbres tombent entiers d'un seul coup de hache. Fini de casser bloc par bloc.</p>
-        <span class="mod-tag" style="background:#052e16;color:#22c55e">NOUVEAU</span>
-      </div>
-    </div>
-    <div class="mod-card">
-      <div class="mod-icon" style="background:#1a1a2e">⛏️</div>
-      <div>
-        <h4>Ore Excavation</h4>
-        <p>Mine un filon de minerai entier en un seul clic. Idéal pour les grottes profondes.</p>
-        <span class="mod-tag" style="background:#052e16;color:#22c55e">NOUVEAU</span>
-      </div>
-    </div>
-    <div class="mod-card">
-      <div class="mod-icon" style="background:#2e1a2e">🚪</div>
-      <div>
-        <h4>Double Door</h4>
-        <p>Les deux portes d'une double porte s'ouvrent et se ferment ensemble automatiquement.</p>
-        <span class="mod-tag" style="background:#052e16;color:#22c55e">NOUVEAU</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MODS PHARES -->
-<section id="mods">
-  <div class="section-title">Mods phares</div>
-  <div class="mods-grid" id="mods-grid"></div>
-</section>
-
-<!-- CHANGELOG -->
-<section id="changelog">
-  <div class="section-title">Changelog</div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.12 <span style="color:#22c55e;font-size:11px;margin-left:8px">← actuelle</span></h3>
-      <span class="cl-date">21 juillet 2026</span>
-    </div>
-    <div class="cl-body">
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auth : le token Minecraft est rafraîchi automatiquement au démarrage via <code>refresh_token</code> — corrige la déconnexion en jeu après avoir fermé/rouvert le launcher</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auth : session proprement invalidée si le renouvellement échoue, au lieu de garder un compte affiché "connecté" avec un token expiré</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.11</h3>
-      <span class="cl-date">21 juillet 2026</span>
-    </div>
-    <div class="cl-body">
-      <div class="cl-entry"><span class="cl-tag tag-new">NEW</span><span>Ouverture : fade-in fluide (0→1 en 300 ms) au lieu d'apparition instantanée</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NEW</span><span>Changement d'onglet : crossfade subtil (dip alpha 3 frames) — plus aucun flash ni rectangle noir</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NEW</span><span>Toasts : slide-in depuis la droite au lieu d'apparition instantanée</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auth Microsoft : CLIENT_ID Xbox App (<code>00000000402b5328</code>) + endpoints <code>login.live.com</code> — fix erreur 403 Minecraft</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.10</h3>
-      <span class="cl-date">14 juillet 2026</span>
-    </div>
-    <div class="cl-body">
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auth Microsoft : <code>verification_uri</code> correcte utilisée pour ouvrir le navigateur — le code était invalide car la mauvaise page Microsoft s'ouvrait</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auth Microsoft : header <code>Accept: application/json</code> ajouté à <code>login_with_xbox</code> — fix erreur 403 Minecraft</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Changement d'onglet : rectangles noirs/flash corrigés (<code>update_idletasks</code> après pack)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auto-updater bat : <code>setlocal enabledelayedexpansion</code> + <code>!TRIES!</code> — relancement après MAJ cassé corrigé</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span>Particules VFX déplacées avec <code>coords()</code> au lieu de <code>delete+create_oval</code> chaque frame — 10× moins de charge tkinter</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span>Pulse du bouton JOUER à 150 ms — quasi-zéro charge CPU</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.9</h3>
-      <span class="cl-date">14 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span>Lazy loading des onglets : seul l'onglet Jouer est construit au démarrage — ouverture ~3× plus rapide</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span>Threads réseau (vérif MAJ, poll serveur) démarrés après 1–2 s pour ne pas bloquer l'affichage initial</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span>Particules VFX réduites de 38 à 20, intervalle animation 33 ms → 50 ms, pulse bouton 40 ms → 80 ms</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-perf">PERF</span><span><code>import random</code> sorti de la boucle d'animation (~3 ms économisés par frame)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auth Microsoft : nouveau CLIENT_ID Azure (<code>7e72ec82</code>) — l'ancien avait été restreint</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.8</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Historique des lancements : sessions orphelines (launcher tué par auto-update) affichent la durée estimée au lieu de "En cours..."</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Durée avec "Fermer au lancement" : le suivi de session survit à la fermeture de la fenêtre</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span><code>&lt; 1 min</code> affiché pour les sessions très courtes (au lieu de <code>0 min</code>)</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.7</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-audit">AUDIT</span><span>Auto-updater définitif : <code>taskkill /F</code>, timeout 5s, 5 tentatives de <code>move</code> avec 2s d'attente chacune, <code>start /D</code> — toutes les erreurs DLL couvertes</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.6</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auto-updater : <code>taskkill</code> de l'ancien exe avant remplacement + timeout 3s (fix <code>python312.dll</code> verrouillé)</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.5</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-audit">AUDIT</span><span>Poll serveur : flag <code>_poll_running</code> dédié — ne s'arrête plus définitivement après un changement de thème</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-audit">AUDIT</span><span>Poll serveur : thread redémarré après changement de thème</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span><code>_update_server_ui</code> : try/except global — évite crash si appelé pendant le rebuild UI</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Carrousel : couleurs de fondu adaptées au thème (plus de violet dur en thème clair)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Réinitialiser paramètres : remet le thème sombre si thème clair était actif</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.3</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auto-updater : <code>start /D</code> dans le bat pour garantir le bon répertoire au relancement (fix erreur DLL _tkinter après mise à jour)</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.2</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Carrousel : affiche toujours les nouveautés même si la version courante n'a que des entrées fix/audit</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Roadmap : "Launcher v2.7" retiré du défaut codé en dur</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.1</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-audit">AUDIT</span><span>Auto-updater : comparaison de version par tuple (évite faux downgrades)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-audit">AUDIT</span><span>Auto-updater : garde anti-double-clic, nettoyage fichier partiel en cas d'erreur</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.8.0</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Timer de session live dans la sidebar (chrono pendant le jeu)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Galerie de screenshots : onglet dédié avec miniatures cliquables</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Achievements dans le tableau de bord (7 médailles, sessions + heures)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Notifications ami en ligne : toast quand un joueur rejoint le serveur</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.7.2</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body">
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auto-update : relancement depuis le bon répertoire (fix DLL python312)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Carrousel compact — plus d'espace vide sous le texte</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.7.1</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Auto-updater : ajout du répertoire de travail dans le bat pour éviter l'erreur DLL</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.7.0</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Tableau de bord : stats de jeu (sessions, temps total, dernière session), statut serveur en direct, infos modpack</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Thème clair optionnel (toggle dans Paramètres &gt; Apparence)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Dialogs de confirmation non-bloquants (déconnexion, réparation mods, suppression packs)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Config serveur lue depuis launcher_config.json (host et port dynamiques)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-audit">AUDIT</span><span>Durée 0 min affichée correctement dans l'historique</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.6.5</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Carrousel Nouveautés compact, hauteur fixe (plus d'espace vide sur grand écran)</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.6.4</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Roadmap affichée par défaut (valeurs codées en dur, plus de roadmap.json séparé)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Ore Excavation dans les mods récents par défaut (au lieu de Ore Vein Miner)</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.6.3</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Toast de bienvenue au démarrage (disparaît après 4s)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Bandeau orange non-bloquant si le launcher n'est pas à jour</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Carte changelog dans la page Jouer quand une MAJ est disponible</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Suppression de la messagebox bloquante pour les mises à jour</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.6.2</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Onglet Web : carte BlueMap + guide intégré, URLs dynamiques via config</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>launcher_config.json étendu : annonce, liens, roadmap, carte live</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.6.1</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Tous les fichiers créés dans .petravox au lieu du dossier de l'exe</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>launcher_config.json sur GitHub Pages : modifier carousel et mods récents sans recompiler</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.6.0</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Skin Minecraft réel affiché dans la sidebar (face + chapeau)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Clic sur l'avatar : menu compte (profil Xbox, déconnexion)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Carrousel : glisser gauche/droite pour changer de slide</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.5.0</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body">
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Onglet Serveur : statut en direct, joueurs connectés, copie IP</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Notifications toast (plus de popups bloquantes)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Avatar coloré avec initiales dans la sidebar</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Compteur joueurs en direct dans la sidebar</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Historique des lancements dans À propos</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Bouton Ouvrir le dossier .petravox dans Paramètres</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Bouton Réparer (réinstallation mods) dans Paramètres</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Détection mode hors-ligne automatique</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Sélecteur Java dans Paramètres</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.4.4</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Fenêtre toujours visible même si erreur au démarrage</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>F11 corrigé : plus de rectangles blancs</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>URL de mise à jour corrigée vers GitHub Releases</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.4.2</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Animations boutons : flash lumineux au clic</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Transition fondu entre les slides du carrousel</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Sons de boutons (clic, navigation, succès lancement)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Démarrage propre sans saut de taille</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.4.1</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>VFX : particules flottantes animées en arrière-plan</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Pulsation couleur du bouton JOUER</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-fix">FIX</span><span>Bouton JOUER redimensionné</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.4.0</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Launcher en plein écran au démarrage (F11)</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Carrousel Nouveautés sur la page Jouer</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Boutons Site web et GitHub dans la sidebar</span></div>
-    </div>
-  </div>
-
-  <div class="cl-version">
-    <div class="cl-header" onclick="toggleCl(this)">
-      <h3>v2.3.0</h3>
-      <span class="cl-date">13 juillet 2026</span>
-    </div>
-    <div class="cl-body" style="display:none">
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Plein écran Minecraft configurable</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Auto-updater : mise à jour automatique du launcher</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>RAM dynamique adaptée au PC</span></div>
-      <div class="cl-entry"><span class="cl-tag tag-new">NOUVEAU</span><span>Barre de progression réaliste</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq">
-  <div class="section-title">FAQ</div>
-
-  <div class="faq-item open">
-    <div class="faq-q" onclick="toggleFaq(this)">Je n'ai pas Minecraft Java Edition, je peux quand même jouer ? <span class="arrow">▾</span></div>
-    <div class="faq-a">Non, Minecraft Java Edition est requis. Tu peux l'acheter sur <a href="https://minecraft.net" style="color:var(--accent2)">minecraft.net</a>. Le launcher gère l'authentification mais pas la licence.</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q" onclick="toggleFaq(this)">Le launcher ne se lance pas / fenêtre noire <span class="arrow">▾</span></div>
-    <div class="faq-a">Vérifie que tu utilises la dernière version. Si le problème persiste, un fichier <code>launcher_error.log</code> est créé dans <code>%appdata%\.petravox\</code> — envoie-le à un admin pour diagnostic.</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q" onclick="toggleFaq(this)">Minecraft crash au démarrage <span class="arrow">▾</span></div>
-    <div class="faq-a">Essaie d'augmenter la RAM dans les Paramètres du launcher (6–8 Go recommandé). Si le crash persiste, vérifie les logs dans <code>%appdata%\.petravox\minecraft\logs\</code>.</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q" onclick="toggleFaq(this)">Les mods se mettent-ils à jour automatiquement ? <span class="arrow">▾</span></div>
-    <div class="faq-a">Oui. Le launcher vérifie à chaque lancement si le modpack a changé et resynchronise automatiquement les mods si nécessaire.</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q" onclick="toggleFaq(this)">Où sont stockés les fichiers Minecraft ? <span class="arrow">▾</span></div>
-    <div class="faq-a">Dans <code>%appdata%\.petravox\minecraft\</code> — séparé de ton installation Minecraft normale pour ne pas interférer.</div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q" onclick="toggleFaq(this)">Comment signaler un bug ? <span class="arrow">▾</span></div>
-    <div class="faq-a">Ouvre un ticket sur <a href="https://github.com/Leimmingz/Petravox-modpack/issues" style="color:var(--accent2)">GitHub Issues</a> en joignant le fichier <code>launcher_error.log</code> si le launcher est concerné.</div>
-  </div>
-</section>
-
-<footer>
-  Propulsé par <strong style="color:var(--accent2)">Zervox</strong> &nbsp;·&nbsp;
-  <a href="https://github.com/Leimmingz/Petravox-modpack">GitHub</a> &nbsp;·&nbsp;
-  Non affilié à Mojang
-</footer>
-
-<script>
-  // ── MODS PHARES ────────────────────────────────────────────────────────────
-  // Pour ajouter/modifier/retirer un mod : édite juste ce tableau, rien d'autre
-  // à toucher. icon = emoji, bg = couleur de fond de la pastille (hex sombre).
-  const MODS_PHARES = [
-    { icon: "⚙️", bg: "#1a2e1a", name: "Create",
-      desc: "Automatisation mécanique avec engrenages, convoyeurs et machines à vapeur.",
-      tag: "Technologie" },
-    { icon: "🔬", bg: "#1a1a2e", name: "Mekanism",
-      desc: "Suite industrielle complète : machines, générateurs, outils, armes et armures high-tech.",
-      tag: "Industrie" },
-    { icon: "⚒️", bg: "#2e2a1a", name: "Tinkers' Construct",
-      desc: "Fabrique des outils et armes entièrement personnalisés avec des matériaux combinables.",
-      tag: "Artisanat" },
-    { icon: "🧙", bg: "#2e1a2e", name: "Iron's Spells 'n Spellbooks",
-      desc: "Système de magie complet : sorts, livres de sorts, baguettes et classes magiques.",
-      tag: "Magie" },
-    { icon: "🦎", bg: "#1a2e2e", name: "Alex's Mobs & Caves",
-      desc: "Des dizaines de nouvelles créatures et biomes souterrains uniques à explorer.",
-      tag: "Exploration" },
-    { icon: "🚀", bg: "#0a0a1e", name: "Ad Astra",
-      desc: "Explore l'espace, construis des fusées et colonise d'autres planètes.",
-      tag: "Espace" },
-    { icon: "🥊", bg: "#2e1a1a", name: "Epic Fight",
-      desc: "Système de combat dynamique avec esquives, combos et animations fluides.",
-      tag: "Combat" },
-    { icon: "🍽️", bg: "#1a2a1a", name: "Farmer's Delight + 10 addons",
-      desc: "Cuisine enrichie : cultures, recettes, boissons, poissons, desserts et plus encore.",
-      tag: "Nourriture" },
-    { icon: "🏰", bg: "#2e2e1a", name: "When Dungeons Arise",
-      desc: "Donjons gigantesques générés dans le monde, remplis de monstres et de trésors.",
-      tag: "Donjons" },
-    { icon: "🌍", bg: "#1a1a2e", name: "Biomes O' Plenty",
-      desc: "Des dizaines de nouveaux biomes uniques, de la forêt mystique aux plaines volcaniques.",
-      tag: "Monde" },
-    { icon: "👜", bg: "#2e1a2e", name: "Sophisticated Backpacks",
-      desc: "Sacs à dos améliorables avec filtres automatiques, tri et upgrades multiples.",
-      tag: "Stockage" },
-    { icon: "💀", bg: "#2a1a0a", name: "L_Ender's Cataclysm",
-      desc: "Boss colossaux et dimensions secrètes pour les joueurs cherchant un défi extrême.",
-      tag: "Boss" },
-    { icon: "🎙️", bg: "#1a1a2e", name: "Plasmo Voice",
-      desc: "Chat vocal spatial in-game — entends les joueurs proches de toi.",
-      tag: "Communication" },
-    { icon: "🏘️", bg: "#2e2a1a", name: "MineColonies",
-      desc: "Construis et gère une colonie entière avec des PNJ travailleurs.",
-      tag: "Construction" },
-  ];
-
-  function renderModsPhares() {
-    const grid = document.getElementById("mods-grid");
-    if (!grid) return;
-    grid.innerHTML = MODS_PHARES.map(m => `
-      <div class="mod-card">
-        <div class="mod-icon" style="background:${m.bg}">${m.icon}</div>
-        <div>
-          <h4>${m.name}</h4>
-          <p>${m.desc}</p>
-          <span class="mod-tag">${m.tag}</span>
+        <div class="grid grid-3" style="margin-top: var(--sp-5)">
+          <div class="card">
+            <div class="stat-value">Windows 10/11</div>
+            <div class="stat-label">64 bits</div>
+          </div>
+          <div class="card">
+            <div class="stat-value">8 Go de RAM</div>
+            <div class="stat-label">6 Go au minimum</div>
+          </div>
+          <div class="card">
+            <div class="stat-value">~6 Go</div>
+            <div class="stat-label">D’espace disque</div>
+          </div>
+          <div class="card">
+            <div class="stat-value">Java Edition</div>
+            <div class="stat-label">Compte Microsoft requis</div>
+          </div>
+          <div class="card">
+            <div class="stat-value">Java 17</div>
+            <div class="stat-label">Installé par le launcher</div>
+          </div>
+          <div class="card">
+            <div class="stat-value">Connexion</div>
+            <div class="stat-label">Pour l’installation et le jeu</div>
+          </div>
         </div>
       </div>
-    `).join("");
-  }
-  renderModsPhares();
+    </section>
 
-  function toggleCl(header) {
-    const body = header.nextElementSibling;
-    const isOpen = body.style.display !== 'none' && body.style.display !== '';
-    body.style.display = isOpen ? 'none' : 'flex';
-    if (!isOpen) { body.style.flexDirection = 'column'; body.style.gap = '8px'; }
-  }
+    <section id="faq">
+      <div class="wrap">
+        <p class="section-label">Questions</p>
+        <h2>FAQ</h2>
 
-  function toggleFaq(q) {
-    q.parentElement.classList.toggle('open');
-  }
+        <div style="margin-top: var(--sp-5)">
+          <details>
+            <summary>Faut-il installer Forge ou Java soi-même ?</summary>
+            <p>
+              Non. Le launcher télécharge le runtime Java 17 officiel de Mojang s’il n’en trouve pas
+              sur ta machine, installe Forge 47.4.10 et synchronise les mods. Tu n’as rien à
+              configurer.
+            </p>
+          </details>
 
-  // Statut serveur avec timeout
-  const ctrl = new AbortController();
-  const tid = setTimeout(() => ctrl.abort(), 8000);
-  fetch('https://api.mcsrvstat.us/3/srv01.uniheberg.fr:25540', { signal: ctrl.signal })
-    .then(r => { clearTimeout(tid); return r.json(); })
-    .then(data => {
-      const dot = document.getElementById('srv-dot');
-      const lbl = document.getElementById('srv-status');
-      if (data.online) {
-        dot.classList.add('green');
-        const p = data.players;
-        lbl.textContent = p ? p.online + '/' + p.max + ' joueurs' : 'En ligne';
-      } else {
-        dot.classList.add('red');
-        lbl.textContent = 'Hors ligne';
-      }
-    })
-    .catch(() => {
-      document.getElementById('srv-dot').classList.add('red');
-      document.getElementById('srv-status').textContent = 'Inconnu';
-    });
+          <details>
+            <summary>Le serveur a-t-il une whitelist ?</summary>
+            <p>
+              Non, le serveur est ouvert. Il suffit d’avoir le modpack — donc le launcher — pour
+              pouvoir te connecter.
+            </p>
+          </details>
 
-  // Compteur téléchargements GitHub
-  fetch('https://api.github.com/repos/Leimmingz/Petravox-modpack/releases')
-    .then(r => r.json())
-    .then(releases => {
-      let total = 0;
-      releases.forEach(r => r.assets && r.assets.forEach(a => total += a.download_count));
-      document.getElementById('dl-count').textContent = total > 0 ? total.toLocaleString('fr-FR') : '0';
-    })
-    .catch(() => { document.getElementById('dl-count').textContent = '0'; });
-</script>
-</body>
+          <details>
+            <summary>Puis-je jouer sans le launcher ?</summary>
+            <p>
+              Techniquement oui, en installant Forge 1.20.1 et les <span data-mod-total>216</span> mods à la main dans les
+              bonnes versions. En pratique, la moindre différence t’empêchera de te connecter — le
+              launcher existe précisément pour éviter ça.
+            </p>
+          </details>
+
+          <details>
+            <summary>Mes mondes sont-ils sauvegardés ?</summary>
+            <p>
+              Le launcher archive ton dossier de mondes après une session, en dehors du dossier de
+              jeu, et conserve les cinq dernières sauvegardes. Tu peux en restaurer une depuis les
+              Paramètres.
+            </p>
+          </details>
+
+          <details>
+            <summary>Le jeu plante au démarrage, que faire ?</summary>
+            <p>
+              Le launcher affiche la fin du journal avec un bouton « Copier pour Discord ». Essaie
+              aussi « Vérifier les mods » dans les Paramètres : un fichier incomplet suffit à faire
+              planter le jeu.
+            </p>
+          </details>
+
+          <details>
+            <summary>Combien d’espace disque faut-il ?</summary>
+            <p>
+              Environ 6 Go : Minecraft et ses ressources, Forge, les <span data-mod-total>216</span> mods, le runtime Java et
+              les sauvegardes. Les Paramètres du launcher affichent la répartition exacte.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap row row-between" style="flex-wrap: wrap; gap: var(--sp-4)">
+        <span>© <span data-year>2026</span> Petravox · Propulsé par Zervox</span>
+        <span class="row" style="gap: var(--sp-4)">
+          <a href="mods.html">Mods</a>
+          <a href="changelog.html">Changelog</a>
+          <a href="https://github.com/Leimmingz/Petravox-modpack" target="_blank" rel="noopener">
+            GitHub
+          </a>
+        </span>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/site.js"></script>
+  </body>
 </html>

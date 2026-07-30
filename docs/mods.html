@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mods — Petravox</title>
+    <meta
+      name="description"
+      content="La liste complète des mods du serveur Petravox, générée directement depuis le modpack : 216 mods en Forge 1.20.1."
+    />
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="wrap nav-inner">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="" />
+          <span>PETRAVOX</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="mods.html" aria-current="page">Mods</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li>
+            <a href="https://github.com/Leimmingz/Petravox-modpack" target="_blank" rel="noopener">
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="wrap hero" style="padding-bottom: var(--sp-6)">
+      <p class="section-label">Modpack</p>
+      <h1 style="font-size: var(--fs-2xl)">
+        Les <span data-mod-total>216</span> mods du serveur
+      </h1>
+      <p class="lead">
+        Cette liste est générée depuis le modpack lui-même : elle correspond exactement à ce que le
+        launcher installe. Les mods publiés sur Modrinth renvoient vers leur page ; les autres sont
+        embarqués directement dans le pack.
+      </p>
+    </header>
+
+    <div class="wrap" style="padding-bottom: var(--sp-9)">
+      <div class="row" style="margin-bottom: var(--sp-5); flex-wrap: wrap">
+        <input
+          class="search spacer"
+          type="search"
+          placeholder="Rechercher un mod…"
+          aria-label="Rechercher un mod"
+          data-mod-search
+        />
+        <span class="muted" data-mod-count></span>
+      </div>
+
+      <div class="mod-grid" data-mod-grid>
+        <p class="muted">Chargement…</p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="wrap row row-between" style="flex-wrap: wrap; gap: var(--sp-4)">
+        <span>© <span data-year>2026</span> Petravox · Propulsé par Zervox</span>
+        <span class="row" style="gap: var(--sp-4)">
+          <a href="index.html">Accueil</a>
+          <a href="changelog.html">Changelog</a>
+          <a href="https://github.com/Leimmingz/Petravox-modpack" target="_blank" rel="noopener">
+            GitHub
+          </a>
+        </span>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1450 @@
+{
+  "generatedAt": "2026-07-30T20:53:51.450Z",
+  "packName": "Fantasy Vs. Science Quarks & Magic",
+  "packVersion": "1.0.0",
+  "minecraft": "1.20.1",
+  "forge": "47.4.10",
+  "modCount": 216,
+  "fromModrinth": 142,
+  "embedded": 74,
+  "mods": [
+    {
+      "name": "Ad Astra",
+      "file": "ad_astra-forge-1.20.1-1.15.20.jar",
+      "sizeBytes": 7508861,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/3ufwT9JF"
+    },
+    {
+      "name": "Ad Astra Giselle Addon",
+      "file": "Ad-Astra-Giselle-Addon-forge-1.20.1-6.20.jar",
+      "sizeBytes": 494545,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/XQDxCBVw"
+    },
+    {
+      "name": "Addonslib",
+      "file": "addonslib-1.20.1-1.6.jar",
+      "sizeBytes": 136968,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/cl5ec0Qm"
+    },
+    {
+      "name": "AdvancementPlaques",
+      "file": "AdvancementPlaques-1.20.1-forge-1.6.9.jar",
+      "sizeBytes": 208850,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/9NM0dXub"
+    },
+    {
+      "name": "Alchemistry",
+      "file": "alchemistry-1.20.1-2.3.4.jar",
+      "sizeBytes": 3654585,
+      "source": "pack"
+    },
+    {
+      "name": "Alchemylib",
+      "file": "alchemylib-1.20.1-1.0.30.jar",
+      "sizeBytes": 101349,
+      "source": "pack"
+    },
+    {
+      "name": "Alexscaves",
+      "file": "alexscaves-2.0.2.jar",
+      "sizeBytes": 74871657,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/U6GY0xp0"
+    },
+    {
+      "name": "Alexsdelight",
+      "file": "alexsdelight-1.5.jar",
+      "sizeBytes": 55398,
+      "source": "pack"
+    },
+    {
+      "name": "Alexsmobs",
+      "file": "alexsmobs-1.22.9.jar",
+      "sizeBytes": 26350793,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/2cMuAZAp"
+    },
+    {
+      "name": "Alltheores",
+      "file": "alltheores-1.20.1-47.1.3-2.2.4.jar",
+      "sizeBytes": 1073852,
+      "source": "pack"
+    },
+    {
+      "name": "Almostunified",
+      "file": "almostunified-forge-1.20.1-0.10.1.jar",
+      "sizeBytes": 217445,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/sdaSaQEz"
+    },
+    {
+      "name": "AnvilNeverTooExpensive",
+      "file": "AnvilNeverTooExpensive-1.20.1-1.1.jar",
+      "sizeBytes": 7903,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/TEOa2X8B"
+    },
+    {
+      "name": "ApothicAttributes",
+      "file": "ApothicAttributes-1.20.1-1.3.7.jar",
+      "sizeBytes": 227511,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/DGaH8Rh0"
+    },
+    {
+      "name": "Aquaculture",
+      "file": "Aquaculture-1.20.1-2.5.6.jar",
+      "sizeBytes": 602097,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/Vl1uNAuy"
+    },
+    {
+      "name": "Aquaculture Tinkers",
+      "file": "Aquaculture-Tinkers-1.0.0.jar",
+      "sizeBytes": 1779508,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/UF9cVDTS"
+    },
+    {
+      "name": "Aquaculturedelight",
+      "file": "aquaculturedelight-1.1.1-forge-1.20.1.jar",
+      "sizeBytes": 225149,
+      "source": "pack"
+    },
+    {
+      "name": "Architectury",
+      "file": "architectury-9.2.14-forge.jar",
+      "sizeBytes": 580602,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/lhGA9TYQ"
+    },
+    {
+      "name": "Ars Nouveau",
+      "file": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "sizeBytes": 12430237,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/TKB6INcv"
+    },
+    {
+      "name": "Athena",
+      "file": "athena-forge-1.20.1-3.1.2.jar",
+      "sizeBytes": 91808,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/b1ZV3DIJ"
+    },
+    {
+      "name": "AttributeFix",
+      "file": "AttributeFix-Forge-1.20.1-21.0.4.jar",
+      "sizeBytes": 19471,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/lOOpEntO"
+    },
+    {
+      "name": "AutoLeveling",
+      "file": "AutoLeveling-1.20-1.19b.jar",
+      "sizeBytes": 73258,
+      "source": "pack"
+    },
+    {
+      "name": "Automobility",
+      "file": "automobility-0.4.2+1.20.1-forge.jar",
+      "sizeBytes": 1054094,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/rqIsPf9F"
+    },
+    {
+      "name": "Azurelib Neo",
+      "file": "azurelib-neo-1.20.1-3.1.2.jar",
+      "sizeBytes": 1055848,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/7zlUOZvb"
+    },
+    {
+      "name": "BadMobs",
+      "file": "BadMobs-1.20.1-19.0.4.jar",
+      "sizeBytes": 10425,
+      "source": "pack"
+    },
+    {
+      "name": "BetterCompatibilityChecker",
+      "file": "BetterCompatibilityChecker-forge-4.0.8+mc1.20.1.jar",
+      "sizeBytes": 26540,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/KJhXPbHQ"
+    },
+    {
+      "name": "Betterfpsdist",
+      "file": "betterfpsdist-1.20.1-6.0.jar",
+      "sizeBytes": 19917,
+      "source": "pack"
+    },
+    {
+      "name": "BetterMultiplayerSleep 1 1 0",
+      "file": "BetterMultiplayerSleep 1.1.0.jar",
+      "sizeBytes": 19219,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/LxB45e67"
+    },
+    {
+      "name": "BiomesOPlenty",
+      "file": "BiomesOPlenty-forge-1.20.1-19.0.0.96.jar",
+      "sizeBytes": 22381010,
+      "source": "pack"
+    },
+    {
+      "name": "Blockui",
+      "file": "blockui-1.20.1-1.0.193.jar",
+      "sizeBytes": 391010,
+      "source": "pack"
+    },
+    {
+      "name": "Blocky Siege",
+      "file": "blocky_siege-6.1.92-1.20.1.jar",
+      "sizeBytes": 2940415,
+      "source": "pack"
+    },
+    {
+      "name": "Bookshelf",
+      "file": "Bookshelf-Forge-1.20.1-20.2.13.jar",
+      "sizeBytes": 343962,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/uy4Cnpcm"
+    },
+    {
+      "name": "Botarium",
+      "file": "botarium-forge-1.20.1-2.3.4.jar",
+      "sizeBytes": 157633,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/2u6LRnMa"
+    },
+    {
+      "name": "Bountiful",
+      "file": "Bountiful-6.0.4+1.20.1-forge.jar",
+      "sizeBytes": 502662,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/BpwWFOVM"
+    },
+    {
+      "name": "BrewinAndChewin",
+      "file": "BrewinAndChewin-1.20.1-3.2.1.jar",
+      "sizeBytes": 1206255,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/hIu9KJTT"
+    },
+    {
+      "name": "Bucketlib",
+      "file": "bucketlib-1.20.1-2.3.7.1.jar",
+      "sizeBytes": 153080,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/DItE655o"
+    },
+    {
+      "name": "Caelus",
+      "file": "caelus-forge-3.2.0+1.20.1.jar",
+      "sizeBytes": 40125,
+      "source": "pack"
+    },
+    {
+      "name": "Carryon",
+      "file": "carryon-forge-1.20.1-2.1.2.7.jar",
+      "sizeBytes": 439457,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/joEfVgkn"
+    },
+    {
+      "name": "Cataclysm Dimension Forge1 20 1",
+      "file": "cataclysm_dimension-forge1.20.1-1.5.7.jar",
+      "sizeBytes": 196458,
+      "source": "pack"
+    },
+    {
+      "name": "Ceramicbucket",
+      "file": "ceramicbucket-1.20.1-4.1.0.0.jar",
+      "sizeBytes": 18591,
+      "source": "pack"
+    },
+    {
+      "name": "Cfm Wap",
+      "file": "cfm_wap-1.20.1-forge-1.2.0.jar",
+      "sizeBytes": 71368,
+      "source": "pack"
+    },
+    {
+      "name": "Chefs Delight",
+      "file": "chefs-delight-1.0.3-forge-1.20.1.jar",
+      "sizeBytes": 84059,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/pvcsfne4"
+    },
+    {
+      "name": "Chemlib",
+      "file": "chemlib-1.20.1-2.0.19.jar",
+      "sizeBytes": 13611240,
+      "source": "pack"
+    },
+    {
+      "name": "Chipped",
+      "file": "chipped-forge-1.20.1-3.0.7.jar",
+      "sizeBytes": 15060263,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/BAscRYKm"
+    },
+    {
+      "name": "Chisel Chipped Integration",
+      "file": "chisel_chipped_integration-v1.1.6-1.20.1.jar",
+      "sizeBytes": 2804717,
+      "source": "pack"
+    },
+    {
+      "name": "Chunky",
+      "file": "Chunky-1.3.146.jar",
+      "sizeBytes": 341451,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/fALzjamp"
+    },
+    {
+      "name": "Citadel",
+      "file": "citadel-2.6.2-1.20.1.jar",
+      "sizeBytes": 3185379,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/jJfV67b1"
+    },
+    {
+      "name": "Cloth Config",
+      "file": "cloth-config-11.1.136-forge.jar",
+      "sizeBytes": 1181413,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/9s6osm5g"
+    },
+    {
+      "name": "Clumps",
+      "file": "Clumps-forge-1.20.1-12.0.0.4.jar",
+      "sizeBytes": 20299,
+      "source": "pack"
+    },
+    {
+      "name": "CoffeeDelight",
+      "file": "CoffeeDelight-Forge-1.20.1-1.5-Fix.jar",
+      "sizeBytes": 142028,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/jn1HiMrY"
+    },
+    {
+      "name": "Collective",
+      "file": "collective-1.20.1-8.39.jar",
+      "sizeBytes": 745947,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/e0M1UDsY"
+    },
+    {
+      "name": "Comforts",
+      "file": "comforts-forge-6.4.0+1.20.1.jar",
+      "sizeBytes": 382083,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/SaCpeal4"
+    },
+    {
+      "name": "Configured",
+      "file": "configured-forge-1.20.1-2.2.3.jar",
+      "sizeBytes": 418929,
+      "source": "pack"
+    },
+    {
+      "name": "Connectivity",
+      "file": "connectivity-1.20.1-7.2.jar",
+      "sizeBytes": 112268,
+      "source": "pack"
+    },
+    {
+      "name": "Controlling",
+      "file": "Controlling-forge-1.20.1-12.0.2.jar",
+      "sizeBytes": 115280,
+      "source": "pack"
+    },
+    {
+      "name": "Copperagebackport",
+      "file": "copperagebackport-forge-1.20.1-0.1.4.jar",
+      "sizeBytes": 2818863,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/a1llHwl4"
+    },
+    {
+      "name": "Corn Delight",
+      "file": "corn_delight-1.1.9-1.20.1.jar",
+      "sizeBytes": 172982,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/uxLAKWU8"
+    },
+    {
+      "name": "Cosmeticarmorreworked",
+      "file": "cosmeticarmorreworked-1.20.1-v1a.jar",
+      "sizeBytes": 88752,
+      "source": "pack"
+    },
+    {
+      "name": "CraftTweaker",
+      "file": "CraftTweaker-forge-1.20.1-14.0.60.jar",
+      "sizeBytes": 3271742,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/Xg35A4rS"
+    },
+    {
+      "name": "CraftTweaker",
+      "file": "CraftTweaker-forge-1.20.1-14.0.59.jar",
+      "sizeBytes": 3269064,
+      "source": "pack"
+    },
+    {
+      "name": "Create",
+      "file": "create-1.20.1-6.0.8.jar",
+      "sizeBytes": 19170905,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/LNytGWDc"
+    },
+    {
+      "name": "Createaddition",
+      "file": "createaddition-1.20.1-1.3.3.jar",
+      "sizeBytes": 1577313,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/kU1G12Nn"
+    },
+    {
+      "name": "CreateTweaker",
+      "file": "CreateTweaker-forge-1.20.1-4.0.15.jar",
+      "sizeBytes": 305613,
+      "source": "pack"
+    },
+    {
+      "name": "CreativeCore",
+      "file": "CreativeCore_FORGE_v2.12.32_mc1.20.1.jar",
+      "sizeBytes": 1158417,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/OsZiaDHq"
+    },
+    {
+      "name": "Crystalcraft Unlimited 1 20 1 21",
+      "file": "Crystalcraft Unlimited 1.20.1 21-11-2025.jar",
+      "sizeBytes": 14002118,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/JYgaA74n"
+    },
+    {
+      "name": "Culturaldelights",
+      "file": "culturaldelights-0.16.5.jar",
+      "sizeBytes": 262495,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/YttyNOFA"
+    },
+    {
+      "name": "Cupboard",
+      "file": "cupboard-1.20.1-2.7.jar",
+      "sizeBytes": 25983,
+      "source": "pack"
+    },
+    {
+      "name": "Curios",
+      "file": "curios-forge-5.14.1+1.20.1.jar",
+      "sizeBytes": 398066,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/vvuO3ImH"
+    },
+    {
+      "name": "Dave's Potioneering",
+      "file": "Dave's Potioneering-forge-1.20.1-13.jar",
+      "sizeBytes": 649054,
+      "source": "pack"
+    },
+    {
+      "name": "Delightful",
+      "file": "Delightful-1.20.1-3.7.6.jar",
+      "sizeBytes": 1514819,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/JtSnhtNJ"
+    },
+    {
+      "name": "Domum Ornamentum",
+      "file": "domum_ornamentum-1.20.1-1.0.296-universal.jar",
+      "sizeBytes": 1141555,
+      "source": "pack"
+    },
+    {
+      "name": "Doubledoors",
+      "file": "doubledoors-1.20.1-7.2.jar",
+      "sizeBytes": 54300,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/JrvR9OHr"
+    },
+    {
+      "name": "Dr Stone Extras",
+      "file": "dr_stone_extras-1.3.1-forge-1.20.1.jar",
+      "sizeBytes": 1944953,
+      "source": "pack"
+    },
+    {
+      "name": "DrStoneKoS",
+      "file": "DrStoneKoS-v1.0.1.jar",
+      "sizeBytes": 1087776,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/neby8dsf"
+    },
+    {
+      "name": "Drstonemod",
+      "file": "drstonemod-forge-1.20.1-5.1.jar",
+      "sizeBytes": 2152898,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/F4QqQi6T"
+    },
+    {
+      "name": "Dummmmmmy",
+      "file": "dummmmmmy-1.20-2.0.9.jar",
+      "sizeBytes": 363044,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/Adega8YN"
+    },
+    {
+      "name": "DungeonsArise",
+      "file": "DungeonsArise-1.20.x-2.1.58-release.jar",
+      "sizeBytes": 8762342,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/8DfbfASn"
+    },
+    {
+      "name": "E4mc Minecraft",
+      "file": "e4mc_minecraft-forge-5.4.1.jar",
+      "sizeBytes": 631050,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/qANg5Jrr"
+    },
+    {
+      "name": "Easy Npc",
+      "file": "easy_npc-forge-1.20.1-7.0.0.jar",
+      "sizeBytes": 2219724,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/Epm6R3P2"
+    },
+    {
+      "name": "Easy Npc Bundle",
+      "file": "easy_npc_bundle-forge-1.20.1-7.0.0.jar",
+      "sizeBytes": 25439,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/CgGEe1h3"
+    },
+    {
+      "name": "Easy Npc Config Ui",
+      "file": "easy_npc_config_ui-forge-1.20.1-7.0.0.jar",
+      "sizeBytes": 971746,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/uTGjf7vA"
+    },
+    {
+      "name": "EF Knuckles Extended",
+      "file": "EF_Knuckles_extended_20.1.jar",
+      "sizeBytes": 84687,
+      "source": "pack"
+    },
+    {
+      "name": "Embeddium",
+      "file": "embeddium-0.3.31+mc1.20.1.jar",
+      "sizeBytes": 1320675,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/sk9rgfiA"
+    },
+    {
+      "name": "EnchantmentDescriptions",
+      "file": "EnchantmentDescriptions-Forge-1.20.1-17.1.19.jar",
+      "sizeBytes": 69476,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/UVtY3ZAC"
+    },
+    {
+      "name": "Endersdelight",
+      "file": "endersdelight-forge-1.20.1-1.1.3.jar",
+      "sizeBytes": 179456,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/2uEhdGKt"
+    },
+    {
+      "name": "Entityculling",
+      "file": "entityculling-forge-1.9.3-mc1.20.1.jar",
+      "sizeBytes": 477884,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/NNAgCjsB"
+    },
+    {
+      "name": "Epicfight",
+      "file": "epicfight-forge-20.14.1-1.20.1.jar",
+      "sizeBytes": 8061102,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/vu3NZ5Ma"
+    },
+    {
+      "name": "Essential",
+      "file": "Essential_1-4-0-3_forge_1-20-1.jar",
+      "sizeBytes": 51969393,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/k2ZPuTBm"
+    },
+    {
+      "name": "ExtraBounties Universal",
+      "file": "ExtraBounties-universal.jar",
+      "sizeBytes": 273462,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/5XH5uKvv"
+    },
+    {
+      "name": "ExtraLib",
+      "file": "ExtraLib-2.0.0-1.20.1-Forge.jar",
+      "sizeBytes": 6969093,
+      "source": "pack"
+    },
+    {
+      "name": "ExtraQuests",
+      "file": "ExtraQuests-1.5.11-1.20.1-Forge.jar",
+      "sizeBytes": 51945,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/rMvP0ujv"
+    },
+    {
+      "name": "Fallingtrees",
+      "file": "fallingtrees-forge-mc1.20-0.13.2-SNAPSHOT.jar",
+      "sizeBytes": 4025908,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/i2kUe4lq"
+    },
+    {
+      "name": "Fancymenu",
+      "file": "fancymenu_forge_3.8.1_MC_1.20.1.jar",
+      "sizeBytes": 4472193,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/Wq5SjeWM"
+    },
+    {
+      "name": "FarmersDelight",
+      "file": "FarmersDelight-1.20.1-1.2.9.jar",
+      "sizeBytes": 2978080,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/R2OftAxM"
+    },
+    {
+      "name": "Ferritecore",
+      "file": "ferritecore-6.0.1-forge.jar",
+      "sizeBytes": 123034,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/uXXizFIs"
+    },
+    {
+      "name": "Findme",
+      "file": "findme-3.2.3-forge.jar",
+      "sizeBytes": 38674,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/rEuzehyH"
+    },
+    {
+      "name": "FpsReducer2",
+      "file": "FpsReducer2-forge-1.20.1-2.5.1.jar",
+      "sizeBytes": 125660,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/iZ10HXDj"
+    },
+    {
+      "name": "Framework",
+      "file": "framework-forge-1.20.1-0.7.15.jar",
+      "sizeBytes": 309560,
+      "source": "pack"
+    },
+    {
+      "name": "Fruitsdelight",
+      "file": "fruitsdelight-1.1.1.jar",
+      "sizeBytes": 1892593,
+      "source": "pack"
+    },
+    {
+      "name": "Ftb Library",
+      "file": "ftb-library-forge-2001.2.12.jar",
+      "sizeBytes": 780523,
+      "source": "pack"
+    },
+    {
+      "name": "FTB PlaceHolders",
+      "file": "FTB_PlaceHolders-1.0.6a.jar",
+      "sizeBytes": 1868226,
+      "source": "pack"
+    },
+    {
+      "name": "Ftb Quests",
+      "file": "ftb-quests-forge-2001.4.17.jar",
+      "sizeBytes": 1227820,
+      "source": "pack"
+    },
+    {
+      "name": "Ftb Teams",
+      "file": "ftb-teams-forge-2001.3.1.jar",
+      "sizeBytes": 248592,
+      "source": "pack"
+    },
+    {
+      "name": "Ftb Xmod Compat",
+      "file": "ftb-xmod-compat-forge-2.1.3.jar",
+      "sizeBytes": 129725,
+      "source": "pack"
+    },
+    {
+      "name": "Ftbquestsfreezefix",
+      "file": "ftbquestsfreezefix-forge-1.0.0-1.20.1.jar",
+      "sizeBytes": 163803,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/6Z1o0Fxu"
+    },
+    {
+      "name": "Geckolib",
+      "file": "geckolib-forge-1.20.1-4.8.2.jar",
+      "sizeBytes": 1038979,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/8BmcQJ2H"
+    },
+    {
+      "name": "GlitchCore",
+      "file": "GlitchCore-forge-1.20.1-0.0.1.1.jar",
+      "sizeBytes": 87550,
+      "source": "pack"
+    },
+    {
+      "name": "Globalpacks",
+      "file": "globalpacks-forge-1.20.1-19.3.7.jar",
+      "sizeBytes": 25101,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/NRLPy2mk"
+    },
+    {
+      "name": "Gpumemleakfix",
+      "file": "gpumemleakfix-1.20.1-1.8.jar",
+      "sizeBytes": 7997,
+      "source": "pack"
+    },
+    {
+      "name": "Gravestone",
+      "file": "gravestone-forge-1.20.1-1.0.35.jar",
+      "sizeBytes": 317181,
+      "source": "pack"
+    },
+    {
+      "name": "Iceberg",
+      "file": "Iceberg-1.20.1-forge-1.1.25.jar",
+      "sizeBytes": 134551,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/5faXoLqX"
+    },
+    {
+      "name": "ImmediatelyFast",
+      "file": "ImmediatelyFast-Forge-1.5.2+1.20.4.jar",
+      "sizeBytes": 425140,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/5ZwdcRci"
+    },
+    {
+      "name": "Immersive Aircraft",
+      "file": "immersive_aircraft-1.4.0+1.20.1-forge.jar",
+      "sizeBytes": 2428368,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/x3HZvrj6"
+    },
+    {
+      "name": "Immersive Machinery",
+      "file": "immersive_machinery-0.2.0+1.20.1-forge.jar",
+      "sizeBytes": 899304,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/kGP3J2TW"
+    },
+    {
+      "name": "Infernalmobs",
+      "file": "infernalmobs-1.20.1.10.jar",
+      "sizeBytes": 145817,
+      "source": "pack"
+    },
+    {
+      "name": "Inventorysorter",
+      "file": "inventorysorter-1.20.1-23.0.11.jar",
+      "sizeBytes": 54267,
+      "source": "pack"
+    },
+    {
+      "name": "Irons Spellbooks",
+      "file": "irons_spellbooks-1.20.1-3.4.0.11.jar",
+      "sizeBytes": 8784756,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/s4OWxYQQ"
+    },
+    {
+      "name": "ItemPhysic",
+      "file": "ItemPhysic_FORGE_v1.8.9_mc1.20.1.jar",
+      "sizeBytes": 54884,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/aT8BzaOj"
+    },
+    {
+      "name": "Jade",
+      "file": "Jade-1.20.1-Forge-11.13.2.jar",
+      "sizeBytes": 552486,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/nvQzSEkH"
+    },
+    {
+      "name": "JAOPCA",
+      "file": "JAOPCA-1.20.1-4.4.17.33.jar",
+      "sizeBytes": 924630,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/P48mHi2j"
+    },
+    {
+      "name": "Jei",
+      "file": "jei-1.20.1-forge-15.20.0.134.jar",
+      "sizeBytes": 1412399,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/u6dRKJwZ"
+    },
+    {
+      "name": "Jeiintegration",
+      "file": "jeiintegration_1.20.1-10.0.0.jar",
+      "sizeBytes": 26940,
+      "source": "pack"
+    },
+    {
+      "name": "JeiTweaker",
+      "file": "JeiTweaker-forge-1.20.1-8.0.6.jar",
+      "sizeBytes": 122689,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/EiEOyeoL"
+    },
+    {
+      "name": "JsonThings",
+      "file": "JsonThings-1.20.1-0.9.10.jar",
+      "sizeBytes": 528287,
+      "source": "pack"
+    },
+    {
+      "name": "JustEnoughGuns",
+      "file": "JustEnoughGuns-0.13.2-1.20.1.jar",
+      "sizeBytes": 9877729,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/n1EbSfq3"
+    },
+    {
+      "name": "JustEnoughMekanismMultiblocks",
+      "file": "JustEnoughMekanismMultiblocks-1.20.1-4.15.jar",
+      "sizeBytes": 162801,
+      "source": "pack"
+    },
+    {
+      "name": "JustEnoughProfessions",
+      "file": "JustEnoughProfessions-forge-1.20.1-3.0.1.jar",
+      "sizeBytes": 24607,
+      "source": "pack"
+    },
+    {
+      "name": "JustEnoughResources",
+      "file": "JustEnoughResources-1.20.1-1.4.0.247.jar",
+      "sizeBytes": 276231,
+      "source": "pack"
+    },
+    {
+      "name": "Justlevelingfork",
+      "file": "justlevelingfork-1.2.1.jar",
+      "sizeBytes": 489490,
+      "source": "pack"
+    },
+    {
+      "name": "Kambrik",
+      "file": "Kambrik-6.1.1+1.20.1-forge.jar",
+      "sizeBytes": 325546,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/zfbCkvdZ"
+    },
+    {
+      "name": "Kleiders Custom Renderer",
+      "file": "kleiders_custom_renderer-7.4.1-forge-1.20.1.jar",
+      "sizeBytes": 47876,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/oaG6aa1j"
+    },
+    {
+      "name": "Konkrete",
+      "file": "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
+      "sizeBytes": 625185,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/J81TRJWm"
+    },
+    {
+      "name": "Kotlinforforge",
+      "file": "kotlinforforge-4.12.0-all.jar",
+      "sizeBytes": 7442998,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/ordsPcFz"
+    },
+    {
+      "name": "L Enders Cataclysm",
+      "file": "L_Enders_Cataclysm-3.16.jar",
+      "sizeBytes": 127993805,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/46KJle7n"
+    },
+    {
+      "name": "Lionfishapi",
+      "file": "lionfishapi-2.4-Fix.jar",
+      "sizeBytes": 162767,
+      "source": "pack"
+    },
+    {
+      "name": "Lootintegrations",
+      "file": "lootintegrations-1.20.1-4.7.jar",
+      "sizeBytes": 42220,
+      "source": "pack"
+    },
+    {
+      "name": "Lootintegrations Cataclysm",
+      "file": "lootintegrations_cataclysm-1.1.jar",
+      "sizeBytes": 5663,
+      "source": "pack"
+    },
+    {
+      "name": "Lootr",
+      "file": "lootr-forge-1.20-0.7.35.94.jar",
+      "sizeBytes": 463485,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/EltpO5cN"
+    },
+    {
+      "name": "Man Of Many Planes",
+      "file": "man_of_many_planes-0.2.0+1.20.1-forge.jar",
+      "sizeBytes": 309137,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/9qdTHi0q"
+    },
+    {
+      "name": "Mantle",
+      "file": "Mantle-1.20.1-1.11.79.jar",
+      "sizeBytes": 1480444,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/Cg6Uc79H"
+    },
+    {
+      "name": "Map Atlases",
+      "file": "map_atlases-1.20-6.0.17.jar",
+      "sizeBytes": 738103,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/4hwXMFif"
+    },
+    {
+      "name": "Mapsyncer",
+      "file": "mapsyncer-1.0.3-forge-1.20.1.jar",
+      "sizeBytes": 311927,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/AW5A8Q2T"
+    },
+    {
+      "name": "Mcw Doors",
+      "file": "mcw-doors-1.1.2-mc1.20.1forge.jar",
+      "sizeBytes": 1250199,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/kNxa8z3e"
+    },
+    {
+      "name": "Mcw Fences",
+      "file": "mcw-fences-1.2.0-1.20.1forge.jar",
+      "sizeBytes": 695815,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/GmwLse2I"
+    },
+    {
+      "name": "Mcw Furniture",
+      "file": "mcw-furniture-3.4.1-mc1.20.1forge.jar",
+      "sizeBytes": 2174615,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/dtWC90iB"
+    },
+    {
+      "name": "Mcw Trapdoors",
+      "file": "mcw-trapdoors-1.1.5-mc1.20.1forge.jar",
+      "sizeBytes": 604510,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/n2fvCDlM"
+    },
+    {
+      "name": "Mcwbiomesoplenty",
+      "file": "mcwbiomesoplenty-1.20.1-1.4.jar",
+      "sizeBytes": 7323255,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/Tanquv9C"
+    },
+    {
+      "name": "Mekanism",
+      "file": "Mekanism-1.20.1-10.4.16.80.jar",
+      "sizeBytes": 12558456,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/Ce6I4WUE"
+    },
+    {
+      "name": "Mekanism Ad Astra Ores",
+      "file": "mekanism-ad-astra-ores-forge-1.20.1-1.1.0.jar",
+      "sizeBytes": 134254,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/KQwxMOPD"
+    },
+    {
+      "name": "Mekanism Turrets",
+      "file": "mekanism_turrets-1.3.1.jar",
+      "sizeBytes": 155265,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/WXVvYlIb"
+    },
+    {
+      "name": "Mekanism Weaponry",
+      "file": "mekanism_weaponry-1.1.2.jar",
+      "sizeBytes": 1018163,
+      "source": "pack"
+    },
+    {
+      "name": "MekanismAdditions",
+      "file": "MekanismAdditions-1.20.1-10.4.16.80.jar",
+      "sizeBytes": 1136805,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/a6F3uASn"
+    },
+    {
+      "name": "MekanismBridge Universal",
+      "file": "MekanismBridge-Universal-3.1.jar",
+      "sizeBytes": 517986,
+      "source": "pack"
+    },
+    {
+      "name": "MekanismElements",
+      "file": "MekanismElements-1.20.1-2.3.jar",
+      "sizeBytes": 885237,
+      "source": "pack"
+    },
+    {
+      "name": "MekanismGenerators",
+      "file": "MekanismGenerators-1.20.1-10.4.16.80.jar",
+      "sizeBytes": 1054586,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/OFVYKsAk"
+    },
+    {
+      "name": "MekanismTools",
+      "file": "MekanismTools-1.20.1-10.4.16.80.jar",
+      "sizeBytes": 517999,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/tqQpq1lt"
+    },
+    {
+      "name": "Melody",
+      "file": "melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",
+      "sizeBytes": 37178,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/CVT4pFB2"
+    },
+    {
+      "name": "Minecolonies",
+      "file": "minecolonies-1.20.1-1.1.1231.jar",
+      "sizeBytes": 77800516,
+      "source": "pack"
+    },
+    {
+      "name": "Modernfix",
+      "file": "modernfix-forge-5.25.1+mc1.20.1.jar",
+      "sizeBytes": 895267,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/nmDcB62a"
+    },
+    {
+      "name": "Monolib",
+      "file": "monolib-forge-1.20.1-2.1.0.jar",
+      "sizeBytes": 173882,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/9leXt4A5"
+    },
+    {
+      "name": "Moonlight",
+      "file": "moonlight-1.20-2.16.16-forge.jar",
+      "sizeBytes": 1333455,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/twkfQtEc"
+    },
+    {
+      "name": "Moremobvariants",
+      "file": "moremobvariants-forge+1.20.1-1.3.0.1.jar",
+      "sizeBytes": 379988,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/JiEhJ3WG"
+    },
+    {
+      "name": "MouseTweaks",
+      "file": "MouseTweaks-forge-mc1.20.1-2.25.1.jar",
+      "sizeBytes": 76237,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/aC3cM3Vq"
+    },
+    {
+      "name": "Multipiston",
+      "file": "multipiston-1.20-1.2.43-RELEASE.jar",
+      "sizeBytes": 38718,
+      "source": "pack"
+    },
+    {
+      "name": "Mysterious Mountain Lib",
+      "file": "mysterious_mountain_lib-1.6.30-1.20.1.jar",
+      "sizeBytes": 325540,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/ntMyNH8c"
+    },
+    {
+      "name": "Nethersdelight",
+      "file": "nethersdelight-1.20.1-4.0.jar",
+      "sizeBytes": 366047,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/Vv0RM7WN"
+    },
+    {
+      "name": "Not Enough Recipe Book",
+      "file": "Not Enough Recipe Book-FORGE-0.4.1+1.20.1.jar",
+      "sizeBytes": 21667,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/bQh7xzFq"
+    },
+    {
+      "name": "Notreepunching",
+      "file": "notreepunching-forge-1.20-7.1.0.jar",
+      "sizeBytes": 475991,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/2W2FL5UY"
+    },
+    {
+      "name": "Oceansdelight",
+      "file": "oceansdelight-1.0.2-1.20.jar",
+      "sizeBytes": 90353,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/DGiq4ZSW"
+    },
+    {
+      "name": "OctoLib",
+      "file": "OctoLib-FORGE-0.5.0.1+1.20.1.jar",
+      "sizeBytes": 424035,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/RH2KUdKJ"
+    },
+    {
+      "name": "Oculus",
+      "file": "oculus-mc1.20.1-1.8.0.jar",
+      "sizeBytes": 2851119,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/GchcoXML"
+    },
+    {
+      "name": "Oreexcavation",
+      "file": "oreexcavation-1.13.170.jar",
+      "sizeBytes": 282056,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/ODQeqCgz"
+    },
+    {
+      "name": "Pandalib",
+      "file": "pandalib-forge-mc1.20-0.5.2-SNAPSHOT.jar",
+      "sizeBytes": 864398,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/mEEGbEIu"
+    },
+    {
+      "name": "Placebo",
+      "file": "Placebo-1.20.1-8.6.3.jar",
+      "sizeBytes": 282474,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/tCkE8p2N"
+    },
+    {
+      "name": "Plasmovoice",
+      "file": "plasmovoice-forge-1.20.1-2.1.13.jar",
+      "sizeBytes": 12299890,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/1bZhdhsH"
+    },
+    {
+      "name": "Player Animation Lib",
+      "file": "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
+      "sizeBytes": 181437,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/gedNE4y2"
+    },
+    {
+      "name": "Polymorph",
+      "file": "polymorph-forge-0.49.10+1.20.1.jar",
+      "sizeBytes": 299601,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/tagwiZkJ"
+    },
+    {
+      "name": "PuzzlesLib",
+      "file": "PuzzlesLib-v8.1.33-1.20.1-Forge.jar",
+      "sizeBytes": 1342987,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/QAGBst4M"
+    },
+    {
+      "name": "Pv Addon Groups",
+      "file": "pv-addon-groups-1.1.1.jar",
+      "sizeBytes": 164468,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/g2HFPeCl"
+    },
+    {
+      "name": "Questsadditions",
+      "file": "questsadditions-1.4.7.jar",
+      "sizeBytes": 112015,
+      "source": "pack"
+    },
+    {
+      "name": "Radiantgear",
+      "file": "radiantgear-forge-2.2.0+1.20.1.jar",
+      "sizeBytes": 47170,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/AtT9wm5O"
+    },
+    {
+      "name": "Refurbished Furniture",
+      "file": "refurbished_furniture-forge-1.20.1-1.0.20.jar",
+      "sizeBytes": 6689588,
+      "source": "pack"
+    },
+    {
+      "name": "Resourcefulconfig",
+      "file": "resourcefulconfig-forge-1.20.1-2.1.3.jar",
+      "sizeBytes": 136923,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/M1953qlQ"
+    },
+    {
+      "name": "Resourcefullib",
+      "file": "resourcefullib-forge-1.20.1-2.1.29.jar",
+      "sizeBytes": 432753,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/G1hIVOrD"
+    },
+    {
+      "name": "Samurai Dynasty",
+      "file": "samurai_dynasty-0.1.0-1.20.1-forge.jar",
+      "sizeBytes": 2267736,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/lMWJDrbO"
+    },
+    {
+      "name": "Scannable",
+      "file": "scannable-MC1.20.1-forge-1.7.12+18ccb75.jar",
+      "sizeBytes": 399467,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/YqFnwJHf"
+    },
+    {
+      "name": "Searchables",
+      "file": "Searchables-forge-1.20.1-1.0.3.jar",
+      "sizeBytes": 77732,
+      "source": "pack"
+    },
+    {
+      "name": "Selfexpression",
+      "file": "selfexpression-2.22a-forge-1.20.1.jar",
+      "sizeBytes": 6987776,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/yv3OK08E"
+    },
+    {
+      "name": "SereneSeasons",
+      "file": "SereneSeasons-forge-1.20.1-9.1.0.2.jar",
+      "sizeBytes": 160887,
+      "source": "pack"
+    },
+    {
+      "name": "Smallships",
+      "file": "smallships-forge-1.20.1-2.0.0-b1.4.jar",
+      "sizeBytes": 1816687,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/rGWEHQrP"
+    },
+    {
+      "name": "Smoothchunk",
+      "file": "smoothchunk-1.20.1-4.1.jar",
+      "sizeBytes": 14249,
+      "source": "pack"
+    },
+    {
+      "name": "Sodiumdynamiclights",
+      "file": "sodiumdynamiclights-forge-1.0.10-1.20.1.jar",
+      "sizeBytes": 511601,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/PxQSWIcD"
+    },
+    {
+      "name": "Sodiumoptionsapi",
+      "file": "sodiumoptionsapi-forge-1.0.10-1.20.1.jar",
+      "sizeBytes": 443978,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/Es5v4eyq"
+    },
+    {
+      "name": "Sophisticatedbackpacks",
+      "file": "sophisticatedbackpacks-1.20.1-3.24.12.1411.jar",
+      "sizeBytes": 973366,
+      "source": "pack"
+    },
+    {
+      "name": "Sophisticatedcore",
+      "file": "sophisticatedcore-1.20.1-1.2.107.1240.jar",
+      "sizeBytes": 1438965,
+      "source": "pack"
+    },
+    {
+      "name": "Spelunkers Charm",
+      "file": "spelunkers_charm-3.6.0-1.20.1.jar",
+      "sizeBytes": 2018943,
+      "source": "pack"
+    },
+    {
+      "name": "Staples Afk Display",
+      "file": "staples-afk-display-1.1.5.jar",
+      "sizeBytes": 150075,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/qVfvmIwi"
+    },
+    {
+      "name": "Storagedelight",
+      "file": "storagedelight-25.06.26-1.20-forge.jar",
+      "sizeBytes": 490068,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/LTTvOp5L"
+    },
+    {
+      "name": "StorageDrawers",
+      "file": "StorageDrawers-forge-1.20.1-12.14.3.jar",
+      "sizeBytes": 1143623,
+      "source": "pack"
+    },
+    {
+      "name": "StorageDrawersExtras",
+      "file": "StorageDrawersExtras-1.20.1-12.1.0.jar",
+      "sizeBytes": 807737,
+      "source": "pack"
+    },
+    {
+      "name": "Structurize",
+      "file": "structurize-1.20.1-1.0.816.jar",
+      "sizeBytes": 1128298,
+      "source": "pack"
+    },
+    {
+      "name": "Supermartijn642configlib",
+      "file": "supermartijn642configlib-1.1.8-forge-mc1.20.jar",
+      "sizeBytes": 206584,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/LN9BxssP"
+    },
+    {
+      "name": "Supermartijn642corelib",
+      "file": "supermartijn642corelib-1.1.18-forge-mc1.20.1.jar",
+      "sizeBytes": 515362,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/rOUBggPv"
+    },
+    {
+      "name": "Takkit",
+      "file": "takkit-1.3.1-1.20.1.jar",
+      "sizeBytes": 550601,
+      "source": "pack"
+    },
+    {
+      "name": "TCIntegrations",
+      "file": "TCIntegrations-1.20.1-2.0.25.17.jar",
+      "sizeBytes": 2108273,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/jNa5P8yc"
+    },
+    {
+      "name": "TConstruct",
+      "file": "TConstruct-1.20.1-3.10.2.92.jar",
+      "sizeBytes": 19792115,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/rxIIYO6c"
+    },
+    {
+      "name": "TerraBlender",
+      "file": "TerraBlender-forge-1.20.1-3.0.1.10.jar",
+      "sizeBytes": 107532,
+      "source": "pack"
+    },
+    {
+      "name": "Tinkersjewelry",
+      "file": "tinkersjewelry-1.2.0.jar",
+      "sizeBytes": 1117039,
+      "source": "pack"
+    },
+    {
+      "name": "ToastControl",
+      "file": "ToastControl-1.20.1-8.0.3.jar",
+      "sizeBytes": 26957,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/CnOG2wlS"
+    },
+    {
+      "name": "Tough As Nails Compat",
+      "file": "tough_as_nails_compat-1.0.5-1.20.1.jar",
+      "sizeBytes": 304020,
+      "source": "pack"
+    },
+    {
+      "name": "ToughAsNails",
+      "file": "ToughAsNails-forge-1.20.1-9.2.0.171.jar",
+      "sizeBytes": 459479,
+      "source": "pack"
+    },
+    {
+      "name": "Toughastweaked",
+      "file": "toughastweaked-1.0.2.jar",
+      "sizeBytes": 20813,
+      "source": "pack"
+    },
+    {
+      "name": "Wardrobe",
+      "file": "wardrobe-1.0.3.1-forge-1.20.1.jar",
+      "sizeBytes": 873200,
+      "source": "pack"
+    },
+    {
+      "name": "Weaponleveling",
+      "file": "weaponleveling-1.20.1-2.2.2-forge.jar",
+      "sizeBytes": 238858,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/IuFgFiGE"
+    },
+    {
+      "name": "Xaerominimap",
+      "file": "xaerominimap-forge-1.20.1-26.2.0.jar",
+      "sizeBytes": 2182785,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/1bokaNcj"
+    },
+    {
+      "name": "Xaeroworldmap",
+      "file": "xaeroworldmap-forge-1.20.1-1.42.0.jar",
+      "sizeBytes": 1409051,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/NcUtCpym"
+    },
+    {
+      "name": "YetAnotherConfigLib",
+      "file": "YetAnotherConfigLib-3.4.2+1.20.1-forge.jar",
+      "sizeBytes": 1075392,
+      "source": "modrinth",
+      "url": "https://modrinth.com/project/1eAoo2KR"
+    }
+  ]
+}
