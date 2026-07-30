@@ -559,6 +559,7 @@ h3 {
   display: flex;
   gap: var(--sp-3);
   align-items: center;
+  min-width: 0;
   padding: var(--sp-3) var(--sp-4);
   background: color-mix(in srgb, var(--card) 70%, transparent);
   border: 1px solid var(--line);
@@ -571,19 +572,28 @@ h3 {
   transform: translateY(-2px);
 }
 
+/*
+ * `display: block` est indispensable : en inline — le défaut d'un <span> — les
+ * deux libellés se suivaient sur la même ligne et la troncature ne s'appliquait
+ * pas, si bien que le nom de fichier débordait hors de la carte.
+ */
 .mod-name {
+  display: block;
   overflow: hidden;
   font-size: var(--fs-sm);
   font-weight: 600;
+  line-height: 1.35;
   color: var(--text);
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .mod-file {
+  display: block;
   overflow: hidden;
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
+  line-height: 1.35;
   color: var(--text-dim);
   text-overflow: ellipsis;
   white-space: nowrap;
