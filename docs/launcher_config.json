@@ -57,9 +57,9 @@
     "motd": "Survie moddé — Fantasy vs. Science"
   },
 
-  "_discord_comment": "app_id vide = Rich Presence desactive. Pour l'activer : cree une application sur https://discord.com/developers/applications, televerse une image nommee 'petravox' dans Rich Presence > Art Assets, puis colle ici l'Application ID.",
+  "_discord_comment": "Application 'Petravox' du portail developpeur Discord, dediee a la Rich Presence (aucun bot). L'image de Rich Presence > Ressources artistiques doit imperativement porter la cle 'petravox' : c'est ce nom que le launcher envoie, et Discord ne permet pas de le modifier apres coup. Vider app_id desactive la fonctionnalite.",
   "discord": {
-    "app_id": ""
+    "app_id": "1533569435812626453"
   },
 
   "links": {
