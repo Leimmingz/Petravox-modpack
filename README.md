@@ -8,7 +8,7 @@
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62b47a?style=flat-square&logo=minecraft&logoColor=white)](https://minecraft.net)
 [![Forge](https://img.shields.io/badge/Forge-47.4.10-e04a00?style=flat-square)](https://files.minecraftforge.net)
-[![Launcher](https://img.shields.io/badge/Launcher-v3.2.1-16b981?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases/latest)
+[![Launcher](https://img.shields.io/badge/Launcher-v3.3.0-16b981?style=flat-square)](https://github.com/Leimmingz/Petravox-modpack/releases/latest)
 [![Site](https://img.shields.io/badge/Site-leimmingz.github.io-9f5cf7?style=flat-square)](https://leimmingz.github.io/Petravox-modpack/)
 [![License](https://img.shields.io/badge/Licence-Privé-374151?style=flat-square)](#)
 
@@ -22,7 +22,7 @@
 
 ## À propos
 
-Petravox est un serveur Minecraft moddé privé basé sur le modpack **Fantasy Vs. Science**, enrichi de plus de 205 mods. Il tourne sur Forge 1.20.1 et est accessible via un launcher dédié qui gère automatiquement l'installation et les mises à jour.
+Petravox est un serveur Minecraft moddé privé basé sur le modpack **Fantasy Vs. Science**, enrichi de 216 mods. Il tourne sur Forge 1.20.1 et est accessible via un launcher dédié qui gère automatiquement l'installation et les mises à jour.
 
 ---
 

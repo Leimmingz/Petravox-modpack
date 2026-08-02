@@ -15,11 +15,12 @@
   },
 
   "whats_new": [
-    "Timer de session live dans la sidebar (temps écoulé pendant le jeu)",
-    "Galerie de screenshots : miniatures cliquables, onglet dédié",
-    "Achievements dans le tableau de bord (sessions, heures jouées)",
-    "Notifications ami en ligne : toast quand un joueur rejoint",
-    "Thème clair optionnel dans Paramètres > Apparence"
+    "Le launcher reste dans la zone de notification pendant que tu joues",
+    "Tes mondes sont sauvegardés avant chaque mise à jour du modpack",
+    "En cas de plantage, le mod fautif est identifié automatiquement",
+    "Tableau de bord : temps joué cette semaine, jours d'affilée, activité",
+    "Screenshots : copie directe dans le presse-papier pour Discord",
+    "Mode allégé automatique sur les PC modestes"
   ],
 
   "mods_recents": [
@@ -54,6 +55,11 @@
     "port": 25540,
     "display_name": "Petravox",
     "motd": "Survie moddé — Fantasy vs. Science"
+  },
+
+  "_discord_comment": "app_id vide = Rich Presence desactive. Pour l'activer : cree une application sur https://discord.com/developers/applications, televerse une image nommee 'petravox' dans Rich Presence > Art Assets, puis colle ici l'Application ID.",
+  "discord": {
+    "app_id": ""
   },
 
   "links": {

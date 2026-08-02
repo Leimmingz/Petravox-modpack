@@ -1,0 +1,31 @@
+# Mods à ne jamais installer côté serveur.
+#
+# Un motif par ligne, comparé en minuscules au nom du fichier .jar (sous-chaîne,
+# pas d'expression régulière). Tout ce qui suit un # est ignoré.
+#
+# Pourquoi ce fichier existe : les mods embarqués dans overrides/mods/ du
+# .mrpack n'ont AUCUNE métadonnée client/serveur — le format ne la prévoit que
+# pour les mods référencés sur Modrinth (champ env.server). Un mod purement
+# client placé là ferait planter le serveur au démarrage, sans qu'aucun outil
+# puisse le deviner.
+#
+# Symptôme typique : le serveur s'arrête au chargement avec une erreur
+# mentionnant une classe d'interface, de rendu ou de shader
+# (net.minecraft.client.*, RenderSystem, GameRenderer…).
+#
+# Ajoute alors le nom du mod ici et relance `npm run server-mods`.
+
+# — Interface et cosmétique, sans effet serveur —
+fancymenu
+essential
+drippyloadingscreen
+katui
+
+# — Rendu et performance purement client —
+oculus
+embeddium
+rubidium
+sodium
+iris
+entityculling
+betterfpsdist

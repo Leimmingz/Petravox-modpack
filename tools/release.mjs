@@ -212,11 +212,20 @@ console.log(`
 
   1. cd launcher-electron && npm run dist
   2. Pousser le site :  github\\push_github.bat
-  3. Créer la release GitHub avec le tag  v${target}
-     et y attacher LES TROIS fichiers de launcher-electron/release/ :
+  3. Publier LES TROIS fichiers de launcher-electron/release/ :
        · Petravox.Launcher.v${target}.exe
-       · latest.yml           ← sans lui, AUCUN joueur n'est mis à jour
        · Petravox.Launcher.v${target}.exe.blockmap
+       · latest.yml   ← À REMPLACER À CHAQUE FOIS
+
+     latest.yml est le seul fichier qu'electron-updater lit pour
+     savoir quelle version existe et quel .exe télécharger. Il porte
+     toujours le même nom : si tu réutilises une release, supprime
+     l'ancien AVANT de téléverser le nouveau. Un latest.yml périmé
+     laisse les joueurs sur l'ancienne version, ou les envoie sur un
+     .exe supprimé (404).
+
+     Garde les .blockmap des versions précédentes : sans eux, la mise
+     à jour retélécharge les 90 Mo au lieu du différentiel.
 
   Et surtout : la release « modpack » ne doit PAS être marquée
   « Latest ». electron-updater lit la release Latest et y cherche
