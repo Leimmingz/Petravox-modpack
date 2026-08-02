@@ -1,6 +1,20 @@
 {
-  "generatedAt": "2026-08-02T11:59:35.880Z",
+  "generatedAt": "2026-08-02T12:25:54.038Z",
   "releases": [
+    {
+      "version": "3.2.1",
+      "date": "2 août 2026",
+      "entries": [
+        {
+          "kind": "fix",
+          "text": "Le bouton JOUER restait grisé après la fermeture de Minecraft : l'interface se resynchronise maintenant avec le launcher toutes les 5 secondes, au lieu de dépendre d'un seul événement qui pouvait se perdre"
+        },
+        {
+          "kind": "fix",
+          "text": "La fin de partie est signalée même si le journal du jeu n'a pas fini de s'écrire, et un journal illisible ne provoque plus d'erreur silencieuse"
+        }
+      ]
+    },
     {
       "version": "3.2.0",
       "date": "2 août 2026",
