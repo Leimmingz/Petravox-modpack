@@ -4,7 +4,8 @@
   "type": "module",
   "description": "Génération des données du site depuis le modpack et le launcher",
   "scripts": {
-    "build": "node build-mods-data.mjs && node build-site-data.mjs"
+    "build": "node build-mods-data.mjs && node build-site-data.mjs",
+    "release": "node release.mjs"
   },
   "dependencies": {
     "yauzl": "^3.2.0"

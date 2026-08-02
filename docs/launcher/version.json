@@ -1,0 +1,10 @@
+{
+  "version": "3.2.0",
+  "date": "2 août 2026",
+  "download": "https://github.com/Leimmingz/Petravox-modpack/releases/latest",
+  "notes": [
+    "Ajout du mode spectateur",
+    "Le bouton Jouer restait grisé après un crash"
+  ],
+  "generatedAt": "2026-08-02T11:59:35.882Z"
+}

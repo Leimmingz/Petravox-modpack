@@ -59,13 +59,31 @@ async function loadRelease() {
   const link = document.querySelector('[data-release-link]')
   if (!version && !link) return
 
+  // Le numéro de version vient de launcher/version.json, publié avec le site.
+  //
+  // On ne le demande plus à l'API GitHub : elle renvoie la release marquée
+  // « Latest », qui peut être celle du *modpack* si elle a été republiée en
+  // dernier — la page annonçait alors une version de launcher inexistante. Elle
+  // limite aussi le débit par IP. version.json est généré depuis package.json,
+  // il est juste par construction.
+  try {
+    const res = await fetch('launcher/version.json')
+    if (res.ok) {
+      const data = await res.json()
+      if (version && data.version) version.textContent = `v${data.version}`
+    }
+  } catch {
+    // Le texte de repli du HTML (« la plus récente ») reste affiché.
+  }
+
+  // L'API GitHub ne sert plus qu'au lien direct et au poids du fichier, deux
+  // détails de confort : son échec ne doit rien casser.
   try {
     const res = await fetch(`https://api.github.com/repos/${REPO}/releases/latest`)
     if (!res.ok) return
     const data = await res.json()
 
     const asset = (data.assets || []).find((a) => a.name.endsWith('.exe'))
-    if (version) version.textContent = data.tag_name || data.name || ''
     if (link && asset) {
       link.href = asset.browser_download_url
       const size = document.querySelector('[data-release-size]')

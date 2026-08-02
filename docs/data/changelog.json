@@ -1,6 +1,62 @@
 {
-  "generatedAt": "2026-07-30T20:53:51.515Z",
+  "generatedAt": "2026-08-02T11:59:35.880Z",
   "releases": [
+    {
+      "version": "3.2.0",
+      "date": "2 août 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Ajout du mode spectateur"
+        },
+        {
+          "kind": "fix",
+          "text": "Le bouton Jouer restait grisé après un crash"
+        }
+      ]
+    },
+    {
+      "version": "3.1.0",
+      "date": "2 août 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Le launcher se réduit dans la zone de notification au lieu de se fermer : les notifications « un joueur vient de se connecter » continuent d'arriver pendant la partie, et le journal du jeu est enfin conservé dans ce mode"
+        },
+        {
+          "kind": "new",
+          "text": "Sauvegarde automatique des mondes avant chaque mise à jour du modpack — une mise à jour retire des mods, et un monde peut ne plus se charger sans eux"
+        },
+        {
+          "kind": "new",
+          "text": "Fenêtre de crash : le mod fautif, le fichier .jar et les dépendances manquantes sont extraits du journal et affichés en clair"
+        },
+        {
+          "kind": "new",
+          "text": "Tableau de bord : temps joué cette semaine, plus longue session, jours d'affilée et activité des quinze derniers jours"
+        },
+        {
+          "kind": "new",
+          "text": "Screenshots : copier l'image dans le presse-papier (Ctrl+V direct sur Discord), renommer et supprimer depuis l'aperçu"
+        },
+        {
+          "kind": "perf",
+          "text": "Mode allégé : le fond animé, le grain et les flous sont coupés, automatiquement sur une machine modeste ou à la demande dans Paramètres. Ils repeignaient la fenêtre en continu, y compris pendant que Minecraft tourne"
+        },
+        {
+          "kind": "fix",
+          "text": "Statut du serveur : si le service de statut ne répond pas, le launcher interroge le serveur directement. « Serveur hors ligne » ne peut plus vouloir dire « site de statut hors ligne »"
+        },
+        {
+          "kind": "fix",
+          "text": "Le statut du serveur est relevé par le launcher lui-même et non par sa fenêtre : les notifications fonctionnent même fenêtre masquée"
+        },
+        {
+          "kind": "fix",
+          "text": "Si la mise à jour automatique échoue, le launcher signale quand même qu'une version plus récente existe et propose de la télécharger à la main"
+        }
+      ]
+    },
     {
       "version": "3.0.0",
       "date": "30 juillet 2026",
