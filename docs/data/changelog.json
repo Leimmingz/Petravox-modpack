@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T17:35:42.124Z",
+  "generatedAt": "2026-08-03T22:54:28.155Z",
   "releases": [
     {
       "version": "3.3.0",
@@ -55,11 +55,7 @@
       "entries": [
         {
           "kind": "new",
-          "text": "Ajout du mode spectateur"
-        },
-        {
-          "kind": "fix",
-          "text": "Le bouton Jouer restait grisé après un crash"
+          "text": "Première version publiée du lot préparé en 3.1.0 : zone de notification, sauvegarde avant mise à jour du modpack, identification du mod fautif, statistiques de jeu, actions sur les captures et mode allégé. Le détail est dans l'entrée v3.1.0 ci-dessous."
         }
       ]
     },

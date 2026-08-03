@@ -39,8 +39,11 @@ import {
   readLauncherVersion,
   todayLabel
 } from './lib/changelog.mjs'
+import { announceRelease } from './lib/discord-webhook.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
+
+const GITHUB_REPO_URL = 'https://github.com/Leimmingz/Petravox-modpack'
 
 const SEMVER = /^\d+\.\d+\.\d+$/
 
@@ -204,7 +207,17 @@ if (updated !== readme) {
   console.log(`README.md     : badge mis à jour en v${target}`)
 }
 
-// ── 5. Marche à suivre ──────────────────────────────────────────────────────
+// ── 5. Annonce Discord ──────────────────────────────────────────────────────
+
+// Après la régénération, pour n'annoncer qu'une préparation réellement aboutie.
+await announceRelease({
+  version: target,
+  date: entry.date,
+  entries: entry.entries,
+  downloadUrl: `${GITHUB_REPO_URL}/releases/latest`
+})
+
+// ── 6. Marche à suivre ──────────────────────────────────────────────────────
 
 console.log(`
 ────────────────────────────────────────────────────────────────

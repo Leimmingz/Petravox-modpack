@@ -10,3 +10,9 @@ desktop.ini
 # Sorties temporaires
 *.log
 *.tmp
+
+# Webhook Discord : clé d'écriture sur le salon d'annonces. Un secret poussé
+# une seule fois reste dans l'historique Git même après suppression.
+tools/discord-webhook.txt
+
+https://discord.com/api/webhooks/1533973648505835650/3KrKKtfek4Iln7iOd2j2nkWp0pSkD3RvZz5cdrbuTQM0WdU7iDffRMiDsB6X9W_pfL1y

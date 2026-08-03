@@ -10,7 +10,8 @@
   "web": {
     "url": "https://leimmingz.github.io/Petravox-modpack/",
     "label": "Site Petravox",
-    "map_url": "http://srv01.uniheberg.fr:25552",
+    "_map_comment": "Port 25550 = seconde allocation UniHeberg. Ignore par le launcher tant que BlueMap n'ecoute pas dessus : par defaut il se lie au port 8100, qui n'est pas alloue.",
+    "map_url": "http://srv01.uniheberg.fr:25550",
     "map_label": "Carte du serveur"
   },
 
@@ -63,7 +64,7 @@
   },
 
   "links": {
-    "discord": "",
+    "discord": "https://discord.gg/7xmm2pfufT",
     "site": "https://leimmingz.github.io/Petravox-modpack/",
     "github": "https://github.com/Leimmingz/Petravox-modpack"
   },
