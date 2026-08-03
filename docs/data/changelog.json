@@ -1,6 +1,16 @@
 {
-  "generatedAt": "2026-08-03T22:54:28.155Z",
+  "generatedAt": "2026-08-03T23:23:05.682Z",
   "releases": [
+    {
+      "version": "3.4.0",
+      "date": "4 août 2026",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "apparence + fonds + VFX + SFX · onglet Joueurs · onglet Mods lisible avec icônes · skin 3D corrigé · serveur ajouté automatiquement · configs préservées · Discord (annonce + Rejoindre) · carte BlueMap · rapidité"
+        }
+      ]
+    },
     {
       "version": "3.3.0",
       "date": "2 août 2026",

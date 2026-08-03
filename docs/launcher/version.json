@@ -1,15 +1,9 @@
 {
-  "version": "3.3.0",
-  "date": "2 août 2026",
+  "version": "3.4.0",
+  "date": "4 août 2026",
   "download": "https://github.com/Leimmingz/Petravox-modpack/releases/latest",
   "notes": [
-    "Comparaison des mods avec le serveur : le launcher lit la liste que le serveur publie et signale tout écart de version — la cause la plus fréquente d'un refus de connexion",
-    "Multi-comptes : plusieurs comptes Microsoft enregistrés, bascule en un clic depuis la sidebar, jetons chiffrés séparément",
-    "Le modpack est préparé en arrière-plan dès l'ouverture du launcher, pour que « JOUER » soit immédiat",
-    "Rich Presence Discord (optionnel) : affiche ta partie en cours et le nombre de joueurs connectés",
-    "Le rapport de bug inclut désormais l'état du serveur et la comparaison des mods",
-    "Mise à jour du modpack nettement plus rapide : vérifications et téléchargements en parallèle, empreintes mises en cache, mods embarqués non réécrits inutilement",
-    "Avertissement sur l'option « Rejoindre le serveur directement » : avec 216 mods, la connexion démarre avant la fin du chargement et expire"
+    "apparence + fonds + VFX + SFX · onglet Joueurs · onglet Mods lisible avec icônes · skin 3D corrigé · serveur ajouté automatiquement · configs préservées · Discord (annonce + Rejoindre) · carte BlueMap · rapidité"
   ],
-  "generatedAt": "2026-08-03T22:54:28.157Z"
+  "generatedAt": "2026-08-03T23:23:05.684Z"
 }
