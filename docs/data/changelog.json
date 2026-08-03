@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T23:27:48.269Z",
+  "generatedAt": "2026-08-03T23:33:29.597Z",
   "releases": [
     {
       "version": "3.4.0",
@@ -7,7 +7,35 @@
       "entries": [
         {
           "kind": "new",
-          "text": "apparence + fonds + VFX + SFX · onglet Joueurs · onglet Mods lisible avec icônes · skin 3D corrigé · serveur ajouté automatiquement · configs préservées · Discord (annonce + Rejoindre) · carte BlueMap · rapidité"
+          "text": "Onglet Apparence : six fonds d'écran intégrés, ou tes propres images"
+        },
+        {
+          "kind": "new",
+          "text": "Poussière lumineuse animée en arrière-plan"
+        },
+        {
+          "kind": "fix",
+          "text": "Skin 3D : la deuxième couche (chapeau, veste, manches, jambières) s'affiche enfin — elle manquait complètement"
+        },
+        {
+          "kind": "fix",
+          "text": "La barre de progression ne reste plus figée quand le modpack se prépare en arrière-plan"
+        },
+        {
+          "kind": "perf",
+          "text": "Le modpack est entièrement préparé en arrière-plan, installation comprise : « JOUER » devient immédiat"
+        },
+        {
+          "kind": "perf",
+          "text": "Le cache d'empreintes se purge des mods retirés"
+        },
+        {
+          "kind": "audit",
+          "text": "servers.dat : les données que le launcher ne sait pas lire sont désormais préservées au lieu d'être effacées"
+        },
+        {
+          "kind": "audit",
+          "text": "La connexion à Discord est correctement vidée, elle finissait par se bloquer"
         }
       ]
     },

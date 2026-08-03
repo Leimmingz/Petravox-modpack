@@ -3,7 +3,14 @@
   "date": "4 août 2026",
   "download": "https://github.com/Leimmingz/Petravox-modpack/releases/latest",
   "notes": [
-    "apparence + fonds + VFX + SFX · onglet Joueurs · onglet Mods lisible avec icônes · skin 3D corrigé · serveur ajouté automatiquement · configs préservées · Discord (annonce + Rejoindre) · carte BlueMap · rapidité"
+    "Onglet Apparence : six fonds d'écran intégrés, ou tes propres images",
+    "Poussière lumineuse animée en arrière-plan",
+    "Skin 3D : la deuxième couche (chapeau, veste, manches, jambières) s'affiche enfin — elle manquait complètement",
+    "La barre de progression ne reste plus figée quand le modpack se prépare en arrière-plan",
+    "Le modpack est entièrement préparé en arrière-plan, installation comprise : « JOUER » devient immédiat",
+    "Le cache d'empreintes se purge des mods retirés",
+    "servers.dat : les données que le launcher ne sait pas lire sont désormais préservées au lieu d'être effacées",
+    "La connexion à Discord est correctement vidée, elle finissait par se bloquer"
   ],
-  "generatedAt": "2026-08-03T23:27:48.270Z"
+  "generatedAt": "2026-08-03T23:33:29.598Z"
 }
